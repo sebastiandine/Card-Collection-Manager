@@ -1,0 +1,1871 @@
+2017:07:20 14:15:54.110 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:20 14:15:54.124 - DEBUG : Array of EditionBean objects provided.
+2017:07:20 14:15:54.432 - DEBUG : Card maintenance dialog opened.
+2017:07:20 14:15:54.435 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:20 14:15:54.444 - DEBUG : Try to get CardBean with ID=1.
+2017:07:20 14:15:54.466 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:07:20 14:16:01.344 - DEBUG : Front image textfield clicked.
+2017:07:20 14:16:01.346 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:07:20 14:16:02.848 - DEBUG : Back image textfield clicked.
+2017:07:20 14:16:02.849 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:07:20 14:20:07.596 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:20 14:20:07.611 - DEBUG : Array of EditionBean objects provided.
+2017:07:20 14:20:07.907 - DEBUG : Card maintenance dialog opened.
+2017:07:20 14:20:07.909 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:20 14:20:07.920 - DEBUG : Try to get CardBean with ID=1.
+2017:07:20 14:20:07.940 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:07:20 14:20:10.847 - DEBUG : Card maintenance dialog has been closed.
+2017:07:20 14:20:16.74 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:20 14:20:16.90 - DEBUG : Array of EditionBean objects provided.
+2017:07:20 14:20:16.392 - DEBUG : Card maintenance dialog opened.
+2017:07:20 14:20:16.395 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:20 14:20:16.405 - DEBUG : Try to get CardBean with ID=1.
+2017:07:20 14:20:16.427 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:07:20 14:20:18.143 - DEBUG : Card maintenance dialog has been closed.
+2017:07:20 14:20:39.921 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:20 14:20:39.935 - DEBUG : Array of EditionBean objects provided.
+2017:07:20 14:20:40.237 - DEBUG : Card maintenance dialog opened.
+2017:07:20 14:20:40.241 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:20 14:20:40.253 - DEBUG : Try to get CardBean with ID=1.
+2017:07:20 14:20:40.270 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:07:20 14:20:41.768 - DEBUG : Button 'Save' has been pressed.
+2017:07:20 14:20:41.769 - INFO : New card bean has been stored to the system.
+2017:07:20 14:20:41.772 - INFO : CardBean data stored to file 'data/carddata'.
+2017:07:20 14:20:41.780 - DEBUG : Card maintenance dialog has been closed.
+2017:07:25 10:40:01.665 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:25 10:40:01.694 - DEBUG : Array of CardBean objects provided.
+2017:07:25 10:40:55.98 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:25 10:40:55.113 - DEBUG : Array of CardBean objects provided.
+2017:07:25 10:44:58.79 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:25 10:44:58.104 - DEBUG : Array of CardBean objects provided.
+2017:07:25 10:45:40.683 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:25 10:45:40.697 - DEBUG : Array of CardBean objects provided.
+2017:07:25 10:46:42.280 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:25 10:46:42.295 - DEBUG : Array of CardBean objects provided.
+2017:07:25 11:13:28.165 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:25 11:13:28.191 - DEBUG : Array of CardBean objects provided.
+2017:07:25 11:18:08.787 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:25 11:18:08.801 - DEBUG : Array of CardBean objects provided.
+2017:07:25 11:18:21.188 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:25 11:18:21.203 - DEBUG : Array of CardBean objects provided.
+2017:07:25 11:19:05.957 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:25 11:19:05.974 - DEBUG : Array of CardBean objects provided.
+2017:07:26 10:46:01.725 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 10:46:01.787 - DEBUG : Array of CardBean objects provided.
+2017:07:26 10:52:04.625 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 10:52:04.650 - DEBUG : Array of CardBean objects provided.
+2017:07:26 10:53:34.581 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 10:53:34.595 - DEBUG : Array of CardBean objects provided.
+2017:07:26 11:01:18.190 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 11:01:18.222 - DEBUG : Array of CardBean objects provided.
+2017:07:26 11:01:39.715 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 11:01:39.729 - DEBUG : Array of CardBean objects provided.
+2017:07:26 11:10:35.857 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 11:10:35.872 - DEBUG : Array of CardBean objects provided.
+2017:07:26 11:22:56.628 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 11:22:56.642 - DEBUG : Array of CardBean objects provided.
+2017:07:26 11:23:34.375 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 11:23:34.389 - DEBUG : Array of CardBean objects provided.
+2017:07:26 11:25:30.252 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 11:25:30.266 - DEBUG : Array of CardBean objects provided.
+2017:07:26 11:26:55.563 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 11:26:55.577 - DEBUG : Array of CardBean objects provided.
+2017:07:26 11:32:16.939 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:26 11:32:16.989 - DEBUG : Array of EditionBean objects provided.
+2017:07:26 11:32:16.992 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 11:32:16.999 - INFO : CardBean data stored to file 'data/carddata'.
+2017:07:26 11:32:17.03 - INFO : CardBean added to CardBeanContainer: ID: 5, Name: Fastbond, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Fastbond, Amount: 2, Note: null, Foil: true, Signed: true, Altered: true.
+2017:07:26 11:32:30.840 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 11:32:30.856 - DEBUG : Array of CardBean objects provided.
+2017:07:26 11:32:54.697 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 11:32:54.713 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:49:28.777 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:49:28.800 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:51:31.873 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:51:31.888 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:51:55.843 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:51:55.857 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:52:19.156 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:52:19.170 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:52:38.377 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:52:38.395 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:53:51.579 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:53:51.593 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:54:42.751 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:54:42.765 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:55:22.651 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:55:22.666 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:55:47.998 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:55:48.12 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:56:23.185 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:56:23.200 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:57:13.610 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:57:13.625 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:57:27.19 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:57:27.33 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:57:52.924 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:57:52.939 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:58:52.257 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:58:52.271 - DEBUG : Array of CardBean objects provided.
+2017:07:26 12:59:24.17 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 12:59:24.31 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:00:29.00 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:00:29.16 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:00:42.59 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:00:42.73 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:02:51.499 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:26 13:02:51.546 - DEBUG : Array of EditionBean objects provided.
+2017:07:26 13:02:51.548 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:02:51.556 - INFO : CardBean data stored to file 'data/carddata'.
+2017:07:26 13:02:51.561 - INFO : CardBean added to CardBeanContainer: ID: 6, Name: Tropical Island, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Tropical Island, Amount: 2, Note: null, Foil: true, Signed: true, Altered: false.
+2017:07:26 13:03:02.176 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:26 13:03:02.221 - DEBUG : Array of EditionBean objects provided.
+2017:07:26 13:03:02.223 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:03:02.234 - INFO : CardBean data stored to file 'data/carddata'.
+2017:07:26 13:03:02.237 - INFO : CardBean added to CardBeanContainer: ID: 7, Name: Underground Sea, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Underground Sea, Amount: 2, Note: null, Foil: true, Signed: true, Altered: false.
+2017:07:26 13:03:18.659 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:26 13:03:18.704 - DEBUG : Array of EditionBean objects provided.
+2017:07:26 13:03:18.706 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:03:18.717 - INFO : CardBean data stored to file 'data/carddata'.
+2017:07:26 13:03:18.720 - INFO : CardBean added to CardBeanContainer: ID: 8, Name: Tundra, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Tundra, Amount: 2, Note: null, Foil: false, Signed: true, Altered: false.
+2017:07:26 13:03:40.314 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:03:40.332 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:04:21.389 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:26 13:04:21.437 - DEBUG : Array of EditionBean objects provided.
+2017:07:26 13:04:21.439 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:04:21.451 - INFO : CardBean data stored to file 'data/carddata'.
+2017:07:26 13:04:21.455 - INFO : CardBean added to CardBeanContainer: ID: 9, Name: Plains, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Plains, Amount: 22, Note: null, Foil: false, Signed: false, Altered: false.
+2017:07:26 13:04:29.622 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:26 13:04:29.667 - DEBUG : Array of EditionBean objects provided.
+2017:07:26 13:04:29.669 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:04:29.681 - INFO : CardBean data stored to file 'data/carddata'.
+2017:07:26 13:04:29.685 - INFO : CardBean added to CardBeanContainer: ID: 10, Name: Mountain, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Mountain, Amount: 22, Note: null, Foil: false, Signed: false, Altered: false.
+2017:07:26 13:04:41.12 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:26 13:04:41.56 - DEBUG : Array of EditionBean objects provided.
+2017:07:26 13:04:41.59 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:04:41.71 - INFO : CardBean data stored to file 'data/carddata'.
+2017:07:26 13:04:41.74 - INFO : CardBean added to CardBeanContainer: ID: 11, Name: Swamp, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Swamp, Amount: 22, Note: null, Foil: true, Signed: false, Altered: false.
+2017:07:26 13:04:50.57 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:26 13:04:50.105 - DEBUG : Array of EditionBean objects provided.
+2017:07:26 13:04:50.109 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:04:50.127 - INFO : CardBean data stored to file 'data/carddata'.
+2017:07:26 13:04:50.132 - INFO : CardBean added to CardBeanContainer: ID: 12, Name: Island, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Island, Amount: 22, Note: null, Foil: true, Signed: false, Altered: false.
+2017:07:26 13:05:26.738 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:07:26 13:05:26.797 - DEBUG : Array of EditionBean objects provided.
+2017:07:26 13:05:26.799 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:05:26.816 - INFO : CardBean data stored to file 'data/carddata'.
+2017:07:26 13:05:26.819 - INFO : CardBean added to CardBeanContainer: ID: 13, Name: Forest, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Forest, Amount: 22, Note: null, Foil: true, Signed: false, Altered: false.
+2017:07:26 13:05:38.808 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:05:38.827 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:12:45.211 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:12:45.239 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:14:49.622 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:14:49.638 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:18:44.371 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:18:44.387 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:20:20.684 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:20:20.699 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:21:50.794 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:21:50.809 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:22:58.747 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:22:58.763 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:24:07.847 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:24:07.862 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:24:27.176 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:24:27.192 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:24:57.689 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:24:57.704 - DEBUG : Array of CardBean objects provided.
+2017:07:26 13:25:47.955 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 13:25:47.971 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:13:51.367 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:13:51.390 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:15:02.661 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:15:02.677 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:15:34.26 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:15:34.42 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:16:43.805 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:16:43.821 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:17:12.595 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:17:12.611 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:17:30.54 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:17:30.70 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:17:41.540 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:17:41.555 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:18:15.173 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:18:15.188 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:18:39.146 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:18:39.162 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:19:03.100 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:19:03.115 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:19:58.736 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:19:58.751 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:20:47.77 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:20:47.93 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:22:15.353 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:22:15.369 - DEBUG : Array of CardBean objects provided.
+2017:07:26 14:22:30.655 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 14:22:30.671 - DEBUG : Array of CardBean objects provided.
+2017:07:26 15:09:56.91 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 15:09:56.119 - DEBUG : Array of CardBean objects provided.
+2017:07:26 15:18:01.273 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 15:18:01.290 - DEBUG : Array of CardBean objects provided.
+2017:07:26 15:20:59.979 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 15:20:59.995 - DEBUG : Array of CardBean objects provided.
+2017:07:26 15:23:40.569 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:26 15:23:40.585 - DEBUG : Array of CardBean objects provided.
+2017:07:27 10:40:47.917 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 10:40:47.975 - DEBUG : Array of CardBean objects provided.
+2017:07:27 10:45:58.20 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 10:45:58.38 - DEBUG : Array of CardBean objects provided.
+2017:07:27 10:50:30.433 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 10:50:30.449 - DEBUG : Array of CardBean objects provided.
+2017:07:27 10:51:00.374 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 10:51:00.391 - DEBUG : Array of CardBean objects provided.
+2017:07:27 11:02:20.411 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 11:02:20.426 - DEBUG : Array of CardBean objects provided.
+2017:07:27 11:06:48.783 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 11:06:48.796 - DEBUG : Array of CardBean objects provided.
+2017:07:27 11:09:15.548 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 11:09:15.564 - DEBUG : Array of CardBean objects provided.
+2017:07:27 11:10:03.239 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 11:10:03.255 - DEBUG : Array of CardBean objects provided.
+2017:07:27 11:10:47.324 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 11:10:47.339 - DEBUG : Array of CardBean objects provided.
+2017:07:27 11:17:44.399 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 11:17:44.415 - DEBUG : Array of CardBean objects provided.
+2017:07:27 11:24:31.944 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 11:24:31.959 - DEBUG : Array of CardBean objects provided.
+2017:07:27 11:27:30.614 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 11:27:30.630 - DEBUG : Array of CardBean objects provided.
+2017:07:27 11:30:15.710 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:27 11:30:15.726 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:26:13.48 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:26:13.70 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:27:16.823 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:27:16.837 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:27:16.902 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:30:07.561 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:30:07.577 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:30:11.379 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:30:11.395 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:30:42.702 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:30:42.715 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:31:06.932 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:31:06.948 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:31:17.318 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:31:17.334 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:31:17.393 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:32:43.425 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:32:43.440 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:32:43.498 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:34:04.874 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:34:04.890 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:34:04.948 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:34:32.990 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:34:33.06 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:34:33.65 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:34:57.134 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:34:57.149 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:37:07.430 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:37:07.445 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:38:52.277 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:38:52.294 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:39:02.320 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:39:02.336 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:39:02.393 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:42:55.295 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:42:55.311 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:44:01.789 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:44:01.805 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:45:43.131 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:45:43.146 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:45:43.166 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:49:13.417 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:49:13.432 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:49:13.452 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:49:48.142 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:49:48.158 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:49:48.177 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:52:52.836 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:52:52.851 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:52:52.861 - DEBUG : Try to get CardBean with ID=0.
+2017:07:31 10:52:52.861 - WARN : No bean with id=0 found.
+2017:07:31 10:53:38.779 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:53:38.794 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:53:38.804 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:58:04.760 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:58:04.777 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:58:04.787 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:58:34.517 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:58:34.532 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:58:34.542 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:58:35.622 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 10:58:35.733 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 10:58:39.333 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 10:58:39.437 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 10:58:39.741 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 10:58:39.845 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 10:58:40.389 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 10:58:40.501 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 10:58:40.853 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 10:58:40.933 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 10:58:41.173 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 10:58:41.268 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 10:59:11.296 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:59:11.311 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:59:11.321 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:59:12.960 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 10:59:13.22 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 10:59:13.734 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 10:59:13.854 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 10:59:14.566 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 10:59:14.662 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 10:59:14.942 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 10:59:15.38 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 10:59:43.946 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 10:59:43.962 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:59:43.971 - DEBUG : Array of CardBean objects provided.
+2017:07:31 10:59:45.929 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 10:59:46.32 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 10:59:47.128 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 10:59:47.247 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 10:59:48.336 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 10:59:48.456 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 11:00:45.579 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:00:45.594 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:00:45.603 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:00:47.875 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:00:47.963 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:02:15.671 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:02:15.688 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:02:15.698 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:02:17.688 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:02:17.759 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:02:36.525 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:02:36.541 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:02:36.552 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:02:39.161 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:02:39.240 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:02:48.464 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:02:48.600 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:02:49.120 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 11:02:49.248 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 11:02:55.472 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:02:55.599 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:02:55.840 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 11:02:55.935 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 11:04:15.200 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:04:15.216 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:04:15.226 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:04:16.557 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 11:04:16.659 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 11:04:17.339 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:04:17.427 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:04:17.692 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:04:17.764 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:04:18.68 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:04:18.156 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:10:15.100 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:10:15.115 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:10:15.126 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:10:16.564 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 11:10:16.659 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 11:10:16.915 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:10:17.03 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:10:17.315 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:10:17.419 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:10:18.35 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:10:18.130 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:10:18.411 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:10:18.530 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:10:50.369 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:10:50.385 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:10:50.395 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:10:51.320 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 11:10:51.415 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 11:12:34.455 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:12:34.472 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:12:34.482 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:12:35.490 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 11:12:35.594 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 11:12:35.897 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:12:35.985 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:12:36.225 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 11:12:36.328 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 11:13:23.725 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:13:23.741 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:13:23.751 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:13:24.919 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:13:25.15 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:13:25.518 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:13:25.606 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:13:25.950 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 11:13:26.62 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 11:13:26.358 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 11:13:26.422 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 11:13:31.46 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:13:31.157 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:16:33.264 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:16:33.280 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:16:33.290 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:17:39.474 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:17:39.490 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:17:39.500 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:19:25.217 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:19:25.233 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:19:25.243 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:19:26.699 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:19:26.810 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:19:28.538 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:19:28.642 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:19:29.169 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 11:19:29.289 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 11:19:29.834 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:19:29.961 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:20:28.918 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:20:28.933 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:20:28.944 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:20:31.351 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 11:20:31.446 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 11:20:34.670 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:20:34.790 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:21:21.161 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:21:21.176 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:21:21.186 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:21:55.694 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:21:55.709 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:21:55.720 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:22:12.384 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:22:12.399 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:22:12.409 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:22:14.330 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:22:14.448 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:22:15.642 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 11:22:15.728 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 11:23:28.585 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:23:28.602 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:23:28.612 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:23:29.498 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:23:29.602 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:23:30.305 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:23:30.393 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:23:30.893 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 11:23:30.984 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 11:23:31.649 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 11:23:31.729 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 11:23:33.201 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 11:23:33.304 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 11:26:21.443 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:26:21.459 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:26:21.470 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:26:22.595 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:26:22.673 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 11:26:23.425 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 11:26:23.521 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 11:26:23.858 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:26:23.946 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 11:26:24.178 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:26:24.259 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:26:24.451 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 11:26:24.538 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 11:26:24.738 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 11:26:24.834 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 11:26:25.202 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:26:25.290 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:26:25.498 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 11:26:25.578 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 11:26:25.770 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:26:25.866 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:26:26.434 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 11:26:26.506 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 11:26:27.170 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 11:26:27.250 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 11:26:31.227 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:26:31.298 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:26:31.539 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 11:26:31.619 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 11:26:32.339 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 11:26:32.435 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 11:26:32.595 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 11:26:32.674 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 11:27:43.833 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:27:43.849 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:27:43.859 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:27:47.238 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:27:47.315 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:27:48.164 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 11:27:48.251 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 11:27:49.787 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 11:27:50.564 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 11:27:50.884 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:27:50.964 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:27:51.228 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:27:51.300 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:27:51.884 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:27:51.962 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:27:52.132 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 11:27:52.220 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 11:27:52.524 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 11:27:52.643 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 11:27:53.460 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:27:53.555 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:28:16.205 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:28:16.221 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:28:16.231 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:28:17.278 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:28:17.373 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 11:28:22.78 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 11:28:22.157 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 11:28:22.638 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:28:22.717 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 11:28:23.38 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 11:28:23.142 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 11:29:01.89 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 11:29:01.107 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:29:01.113 - DEBUG : Array of CardBean objects provided.
+2017:07:31 11:29:02.624 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:29:02.719 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 11:29:03.255 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 11:29:03.351 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 12:42:34.485 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 12:42:34.504 - DEBUG : Array of CardBean objects provided.
+2017:07:31 12:42:34.522 - DEBUG : Array of CardBean objects provided.
+2017:07:31 12:42:36.397 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 12:42:36.490 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 12:42:45.602 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 12:42:45.705 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 12:43:43.223 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 12:43:43.238 - DEBUG : Array of CardBean objects provided.
+2017:07:31 12:43:43.249 - DEBUG : Array of CardBean objects provided.
+2017:07:31 12:43:58.291 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 12:43:58.308 - DEBUG : Array of CardBean objects provided.
+2017:07:31 12:43:58.317 - DEBUG : Array of CardBean objects provided.
+2017:07:31 12:43:59.886 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 12:43:59.981 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 12:44:00.694 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 12:44:00.749 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 12:44:01.126 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 12:44:01.173 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 12:44:01.590 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 12:44:01.661 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 12:54:25.196 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 12:54:25.212 - DEBUG : Array of CardBean objects provided.
+2017:07:31 12:54:25.222 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:18:40.773 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 13:18:40.788 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:18:40.798 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:18:46.73 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 13:18:46.151 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 13:18:50.232 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 13:18:50.327 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 13:18:53.423 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 13:18:53.534 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 13:18:54.568 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 13:18:54.695 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 13:18:56.439 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 13:18:56.567 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 13:18:57.703 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 13:18:57.831 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 13:34:24.378 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 13:34:24.395 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:34:24.405 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:34:25.684 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 13:34:25.755 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 13:34:32.115 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 13:34:32.202 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 13:34:37.402 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 13:34:37.506 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 13:34:38.282 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 13:34:38.370 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 13:34:38.754 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 13:34:38.850 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 13:34:39.978 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 13:34:40.82 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 13:34:40.818 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 13:34:40.906 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 13:34:41.690 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 13:34:41.786 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 13:34:42.202 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 13:34:42.289 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 13:34:51.786 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 13:34:51.889 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 13:35:14.800 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 13:35:14.880 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 13:36:11.199 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 13:36:11.216 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:36:11.226 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:36:12.998 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 13:36:13.85 - DEBUG : Try to get CardBean with ID=2.
+2017:07:31 13:36:38.624 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 13:36:38.640 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:36:38.650 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:36:39.430 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 13:36:39.523 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 13:36:43.995 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 13:36:44.91 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 13:37:13.116 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 13:37:13.132 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:37:13.141 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:37:14.161 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 13:37:14.226 - DEBUG : Try to get CardBean with ID=9.
+2017:07:31 13:37:20.449 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 13:37:20.537 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 13:37:21.305 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 13:37:21.410 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 13:37:21.681 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 13:37:21.776 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 13:37:22.281 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 13:37:22.376 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 13:37:23.753 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 13:37:23.856 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 13:37:24.225 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 13:37:24.321 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 13:37:41.395 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 13:37:41.411 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:37:41.421 - DEBUG : Array of CardBean objects provided.
+2017:07:31 13:37:42.610 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 13:37:42.671 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 13:37:44.472 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 13:37:44.559 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 13:37:51.759 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 13:37:51.863 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 13:37:53.680 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 13:37:53.759 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 13:37:54.39 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 13:37:54.87 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 13:37:55.407 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 13:37:55.479 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 13:37:55.775 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 13:37:55.855 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 13:37:56.928 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 13:37:57.23 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 13:37:57.343 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 13:37:57.422 - DEBUG : Try to get CardBean with ID=8.
+2017:07:31 15:03:04.389 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 15:03:04.412 - DEBUG : Array of CardBean objects provided.
+2017:07:31 15:03:04.424 - DEBUG : Array of CardBean objects provided.
+2017:07:31 15:03:05.672 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 15:03:05.752 - DEBUG : Try to get CardBean with ID=11.
+2017:07:31 15:03:06.496 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 15:03:06.608 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 15:03:06.984 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 15:03:07.72 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 15:03:07.296 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 15:03:07.375 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 15:03:07.776 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 15:03:07.864 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 15:04:10.161 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:07:31 15:04:10.183 - DEBUG : Array of CardBean objects provided.
+2017:07:31 15:04:10.196 - DEBUG : Array of CardBean objects provided.
+2017:07:31 15:04:11.773 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 15:04:11.868 - DEBUG : Try to get CardBean with ID=7.
+2017:07:31 15:04:12.812 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 15:04:12.924 - DEBUG : Try to get CardBean with ID=5.
+2017:07:31 15:04:13.388 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 15:04:13.492 - DEBUG : Try to get CardBean with ID=4.
+2017:07:31 15:04:13.908 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 15:04:14.28 - DEBUG : Try to get CardBean with ID=3.
+2017:07:31 15:04:14.492 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 15:04:14.588 - DEBUG : Try to get CardBean with ID=1.
+2017:07:31 15:04:15.132 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 15:04:15.228 - DEBUG : Try to get CardBean with ID=6.
+2017:07:31 15:04:15.412 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 15:04:15.484 - DEBUG : Try to get CardBean with ID=10.
+2017:07:31 15:04:15.700 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 15:04:15.804 - DEBUG : Try to get CardBean with ID=12.
+2017:07:31 15:04:16.196 - DEBUG : Try to get CardBean with ID=13.
+2017:07:31 15:04:16.308 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:27:51.809 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:27:51.869 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:27:51.901 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:27:53.313 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:27:53.431 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:27:54.184 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:27:54.280 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:27:54.712 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:27:54.815 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:28:58.494 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:28:58.510 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:28:58.519 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:29:03.699 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:29:03.811 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:29:04.643 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:29:04.762 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:29:05.499 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:29:05.619 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:29:05.955 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:29:06.27 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:29:06.339 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 09:29:06.450 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 09:29:07.259 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:29:07.403 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:29:07.987 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:29:08.122 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:29:14.139 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:29:14.251 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:29:14.483 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:29:14.595 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:29:14.835 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:29:14.963 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:29:18.355 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:29:18.443 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:32:20.524 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:32:20.540 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:32:20.549 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:32:22.420 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:32:22.531 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:32:24.820 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:32:24.947 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:32:25.708 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:32:25.843 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:32:26.460 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:32:26.571 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:32:29.756 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:32:29.915 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:32:32.467 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:32:32.595 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:32:32.971 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 09:32:33.83 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 09:32:33.315 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:32:33.443 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:32:50.824 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:32:50.839 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:32:50.849 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:33:09.474 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:33:09.491 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:33:09.501 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:33:10.382 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:33:10.485 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:33:10.909 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:33:10.972 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:33:11.293 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:33:11.357 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:33:11.573 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:33:11.668 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:33:11.821 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:33:11.924 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:33:24.339 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:33:24.355 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:33:24.366 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:33:25.360 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:33:25.454 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:33:25.870 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:33:25.974 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:33:26.286 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:33:26.399 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:33:26.711 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:33:26.783 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:33:27.22 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 09:33:27.94 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 09:33:27.230 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:33:27.318 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:33:27.670 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:33:27.750 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:33:27.886 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 09:33:27.949 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 09:33:28.158 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 09:33:28.253 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 09:33:28.478 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:33:28.581 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:33:28.806 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:33:28.918 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:33:29.638 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:33:29.725 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:35:47.51 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:35:47.67 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:35:47.77 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:35:49.94 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:35:49.195 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:35:49.940 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:35:50.36 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:35:50.260 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 09:35:50.340 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 09:35:50.540 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:35:50.612 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:36:11.488 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:36:11.505 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:36:11.515 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:36:14.95 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:36:14.181 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:36:14.654 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 09:36:14.702 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:36:14.726 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:36:15.38 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:36:15.125 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:36:15.710 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 09:36:15.781 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 09:36:16.14 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:36:16.109 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:36:16.830 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:36:16.957 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:36:39.343 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:36:39.359 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:36:39.370 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:36:40.432 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:36:40.534 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:36:41.53 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:36:41.134 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:36:41.342 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:36:41.430 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:36:41.726 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 09:36:41.782 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 09:36:41.951 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:36:42.38 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:36:42.40 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:36:43.174 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:36:43.270 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:36:43.535 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 09:36:43.621 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 09:36:43.918 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:36:43.981 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:36:44.335 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:36:44.422 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:37:15.285 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:37:15.301 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:37:15.311 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:37:20.89 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 09:37:20.199 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 09:37:20.976 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:37:21.96 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:37:21.504 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:37:21.592 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:37:21.936 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:37:22.31 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:37:22.888 - DEBUG : Try to get CardBean with ID=7.
+2017:08:01 09:37:22.975 - DEBUG : Try to get CardBean with ID=7.
+2017:08:01 09:37:23.160 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:37:23.255 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 09:37:23.864 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:37:23.936 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:39:20.763 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:01 09:39:20.814 - DEBUG : Array of EditionBean objects provided.
+2017:08:01 09:39:20.816 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:39:20.825 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:01 09:39:20.830 - INFO : CardBean added to CardBeanContainer: ID: 14, Name: The Tabernacle at Pendrell Vale, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: The Tabernacle at Pendrell Vale, Amount: 22, Note: null, Foil: true, Signed: false, Altered: false.
+2017:08:01 09:39:20.933 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:39:20.943 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:39:24.496 - DEBUG : Try to get CardBean with ID=14.
+2017:08:01 09:39:24.598 - DEBUG : Try to get CardBean with ID=14.
+2017:08:01 09:39:44.218 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:01 09:39:44.266 - DEBUG : Array of EditionBean objects provided.
+2017:08:01 09:39:44.268 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:39:44.283 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:01 09:39:44.286 - INFO : CardBean added to CardBeanContainer: ID: 15, Name: The Tabernacle at Pendrell Vale, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: The Tabernacle at Pendrell Vale, Amount: 22, Note: null, Foil: true, Signed: false, Altered: false.
+2017:08:01 09:39:44.389 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:39:44.398 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:40:51.580 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:40:51.601 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:40:51.611 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:41:25.496 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:41:25.516 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:41:25.526 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:41:29.204 - DEBUG : Try to get CardBean with ID=7.
+2017:08:01 09:41:29.324 - DEBUG : Try to get CardBean with ID=7.
+2017:08:01 09:41:30.115 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:41:30.227 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:41:30.794 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 09:41:30.922 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 09:41:34.676 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:41:34.787 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:41:35.422 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:41:35.507 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:41:52.213 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:41:52.233 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:41:52.243 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:42:36.68 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:42:36.87 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:42:36.97 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:43:05.608 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:43:05.695 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 09:43:06.207 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 09:43:06.287 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 09:43:28.560 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:43:28.580 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:43:28.589 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:43:53.387 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:43:53.408 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:43:53.419 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:44:00.394 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:44:00.529 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:44:27.443 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:44:27.463 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:44:27.473 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:50:27.918 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:50:27.938 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:50:27.947 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:50:29.303 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:50:29.398 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:53:15.66 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:53:15.86 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:53:15.97 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:53:24.845 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 09:53:24.947 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 09:53:25.844 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 09:53:25.899 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 09:53:26.147 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:53:26.227 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:53:27.19 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 09:53:27.99 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 09:53:27.220 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:53:27.307 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:53:27.532 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 09:53:27.651 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 09:56:10.157 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 09:56:10.178 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:56:10.188 - DEBUG : Array of CardBean objects provided.
+2017:08:01 09:56:13.523 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:56:13.617 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 09:56:14.138 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:56:14.258 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 09:56:14.635 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 09:56:14.714 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 09:56:14.930 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 09:56:15.33 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 09:56:15.986 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:56:16.81 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:56:16.322 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:56:16.417 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 09:56:16.666 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:56:16.769 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 09:56:17.66 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:56:17.177 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 09:56:17.530 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:56:17.625 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 09:56:17.874 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 09:56:17.970 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 09:56:18.146 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:56:18.241 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 09:56:19.402 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 09:56:19.545 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 09:56:21.194 - DEBUG : Try to get CardBean with ID=14.
+2017:08:01 09:56:21.329 - DEBUG : Try to get CardBean with ID=14.
+2017:08:01 10:06:42.87 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 10:06:42.114 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:06:42.134 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:06:44.383 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 10:06:44.477 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 10:36:36.961 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 10:36:36.981 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:36:36.999 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:36:38.474 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 10:36:38.575 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 10:36:39.535 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 10:36:39.639 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 10:36:40.95 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 10:36:40.198 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 10:36:44.720 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 10:36:44.808 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 10:36:45.208 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 10:36:45.303 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 10:37:39.225 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:01 10:37:39.274 - DEBUG : Array of EditionBean objects provided.
+2017:08:01 10:37:39.276 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 10:37:39.287 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:01 10:37:39.290 - INFO : CardBean added to CardBeanContainer: ID: 16, Name: Serra Angel, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Serra Angel, Amount: 22, Note: test, Foil: false, Signed: false, Altered: false.
+2017:08:01 10:37:39.394 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:37:39.404 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:37:41.747 - DEBUG : Try to get CardBean with ID=14.
+2017:08:01 10:37:41.857 - DEBUG : Try to get CardBean with ID=14.
+2017:08:01 10:37:42.770 - DEBUG : Try to get CardBean with ID=16.
+2017:08:01 10:37:42.873 - DEBUG : Try to get CardBean with ID=16.
+2017:08:01 10:37:55.491 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 10:37:55.611 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 10:37:58.898 - DEBUG : Try to get CardBean with ID=16.
+2017:08:01 10:37:58.994 - DEBUG : Try to get CardBean with ID=16.
+2017:08:01 10:38:01.401 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 10:38:01.513 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 10:38:01.961 - DEBUG : Try to get CardBean with ID=7.
+2017:08:01 10:38:02.57 - DEBUG : Try to get CardBean with ID=7.
+2017:08:01 10:38:07.947 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 10:38:07.965 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 10:38:08.75 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 10:38:08.411 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 10:38:08.507 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 10:38:09.66 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 10:38:09.186 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 10:38:17.12 - DEBUG : Try to get CardBean with ID=16.
+2017:08:01 10:38:17.115 - DEBUG : Try to get CardBean with ID=16.
+2017:08:01 10:38:53.458 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:01 10:38:53.503 - DEBUG : Array of EditionBean objects provided.
+2017:08:01 10:38:53.506 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 10:38:53.522 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:01 10:38:53.525 - INFO : CardBean added to CardBeanContainer: ID: 17, Name: Serra Angel, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Serra Angel, Amount: 22, Note: test, Foil: false, Signed: false, Altered: false.
+2017:08:01 10:38:53.631 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:38:53.640 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:39:11.87 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:01 10:39:11.133 - DEBUG : Array of EditionBean objects provided.
+2017:08:01 10:39:11.135 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 10:39:11.151 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:01 10:39:11.154 - INFO : CardBean added to CardBeanContainer: ID: 18, Name: Serra Angel, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Serra Angel, Amount: 22, Note: test, Foil: false, Signed: false, Altered: false.
+2017:08:01 10:39:11.272 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:39:11.282 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:39:12.455 - DEBUG : Try to get CardBean with ID=7.
+2017:08:01 10:39:12.542 - DEBUG : Try to get CardBean with ID=7.
+2017:08:01 10:39:13.367 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 10:39:13.470 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 10:39:14.686 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 10:39:14.766 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 10:39:16.366 - DEBUG : Try to get CardBean with ID=14.
+2017:08:01 10:39:16.478 - DEBUG : Try to get CardBean with ID=14.
+2017:08:01 10:39:42.371 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:01 10:39:42.417 - DEBUG : Array of EditionBean objects provided.
+2017:08:01 10:39:42.419 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 10:39:42.436 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:01 10:39:42.440 - INFO : CardBean added to CardBeanContainer: ID: 19, Name: Serra Angel, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Serra Angel, Amount: 22, Note: test, Foil: false, Signed: false, Altered: false.
+2017:08:01 10:39:42.547 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:39:42.557 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:40:12.224 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:01 10:40:12.271 - DEBUG : Array of EditionBean objects provided.
+2017:08:01 10:40:12.273 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 10:40:12.290 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:01 10:40:12.293 - INFO : CardBean added to CardBeanContainer: ID: 20, Name: Serra Angel, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Serra Angel, Amount: 22, Note: test, Foil: false, Signed: false, Altered: false.
+2017:08:01 10:40:12.403 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:40:12.413 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:40:14.82 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 10:40:14.176 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 10:40:20.601 - DEBUG : Try to get CardBean with ID=19.
+2017:08:01 10:40:20.703 - DEBUG : Try to get CardBean with ID=19.
+2017:08:01 10:40:21.49 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 10:40:21.120 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 10:40:21.353 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 10:40:21.448 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 10:40:21.745 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 10:40:21.848 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 10:40:22.473 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 10:40:22.537 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 10:40:22.746 - DEBUG : Try to get CardBean with ID=17.
+2017:08:01 10:40:22.817 - DEBUG : Try to get CardBean with ID=17.
+2017:08:01 10:40:32.449 - DEBUG : Try to get CardBean with ID=20.
+2017:08:01 10:40:32.554 - DEBUG : Try to get CardBean with ID=20.
+2017:08:01 10:41:18.688 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:01 10:41:18.735 - DEBUG : Array of EditionBean objects provided.
+2017:08:01 10:41:18.738 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 10:41:18.756 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:01 10:41:18.759 - INFO : CardBean added to CardBeanContainer: ID: 21, Name: Serra Angel, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Serra Angel, Amount: 22, Note: test, Foil: false, Signed: false, Altered: false.
+2017:08:01 10:41:18.878 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:41:18.888 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:41:20.228 - DEBUG : Try to get CardBean with ID=7.
+2017:08:01 10:41:20.308 - DEBUG : Try to get CardBean with ID=7.
+2017:08:01 10:41:28.101 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 10:41:28.187 - DEBUG : Try to get CardBean with ID=13.
+2017:08:01 10:41:28.388 - DEBUG : Try to get CardBean with ID=18.
+2017:08:01 10:41:28.476 - DEBUG : Try to get CardBean with ID=18.
+2017:08:01 10:50:14.120 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:01 10:50:14.192 - DEBUG : Array of EditionBean objects provided.
+2017:08:01 10:50:14.197 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 10:50:14.212 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:01 10:50:14.218 - INFO : CardBean added to CardBeanContainer: ID: 22, Name: Serra Angel, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Serra Angel, Amount: 22, Note: test, Foil: false, Signed: false, Altered: false.
+2017:08:01 10:50:14.446 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:50:14.467 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:51:16.53 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:01 10:51:16.101 - DEBUG : Array of EditionBean objects provided.
+2017:08:01 10:51:16.103 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 10:51:16.123 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:01 10:51:16.128 - INFO : CardBean added to CardBeanContainer: ID: 23, Name: Serra Angel, Edition: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400, Language: English, Condition: Serra Angel, Amount: 22, Note: test, Foil: false, Signed: false, Altered: false.
+2017:08:01 10:51:16.240 - DEBUG : Array of CardBean objects provided.
+2017:08:01 10:51:16.251 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:09:59.598 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:09:59.625 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:09:59.642 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:10:57.627 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:10:57.645 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:10:57.656 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:10:58.968 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 11:10:59.57 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 11:11:04.518 - DEBUG : Try to get CardBean with ID=22.
+2017:08:01 11:11:04.629 - DEBUG : Try to get CardBean with ID=22.
+2017:08:01 11:11:15.29 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 11:11:15.150 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 11:11:16.846 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:11:16.982 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:11:17.726 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 11:11:17.845 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 11:14:17.975 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:14:17.994 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:14:18.04 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:14:20.278 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 11:14:20.341 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 11:14:21.350 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:14:21.453 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:14:26.95 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 11:14:26.205 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 11:16:11.237 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:16:11.256 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:16:11.266 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:16:12.733 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:16:12.814 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:16:14.281 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\3+LimitedEditionAlpha+MoxPearl+IMG_FRONT.png.
+2017:08:01 11:16:14.357 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\3+LimitedEditionAlpha+MoxPearl+IMG_FRONT.png.
+2017:08:01 11:16:18.499 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 11:16:18.578 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 11:16:20.315 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png.
+2017:08:01 11:16:20.350 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png.
+2017:08:01 11:16:28.484 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:01 11:16:28.516 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:01 11:16:28.542 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:01 11:16:28.555 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:01 11:16:33.427 - DEBUG : Try to get CardBean with ID=17.
+2017:08:01 11:16:33.499 - DEBUG : Try to get CardBean with ID=17.
+2017:08:01 11:16:34.804 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 11:16:34.899 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 11:16:35.708 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 11:16:35.804 - DEBUG : Try to get CardBean with ID=9.
+2017:08:01 11:16:36.100 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 11:16:36.196 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 11:16:36.372 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:16:36.467 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:16:36.964 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\3+LimitedEditionAlpha+MoxPearl+IMG_FRONT.png.
+2017:08:01 11:16:36.986 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\3+LimitedEditionAlpha+MoxPearl+IMG_FRONT.png.
+2017:08:01 11:22:08.189 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:22:08.207 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:22:08.217 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:22:09.194 - DEBUG : Try to get CardBean with ID=14.
+2017:08:01 11:22:09.300 - DEBUG : Try to get CardBean with ID=14.
+2017:08:01 11:23:07.962 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:23:07.980 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:23:07.990 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:23:09.93 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 11:23:09.861 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 11:23:10.340 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 11:23:10.748 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 11:23:11.292 - DEBUG : Try to get CardBean with ID=14.
+2017:08:01 11:23:11.612 - DEBUG : Try to get CardBean with ID=19.
+2017:08:01 11:23:20.970 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:23:20.988 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:23:20.998 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:23:21.670 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 11:23:22.661 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 11:23:23.14 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 11:23:24.614 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 11:23:25.54 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 11:23:58.798 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:23:58.816 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:23:58.826 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:23:59.465 - DEBUG : Try to get CardBean with ID=10.
+2017:08:01 11:24:00.375 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:24:00.776 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 11:24:01.71 - DEBUG : Try to get CardBean with ID=19.
+2017:08:01 11:27:02.427 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:01 11:27:02.440 - DEBUG : Array of EditionBean objects provided.
+2017:08:01 11:27:02.669 - DEBUG : Card maintenance dialog opened.
+2017:08:01 11:27:02.673 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:27:02.685 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 11:27:02.719 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:01 11:27:06.719 - DEBUG : Front image textfield clicked.
+2017:08:01 11:27:06.720 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:01 11:27:12.185 - DEBUG : Card maintenance dialog closed.
+2017:08:01 11:28:58.163 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:28:58.184 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:28:58.195 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:28:59.888 - DEBUG : Try to get CardBean with ID=6.
+2017:08:01 11:29:00.654 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:29:02.172 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\3+LimitedEditionAlpha+MoxPearl+IMG_FRONT.png.
+2017:08:01 11:29:06.638 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 11:29:10.773 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 11:29:13.470 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:01 11:29:13.498 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:01 11:29:13.518 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:01 11:29:13.629 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:01 11:29:13.637 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:01 11:29:13.646 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:01 11:29:16.642 - DEBUG : Try to get CardBean with ID=8.
+2017:08:01 11:29:30.888 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:29:30.905 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:29:30.915 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:29:33.549 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 11:29:34.824 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:01 11:29:38.925 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png.
+2017:08:01 11:29:43.668 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 11:29:44.740 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:01 11:29:44.769 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:01 11:29:53.844 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 11:29:57.284 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:01 11:29:57.323 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:01 11:29:57.338 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:01 11:36:06.449 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:36:06.467 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:36:06.477 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:36:07.471 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 11:36:09.142 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 11:36:10.109 - DEBUG : Try to get CardBean with ID=1.
+2017:08:01 11:36:11.27 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:01 11:36:18.734 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:01 11:36:18.886 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:01 11:36:19.46 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:01 11:36:22.966 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:01 11:36:24.526 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:01 11:36:25.949 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 11:36:28.693 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:36:29.461 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\3+LimitedEditionAlpha+MoxPearl+IMG_FRONT.png.
+2017:08:01 11:36:31.133 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 11:36:31.885 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png.
+2017:08:01 11:36:33.389 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:01 11:39:56.598 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:39:56.616 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:39:56.626 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:39:57.850 - DEBUG : Try to get CardBean with ID=12.
+2017:08:01 11:39:59.817 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 11:40:00.433 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 11:40:02.63 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:01 11:40:35.640 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:40:35.658 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:40:35.668 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:40:36.824 - DEBUG : Try to get CardBean with ID=5.
+2017:08:01 11:40:38.775 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:42:21.687 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 11:42:21.705 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:42:21.715 - DEBUG : Array of CardBean objects provided.
+2017:08:01 11:42:22.346 - DEBUG : Try to get CardBean with ID=15.
+2017:08:01 11:42:24.137 - DEBUG : Try to get CardBean with ID=3.
+2017:08:01 11:42:25.94 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\3+LimitedEditionAlpha+MoxPearl+IMG_FRONT.png.
+2017:08:01 11:42:33.945 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\3+LimitedEditionAlpha+MoxPearl+IMG_FRONT.png.
+2017:08:01 11:42:36.896 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 11:42:38.904 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png.
+2017:08:01 14:27:49.961 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 14:27:49.982 - DEBUG : Array of CardBean objects provided.
+2017:08:01 14:27:49.999 - DEBUG : Array of CardBean objects provided.
+2017:08:01 14:27:51.359 - DEBUG : Try to get CardBean with ID=20.
+2017:08:01 14:27:52.901 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 14:27:54.20 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:01 14:30:00.233 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 14:30:00.261 - DEBUG : Array of CardBean objects provided.
+2017:08:01 14:30:00.282 - DEBUG : Array of CardBean objects provided.
+2017:08:01 14:30:24.815 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 14:32:37.832 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 14:32:37.849 - DEBUG : Array of CardBean objects provided.
+2017:08:01 14:32:37.859 - DEBUG : Array of CardBean objects provided.
+2017:08:01 14:32:48.427 - DEBUG : Try to get CardBean with ID=2.
+2017:08:01 15:01:45.376 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:01 15:01:45.393 - DEBUG : Array of CardBean objects provided.
+2017:08:01 15:01:45.404 - DEBUG : Array of CardBean objects provided.
+2017:08:01 15:01:46.117 - DEBUG : Try to get CardBean with ID=11.
+2017:08:01 15:01:47.764 - DEBUG : Try to get CardBean with ID=4.
+2017:08:01 15:01:48.788 - DEBUG : Try to get CardBean with ID=3.
+2017:08:02 08:51:45.17 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 08:51:45.42 - DEBUG : Array of CardBean objects provided.
+2017:08:02 08:51:45.109 - DEBUG : Array of CardBean objects provided.
+2017:08:02 08:51:46.156 - DEBUG : Try to get CardBean with ID=14.
+2017:08:02 08:51:46.905 - DEBUG : Try to get CardBean with ID=7.
+2017:08:02 08:51:47.329 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 08:51:48.244 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:02 08:52:03.495 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 08:52:03.513 - DEBUG : Array of CardBean objects provided.
+2017:08:02 08:52:03.544 - DEBUG : Array of CardBean objects provided.
+2017:08:02 08:52:04.768 - DEBUG : Try to get CardBean with ID=6.
+2017:08:02 08:52:05.280 - DEBUG : Try to get CardBean with ID=3.
+2017:08:02 08:52:05.758 - DEBUG : Try to get CardBean with ID=2.
+2017:08:02 08:52:50.297 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 08:52:50.315 - DEBUG : Array of CardBean objects provided.
+2017:08:02 08:52:50.346 - DEBUG : Array of CardBean objects provided.
+2017:08:02 08:57:22.731 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 08:57:22.773 - DEBUG : Array of CardBean objects provided.
+2017:08:02 08:57:22.815 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:00:02.862 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 09:00:02.879 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:00:02.910 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:00:06.183 - DEBUG : Try to get CardBean with ID=5.
+2017:08:02 09:15:12.106 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 09:15:12.124 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:15:12.154 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:15:13.369 - DEBUG : Try to get CardBean with ID=7.
+2017:08:02 09:15:14.432 - DEBUG : Try to get CardBean with ID=3.
+2017:08:02 09:15:29.144 - DEBUG : Try to get CardBean with ID=9.
+2017:08:02 09:15:38.920 - DEBUG : Try to get CardBean with ID=18.
+2017:08:02 09:15:39.865 - DEBUG : Try to get CardBean with ID=11.
+2017:08:02 09:15:40.504 - DEBUG : Try to get CardBean with ID=21.
+2017:08:02 09:15:40.880 - DEBUG : Try to get CardBean with ID=10.
+2017:08:02 09:15:42.56 - DEBUG : Try to get CardBean with ID=2.
+2017:08:02 09:28:29.612 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 09:28:29.630 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:28:29.660 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:28:32.237 - DEBUG : Try to get CardBean with ID=5.
+2017:08:02 09:28:35.480 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:02 09:28:35.488 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:28:35.814 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:28:35.815 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 09:28:35.827 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 09:28:43.29 - DEBUG : Card maintenance dialog closed.
+2017:08:02 09:28:44.486 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:28:44.532 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:28:44.533 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 09:28:44.534 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 09:28:45.989 - DEBUG : Card maintenance dialog closed.
+2017:08:02 09:28:46.499 - DEBUG : Try to get CardBean with ID=3.
+2017:08:02 09:28:47.747 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:28:47.786 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:28:47.788 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 09:28:47.790 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 09:28:54.160 - DEBUG : Card maintenance dialog closed.
+2017:08:02 09:28:55.616 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:28:55.642 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:28:56.831 - DEBUG : Card maintenance dialog closed.
+2017:08:02 09:29:08.115 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:29:08.143 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:29:08.144 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 09:29:08.146 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 09:29:11.831 - DEBUG : Card maintenance dialog closed.
+2017:08:02 09:30:01.98 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 09:30:01.116 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:30:01.145 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:30:02.33 - DEBUG : Try to get CardBean with ID=7.
+2017:08:02 09:30:06.448 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:02 09:30:06.452 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:30:06.621 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:30:06.621 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 09:30:06.625 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 09:30:12.360 - DEBUG : Back image textfield clicked.
+2017:08:02 09:30:12.364 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:02 09:30:14.681 - DEBUG : Front image textfield clicked.
+2017:08:02 09:30:14.683 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:02 09:30:16.333 - DEBUG : Card maintenance dialog closed.
+2017:08:02 09:32:53.10 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 09:32:53.27 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:32:53.57 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:32:53.874 - DEBUG : Try to get CardBean with ID=5.
+2017:08:02 09:32:56.102 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:02 09:32:56.106 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:32:56.280 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:32:56.280 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 09:32:56.289 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 09:33:07.227 - DEBUG : Card maintenance dialog closed.
+2017:08:02 09:33:07.770 - DEBUG : Try to get CardBean with ID=13.
+2017:08:02 09:33:09.938 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:33:09.971 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:33:09.971 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 09:33:09.973 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 09:33:13.124 - DEBUG : Card maintenance dialog closed.
+2017:08:02 09:34:18.142 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 09:34:18.159 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:34:18.188 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:34:19.868 - DEBUG : Try to get CardBean with ID=9.
+2017:08:02 09:34:22.34 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:02 09:34:22.41 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:34:22.216 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:34:22.216 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 09:34:22.223 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 09:34:23.616 - DEBUG : Card maintenance dialog closed.
+2017:08:02 09:34:24.213 - DEBUG : Try to get CardBean with ID=6.
+2017:08:02 09:34:25.587 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:34:25.612 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:34:25.612 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 09:34:25.615 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 09:34:27.66 - DEBUG : Card maintenance dialog closed.
+2017:08:02 09:35:16.761 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 09:35:16.778 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:35:16.809 - DEBUG : Array of CardBean objects provided.
+2017:08:02 09:35:17.991 - DEBUG : Try to get CardBean with ID=8.
+2017:08:02 09:35:19.838 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:02 09:35:19.842 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:35:20.13 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:35:20.13 - DEBUG : Try to get CardBean with ID=8.
+2017:08:02 09:35:20.16 - DEBUG : Card bean with ID=8 loaded for maintenance.
+2017:08:02 09:35:25.283 - DEBUG : Card maintenance dialog closed.
+2017:08:02 09:35:26.08 - DEBUG : Try to get CardBean with ID=18.
+2017:08:02 09:35:26.992 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 09:35:27.18 - DEBUG : Card maintenance dialog opened.
+2017:08:02 09:35:27.19 - DEBUG : Try to get CardBean with ID=18.
+2017:08:02 09:35:27.20 - DEBUG : Card bean with ID=18 loaded for maintenance.
+2017:08:02 09:35:31.473 - DEBUG : Card maintenance dialog closed.
+2017:08:02 13:20:16.21 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:20:16.51 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:20:16.106 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:20:33.57 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:20:33.81 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:20:33.132 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:20:50.973 - DEBUG : Try to get CardBean with ID=10.
+2017:08:02 13:20:53.629 - DEBUG : Try to get CardBean with ID=4.
+2017:08:02 13:20:57.154 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:02 13:20:57.159 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 13:20:57.413 - DEBUG : Card maintenance dialog opened.
+2017:08:02 13:21:01.144 - DEBUG : Card maintenance dialog closed.
+2017:08:02 13:22:18.398 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:22:18.423 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:22:18.468 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:22:22.98 - DEBUG : Try to get CardBean with ID=5.
+2017:08:02 13:27:25.667 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:27:25.692 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:27:25.734 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:27:54.773 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:27:54.799 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:27:54.836 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:28:00.740 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:02 13:28:00.746 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 13:28:00.984 - DEBUG : Card maintenance dialog opened.
+2017:08:02 13:28:02.88 - DEBUG : Card maintenance dialog closed.
+2017:08:02 13:28:03.14 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 13:28:03.29 - DEBUG : Card maintenance dialog opened.
+2017:08:02 13:28:03.29 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 13:28:03.38 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 13:28:05.99 - DEBUG : Card maintenance dialog closed.
+2017:08:02 13:28:37.188 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:28:37.211 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:28:37.250 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:29:50.15 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:29:50.37 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:29:50.75 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:29:57.213 - DEBUG : Try to get CardBean with ID=12.
+2017:08:02 13:29:57.981 - DEBUG : Try to get CardBean with ID=5.
+2017:08:02 13:30:47.303 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 13:30:48.91 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:02 13:35:29.961 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:35:29.982 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:35:30.19 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:35:37.652 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 13:35:38.845 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:02 13:35:40.578 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:02 13:35:40.582 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 13:35:40.805 - DEBUG : Card maintenance dialog opened.
+2017:08:02 13:35:40.805 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 13:35:40.812 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 13:35:41.916 - DEBUG : Button '...' for front image has been pressed.
+2017:08:02 13:36:34.105 - DEBUG : Card maintenance dialog closed.
+2017:08:02 13:37:52.162 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:37:52.185 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:37:52.223 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:37:54.634 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 13:37:55.832 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:02 13:37:55.836 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 13:37:56.78 - DEBUG : Card maintenance dialog opened.
+2017:08:02 13:37:56.78 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 13:37:56.84 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 13:37:58.489 - DEBUG : Button '...' for front image has been pressed.
+2017:08:02 13:38:13.802 - DEBUG : Card maintenance dialog closed.
+2017:08:02 13:39:08.170 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:39:08.192 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:39:08.231 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:39:10.517 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 13:39:11.521 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:02 13:39:11.526 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 13:39:11.772 - DEBUG : Card maintenance dialog opened.
+2017:08:02 13:39:11.772 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 13:39:11.781 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 13:39:14.301 - DEBUG : Button '...' for front image has been pressed.
+2017:08:02 13:39:36.365 - DEBUG : Copy file from C:\Users\A3889613\Desktop\Black-Lotus-Front.JPG to C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.JPG.
+2017:08:02 13:39:36.386 - DEBUG : Notify observers about file upload.
+2017:08:02 13:39:36.386 - DEBUG : New incoming update notification from class com.sebastiandine.cardcollectionmanager.ui.dialogs.card.FileChooserImageUpload.
+2017:08:02 13:39:36.387 - DEBUG : Update card maintenace dialog UI.
+2017:08:02 13:39:39.286 - DEBUG : Front image textfield clicked.
+2017:08:02 13:39:39.287 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.JPG.
+2017:08:02 13:40:00.954 - DEBUG : Card maintenance dialog closed.
+2017:08:02 13:41:02.645 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:41:02.666 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:41:02.702 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:41:04.252 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 13:41:04.974 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:02 13:41:07.668 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:02 13:41:10.447 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:02 13:41:10.450 - DEBUG : Array of EditionBean objects provided.
+2017:08:02 13:41:10.669 - DEBUG : Card maintenance dialog opened.
+2017:08:02 13:41:10.669 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 13:41:10.677 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:02 13:41:11.882 - DEBUG : Button '...' for front image has been pressed.
+2017:08:02 13:41:22.94 - DEBUG : Delete old file at C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.JPG from card bean.
+2017:08:02 13:41:22.100 - DEBUG : Copy file from C:\Users\A3889613\Desktop\Black-Lotus-Front.JPG to C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.JPG.
+2017:08:02 13:41:22.143 - DEBUG : Notify observers about file upload.
+2017:08:02 13:41:22.143 - DEBUG : New incoming update notification from class com.sebastiandine.cardcollectionmanager.ui.dialogs.card.FileChooserImageUpload.
+2017:08:02 13:41:22.143 - DEBUG : Update card maintenace dialog UI.
+2017:08:02 13:41:23.65 - DEBUG : Button 'Save' has been pressed.
+2017:08:02 13:41:23.65 - INFO : New card bean has been stored to the system.
+2017:08:02 13:41:23.70 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:02 13:41:23.78 - DEBUG : Card maintenance dialog closed.
+2017:08:02 13:41:24.601 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.JPG.
+2017:08:02 13:51:57.793 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:02 13:51:57.837 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:51:57.930 - DEBUG : Array of CardBean objects provided.
+2017:08:02 13:51:59.221 - DEBUG : Try to get CardBean with ID=2.
+2017:08:02 13:52:00.23 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:02 13:52:05.876 - DEBUG : Try to get CardBean with ID=1.
+2017:08:02 13:52:07.36 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.JPG.
+2017:08:03 09:28:09.209 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 09:28:09.271 - DEBUG : Array of CardBean objects provided.
+2017:08:03 09:28:09.347 - DEBUG : Array of CardBean objects provided.
+2017:08:03 09:28:11.817 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 09:28:13.811 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.JPG.
+2017:08:03 09:28:31.722 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.JPG.
+2017:08:03 09:28:42.882 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:03 09:29:24.849 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 09:29:24.867 - DEBUG : Array of CardBean objects provided.
+2017:08:03 09:29:24.898 - DEBUG : Array of CardBean objects provided.
+2017:08:03 09:29:24.984 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 09:29:53.863 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 09:29:53.880 - DEBUG : Array of CardBean objects provided.
+2017:08:03 09:29:53.910 - DEBUG : Array of CardBean objects provided.
+2017:08:03 09:29:53.994 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:16:44.486 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 13:16:44.509 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:16:44.585 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:16:44.741 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:16:46.885 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:16:48.967 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:03 13:16:48.975 - DEBUG : Array of EditionBean objects provided.
+2017:08:03 13:16:49.169 - DEBUG : Card maintenance dialog opened.
+2017:08:03 13:16:49.169 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:16:49.180 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:03 13:16:50.916 - DEBUG : Button '...' for front image has been pressed.
+2017:08:03 13:17:15.53 - DEBUG : Delete old file at C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.JPG from card bean.
+2017:08:03 13:17:15.73 - DEBUG : Copy file from C:\xampp\htdocs\apache_pb.png to C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:03 13:17:15.76 - ERROR : Failed to upload image file C:\xampp\htdocs\apache_pb.png.
+2017:08:03 13:17:15.78 - ERROR : data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png
+2017:08:03 13:17:16.221 - DEBUG : Button 'Save' has been pressed.
+2017:08:03 13:17:16.222 - INFO : New card bean has been stored to the system.
+2017:08:03 13:17:16.240 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:03 13:17:16.259 - DEBUG : Card maintenance dialog closed.
+2017:08:03 13:17:19.699 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:03 13:18:15.746 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 13:18:15.769 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:18:15.806 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:18:15.892 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:18:16.809 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:18:18.112 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:03 13:18:18.116 - DEBUG : Array of EditionBean objects provided.
+2017:08:03 13:18:18.345 - DEBUG : Card maintenance dialog opened.
+2017:08:03 13:18:18.345 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:18:18.350 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:03 13:18:24.567 - DEBUG : Back image textfield clicked.
+2017:08:03 13:18:24.571 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:03 13:18:24.572 - ERROR : Failed to display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:03 13:18:24.573 - ERROR : Can't read input file!
+2017:08:03 13:18:35.679 - DEBUG : Card maintenance dialog closed.
+2017:08:03 13:19:09.143 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 13:19:09.167 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:19:09.197 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:19:09.293 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:19:14.409 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:03 13:19:14.413 - DEBUG : Array of EditionBean objects provided.
+2017:08:03 13:19:14.610 - DEBUG : Card maintenance dialog opened.
+2017:08:03 13:19:14.611 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:19:14.618 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:03 13:19:17.601 - DEBUG : Button '...' for back image has been pressed.
+2017:08:03 13:19:30.584 - DEBUG : Delete old file at C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png from card bean.
+2017:08:03 13:19:30.604 - ERROR : Failed to upload image file C:\xampp\htdocs\apache_pb2.png.
+2017:08:03 13:19:30.605 - ERROR : data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png
+2017:08:03 13:19:31.968 - DEBUG : Button 'Save' has been pressed.
+2017:08:03 13:19:31.969 - INFO : New card bean has been stored to the system.
+2017:08:03 13:19:31.990 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:03 13:19:32.07 - DEBUG : Card maintenance dialog closed.
+2017:08:03 13:20:02.167 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 13:20:02.190 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:20:02.219 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:20:02.307 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:20:03.824 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:20:04.909 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:03 13:20:04.912 - DEBUG : Array of EditionBean objects provided.
+2017:08:03 13:20:05.105 - DEBUG : Card maintenance dialog opened.
+2017:08:03 13:20:05.105 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:20:05.112 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:03 13:20:07.574 - DEBUG : Button '...' for back image has been pressed.
+2017:08:03 13:20:33.324 - DEBUG : Delete old file at C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png from card bean.
+2017:08:03 13:20:33.342 - ERROR : Failed to upload image file C:\xampp\htdocs\apache_pb.png.
+2017:08:03 13:20:33.342 - ERROR : data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png
+2017:08:03 13:20:36.357 - DEBUG : Button 'Save' has been pressed.
+2017:08:03 13:20:36.358 - INFO : New card bean has been stored to the system.
+2017:08:03 13:20:36.377 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:03 13:20:36.396 - DEBUG : Card maintenance dialog closed.
+2017:08:03 13:20:38.16 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:03 13:20:38.17 - ERROR : Failed to display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:03 13:20:38.29 - ERROR : Can't read input file!
+2017:08:03 13:20:40.157 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:03 13:20:40.158 - ERROR : Failed to display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:08:03 13:20:40.158 - ERROR : Can't read input file!
+2017:08:03 13:22:05.807 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 13:22:05.830 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:22:05.860 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:22:05.948 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:22:07.832 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:03 13:22:07.835 - DEBUG : Array of EditionBean objects provided.
+2017:08:03 13:22:08.22 - DEBUG : Card maintenance dialog opened.
+2017:08:03 13:22:08.23 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:22:08.30 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:03 13:22:08.927 - DEBUG : Button '...' for front image has been pressed.
+2017:08:03 13:22:25.383 - DEBUG : Delete old file at C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png from card bean.
+2017:08:03 13:22:25.407 - DEBUG : Copy file from C:\xampp\htdocs\apache_pb.png to C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:03 13:22:25.414 - DEBUG : Notify observers about file upload.
+2017:08:03 13:22:25.414 - DEBUG : New incoming update notification from class com.sebastiandine.cardcollectionmanager.ui.dialogs.card.FileChooserImageUpload.
+2017:08:03 13:22:25.415 - DEBUG : Update card maintenace dialog UI.
+2017:08:03 13:22:28.286 - DEBUG : Button 'Save' has been pressed.
+2017:08:03 13:22:28.287 - INFO : New card bean has been stored to the system.
+2017:08:03 13:22:28.309 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:03 13:22:28.323 - DEBUG : Card maintenance dialog closed.
+2017:08:03 13:22:29.872 - DEBUG : Array of EditionBean objects provided.
+2017:08:03 13:22:29.895 - DEBUG : Card maintenance dialog opened.
+2017:08:03 13:22:29.895 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:22:29.897 - DEBUG : Edition selected: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400.
+2017:08:03 13:22:29.898 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:03 13:22:31.32 - DEBUG : Card maintenance dialog closed.
+2017:08:03 13:22:31.815 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:22:32.951 - DEBUG : Array of EditionBean objects provided.
+2017:08:03 13:22:32.980 - DEBUG : Card maintenance dialog opened.
+2017:08:03 13:22:32.981 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:22:32.982 - DEBUG : Edition selected: ID: 1, Name: Limited Edition Alpha, Release: Mon Jul 03 11:04:00 CEST 2017, Card amount:400.
+2017:08:03 13:22:32.982 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:08:03 13:22:34.486 - DEBUG : Button '...' for back image has been pressed.
+2017:08:03 13:22:52.108 - DEBUG : Delete old file at C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png from card bean.
+2017:08:03 13:22:52.111 - ERROR : Failed to upload image file C:\xampp\htdocs\apache_pb2.png.
+2017:08:03 13:22:52.112 - ERROR : data\images\1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png
+2017:08:03 13:22:56.316 - DEBUG : Button 'Save' has been pressed.
+2017:08:03 13:22:56.316 - INFO : New card bean has been stored to the system.
+2017:08:03 13:22:56.323 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:03 13:22:56.334 - DEBUG : Card maintenance dialog closed.
+2017:08:03 13:23:21.199 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 13:23:21.222 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:23:21.251 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:23:21.338 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:23:22.910 - DEBUG : Try to get CardBean with ID=2.
+2017:08:03 13:23:24.900 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:03 13:23:24.903 - DEBUG : Array of EditionBean objects provided.
+2017:08:03 13:23:25.99 - DEBUG : Card maintenance dialog opened.
+2017:08:03 13:23:25.99 - DEBUG : Try to get CardBean with ID=2.
+2017:08:03 13:23:25.106 - DEBUG : Card bean with ID=2 loaded for maintenance.
+2017:08:03 13:23:28.403 - DEBUG : Button '...' for front image has been pressed.
+2017:08:03 13:23:45.673 - DEBUG : Delete old file at C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png from card bean.
+2017:08:03 13:23:45.694 - DEBUG : Copy file from C:\xampp\htdocs\apache_pb.png to C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:03 13:23:45.698 - DEBUG : Notify observers about file upload.
+2017:08:03 13:23:45.699 - DEBUG : New incoming update notification from class com.sebastiandine.cardcollectionmanager.ui.dialogs.card.FileChooserImageUpload.
+2017:08:03 13:23:45.699 - DEBUG : Update card maintenace dialog UI.
+2017:08:03 13:23:47.770 - DEBUG : Button 'Save' has been pressed.
+2017:08:03 13:23:47.771 - INFO : New card bean has been stored to the system.
+2017:08:03 13:23:47.794 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:03 13:23:47.818 - DEBUG : Card maintenance dialog closed.
+2017:08:03 13:24:09.960 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 13:24:09.983 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:24:10.13 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:24:10.129 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:24:11.426 - DEBUG : Try to get CardBean with ID=2.
+2017:08:03 13:24:12.449 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:03 13:24:12.452 - DEBUG : Array of EditionBean objects provided.
+2017:08:03 13:24:12.646 - DEBUG : Card maintenance dialog opened.
+2017:08:03 13:24:12.646 - DEBUG : Try to get CardBean with ID=2.
+2017:08:03 13:24:12.650 - DEBUG : Card bean with ID=2 loaded for maintenance.
+2017:08:03 13:24:13.861 - DEBUG : Card maintenance dialog closed.
+2017:08:03 13:24:14.316 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png.
+2017:08:03 13:24:16.57 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png.
+2017:08:03 13:24:17.883 - DEBUG : Array of EditionBean objects provided.
+2017:08:03 13:24:17.916 - DEBUG : Card maintenance dialog opened.
+2017:08:03 13:24:17.916 - DEBUG : Try to get CardBean with ID=2.
+2017:08:03 13:24:17.920 - DEBUG : Card bean with ID=2 loaded for maintenance.
+2017:08:03 13:24:18.992 - DEBUG : Button '...' for back image has been pressed.
+2017:08:03 13:24:28.634 - DEBUG : Delete old file at C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png from card bean.
+2017:08:03 13:24:28.652 - DEBUG : Copy file from C:\xampp\htdocs\apache_pb2.png to C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png.
+2017:08:03 13:24:28.661 - DEBUG : Notify observers about file upload.
+2017:08:03 13:24:28.661 - DEBUG : New incoming update notification from class com.sebastiandine.cardcollectionmanager.ui.dialogs.card.FileChooserImageUpload.
+2017:08:03 13:24:28.662 - DEBUG : Update card maintenace dialog UI.
+2017:08:03 13:24:29.416 - DEBUG : Button 'Save' has been pressed.
+2017:08:03 13:24:29.416 - INFO : New card bean has been stored to the system.
+2017:08:03 13:24:29.435 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:03 13:24:29.454 - DEBUG : Card maintenance dialog closed.
+2017:08:03 13:24:40.928 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 13:24:40.950 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:24:40.980 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:24:41.66 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:24:42.792 - DEBUG : Try to get CardBean with ID=2.
+2017:08:03 13:24:43.671 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:03 13:24:43.675 - DEBUG : Array of EditionBean objects provided.
+2017:08:03 13:24:43.869 - DEBUG : Card maintenance dialog opened.
+2017:08:03 13:24:43.870 - DEBUG : Try to get CardBean with ID=2.
+2017:08:03 13:24:43.874 - DEBUG : Card bean with ID=2 loaded for maintenance.
+2017:08:03 13:24:44.935 - DEBUG : Button '...' for front image has been pressed.
+2017:08:03 13:25:12.469 - DEBUG : Delete old file at C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.png from card bean.
+2017:08:03 13:25:12.497 - DEBUG : Copy file from C:\Users\A3889613\Downloads\Black-Lotus-Front.JPG to C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.JPG.
+2017:08:03 13:25:12.538 - DEBUG : Notify observers about file upload.
+2017:08:03 13:25:12.538 - DEBUG : New incoming update notification from class com.sebastiandine.cardcollectionmanager.ui.dialogs.card.FileChooserImageUpload.
+2017:08:03 13:25:12.539 - DEBUG : Update card maintenace dialog UI.
+2017:08:03 13:25:14.645 - DEBUG : Button 'Save' has been pressed.
+2017:08:03 13:25:14.646 - INFO : New card bean has been stored to the system.
+2017:08:03 13:25:14.669 - INFO : CardBean data stored to file 'data/carddata'.
+2017:08:03 13:25:14.692 - DEBUG : Card maintenance dialog closed.
+2017:08:03 13:25:16.993 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.JPG.
+2017:08:03 13:25:23.173 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png.
+2017:08:03 13:37:50.772 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 13:37:50.794 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:37:50.824 - DEBUG : Array of CardBean objects provided.
+2017:08:03 13:37:50.915 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:37:51.760 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 13:37:53.836 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:08:03 13:38:04.47 - DEBUG : Try to get CardBean with ID=2.
+2017:08:03 13:38:04.800 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.JPG.
+2017:08:03 15:14:40.608 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:03 15:14:40.631 - DEBUG : Array of CardBean objects provided.
+2017:08:03 15:14:40.670 - DEBUG : Array of CardBean objects provided.
+2017:08:03 15:14:40.773 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 15:14:42.494 - DEBUG : Try to get CardBean with ID=1.
+2017:08:03 15:14:45.998 - DEBUG : Try to get CardBean with ID=2.
+2017:08:03 15:14:47.982 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.JPG.
+2017:08:03 15:14:48.621 - DEBUG : Scale image with size '4032x3024' to preferred width 500 px.
+2017:08:03 15:14:48.621 - DEBUG : Scale image by ratio 0.16534391.
+2017:08:03 15:14:48.621 - DEBUG : Scaled image size is '666x500'.
+2017:08:03 15:14:51.214 - DEBUG : Display image C:\Users\A3889613\java-ee-workspace\CardCollectionManager\data\images\2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png.
+2017:08:03 15:14:51.220 - DEBUG : Scale image with size '259x32' to preferred width 500 px.
+2017:08:03 15:14:51.221 - DEBUG : Scale image by ratio 15.625.
+2017:08:03 15:14:51.221 - DEBUG : Scaled image size is '4046x500'.
+2017:08:07 15:16:40.242 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:08:07 15:16:40.286 - DEBUG : Array of CardBean objects provided.
+2017:08:07 15:16:40.891 - DEBUG : Array of CardBean objects provided.
+2017:08:07 15:16:44.250 - DEBUG : Try to get CardBean with ID=1.
+2017:08:07 15:16:46.683 - DEBUG : Try to get CardBean with ID=1.
+2017:08:07 15:16:47.363 - DEBUG : Try to get CardBean with ID=2.
+2017:08:07 15:16:48.645 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.JPG.
+2017:08:07 15:16:49.411 - DEBUG : Scale image with size '4032x3024' to preferred width 500 px.
+2017:08:07 15:16:49.411 - DEBUG : Scale image by ratio 0.16534391.
+2017:08:07 15:16:49.412 - DEBUG : Scaled image size is '666x500'.
+2017:08:07 15:16:54.930 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png.
+2017:08:07 15:16:54.931 - DEBUG : Scale image with size '259x32' to preferred width 500 px.
+2017:08:07 15:16:54.931 - DEBUG : Scale image by ratio 15.625.
+2017:08:07 15:16:54.932 - DEBUG : Scaled image size is '4046x500'.
+2017:08:07 15:16:59.319 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:08:07 15:16:59.321 - DEBUG : Array of EditionBean objects provided.
+2017:08:07 15:16:59.358 - DEBUG : Card maintenance dialog opened.
+2017:08:07 15:16:59.359 - DEBUG : Try to get CardBean with ID=2.
+2017:08:07 15:16:59.390 - DEBUG : Card bean with ID=2 loaded for maintenance.
+2017:08:07 15:17:12.385 - DEBUG : Front image textfield clicked.
+2017:08:07 15:17:12.386 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.JPG.
+2017:08:07 15:17:12.762 - DEBUG : Scale image with size '4032x3024' to preferred width 500 px.
+2017:08:07 15:17:12.762 - DEBUG : Scale image by ratio 0.16534391.
+2017:08:07 15:17:12.762 - DEBUG : Scaled image size is '666x500'.
+2017:08:07 15:17:20.968 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:17:03.354 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:09:08 15:17:03.431 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:17:04.243 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:17:07.200 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:17:10.823 - DEBUG : Try to get CardBean with ID=11.
+2017:09:08 15:17:21.807 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:09:08 15:17:21.809 - DEBUG : Array of EditionBean objects provided.
+2017:09:08 15:17:21.853 - DEBUG : Card maintenance dialog opened.
+2017:09:08 15:17:21.853 - DEBUG : Try to get CardBean with ID=11.
+2017:09:08 15:17:21.882 - DEBUG : Card bean with ID=11 loaded for maintenance.
+2017:09:08 15:17:33.108 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:17:34.987 - DEBUG : Array of EditionBean objects provided.
+2017:09:08 15:17:35.07 - DEBUG : Card maintenance dialog opened.
+2017:09:08 15:17:36.516 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:17:41.677 - DEBUG : Try to get CardBean with ID=18.
+2017:09:08 15:17:48.125 - DEBUG : Try to get CardBean with ID=10.
+2017:09:08 15:17:48.981 - DEBUG : Try to get CardBean with ID=18.
+2017:09:08 15:18:48.310 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:09:08 15:18:48.322 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:18:48.351 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:18:49.582 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:18:53.665 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:09:08 15:18:53.667 - DEBUG : Array of EditionBean objects provided.
+2017:09:08 15:18:53.699 - DEBUG : Card maintenance dialog opened.
+2017:09:08 15:18:53.699 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:18:53.703 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:09:08 15:18:56.749 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:18:57.162 - DEBUG : Try to get CardBean with ID=4.
+2017:09:08 15:18:58.824 - DEBUG : Array of EditionBean objects provided.
+2017:09:08 15:18:58.847 - DEBUG : Card maintenance dialog opened.
+2017:09:08 15:18:58.848 - DEBUG : Try to get CardBean with ID=4.
+2017:09:08 15:18:58.848 - DEBUG : Card bean with ID=4 loaded for maintenance.
+2017:09:08 15:19:04.467 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:19:05.334 - DEBUG : Array of EditionBean objects provided.
+2017:09:08 15:19:05.358 - DEBUG : Card maintenance dialog opened.
+2017:09:08 15:19:07.209 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:19:27.494 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:09:08 15:19:27.506 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:19:27.537 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:19:28.795 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:19:29.528 - DEBUG : Try to get CardBean with ID=13.
+2017:09:08 15:19:31.153 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:09:08 15:19:31.154 - DEBUG : Array of EditionBean objects provided.
+2017:09:08 15:19:31.193 - DEBUG : Card maintenance dialog opened.
+2017:09:08 15:19:31.193 - DEBUG : Try to get CardBean with ID=13.
+2017:09:08 15:19:31.197 - DEBUG : Card bean with ID=13 loaded for maintenance.
+2017:09:08 15:19:39.448 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:19:40.997 - DEBUG : Array of EditionBean objects provided.
+2017:09:08 15:19:41.23 - DEBUG : Card maintenance dialog opened.
+2017:09:08 15:19:47.607 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:20:05.128 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:09:08 15:20:05.140 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:20:05.169 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:20:06.413 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:20:06.991 - DEBUG : Try to get CardBean with ID=10.
+2017:09:08 15:20:07.807 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:09:08 15:20:07.809 - DEBUG : Array of EditionBean objects provided.
+2017:09:08 15:20:07.848 - DEBUG : Card maintenance dialog opened.
+2017:09:08 15:20:07.848 - DEBUG : Try to get CardBean with ID=10.
+2017:09:08 15:20:07.852 - DEBUG : Card bean with ID=10 loaded for maintenance.
+2017:09:08 15:20:13.386 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:20:13.934 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:20:15.868 - DEBUG : Array of EditionBean objects provided.
+2017:09:08 15:20:15.894 - DEBUG : Card maintenance dialog opened.
+2017:09:08 15:20:15.894 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:20:15.896 - DEBUG : Card bean with ID=1 loaded for maintenance.
+2017:09:08 15:20:17.548 - DEBUG : Front image textfield clicked.
+2017:09:08 15:20:17.549 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:09:08 15:20:17.568 - DEBUG : Scale image with size '259x32' to preferred width 500 px.
+2017:09:08 15:20:17.568 - DEBUG : Scale image by ratio 15.625.
+2017:09:08 15:20:17.568 - DEBUG : Scaled image size is '4046x500'.
+2017:09:08 15:20:20.421 - DEBUG : Back image textfield clicked.
+2017:09:08 15:20:20.422 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:09:08 15:20:20.422 - ERROR : Failed to display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:09:08 15:20:20.422 - ERROR : Can't read input file!
+2017:09:08 15:20:21.461 - DEBUG : Back image textfield clicked.
+2017:09:08 15:20:21.462 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:09:08 15:20:21.462 - ERROR : Failed to display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:09:08 15:20:21.462 - ERROR : Can't read input file!
+2017:09:08 15:20:21.903 - DEBUG : Back image textfield clicked.
+2017:09:08 15:20:21.904 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:09:08 15:20:21.904 - ERROR : Failed to display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:09:08 15:20:21.904 - ERROR : Can't read input file!
+2017:09:08 15:20:22.310 - DEBUG : Back image textfield clicked.
+2017:09:08 15:20:22.311 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:09:08 15:20:22.311 - ERROR : Failed to display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_BACK.png.
+2017:09:08 15:20:22.311 - ERROR : Can't read input file!
+2017:09:08 15:20:24.45 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:20:27.69 - DEBUG : Try to get CardBean with ID=2.
+2017:09:08 15:20:28.03 - DEBUG : Array of EditionBean objects provided.
+2017:09:08 15:20:28.44 - DEBUG : Card maintenance dialog opened.
+2017:09:08 15:20:28.44 - DEBUG : Try to get CardBean with ID=2.
+2017:09:08 15:20:28.46 - DEBUG : Card bean with ID=2 loaded for maintenance.
+2017:09:08 15:20:29.732 - DEBUG : Front image textfield clicked.
+2017:09:08 15:20:29.733 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/2+LimitedEditionAlpha+AncestralRecall+IMG_FRONT.JPG.
+2017:09:08 15:20:30.398 - DEBUG : Scale image with size '4032x3024' to preferred width 500 px.
+2017:09:08 15:20:30.398 - DEBUG : Scale image by ratio 0.16534391.
+2017:09:08 15:20:30.398 - DEBUG : Scaled image size is '666x500'.
+2017:09:08 15:20:35.100 - DEBUG : Back image textfield clicked.
+2017:09:08 15:20:35.101 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/2+LimitedEditionAlpha+AncestralRecall+IMG_BACK.png.
+2017:09:08 15:20:35.143 - DEBUG : Scale image with size '259x32' to preferred width 500 px.
+2017:09:08 15:20:35.143 - DEBUG : Scale image by ratio 15.625.
+2017:09:08 15:20:35.143 - DEBUG : Scaled image size is '4046x500'.
+2017:09:08 15:20:37.143 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:30:56.720 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:09:08 15:30:56.732 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:30:56.762 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:30:58.13 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:30:59.390 - DEBUG : Try to get CardBean with ID=2.
+2017:09:08 15:30:59.821 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:31:02.175 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:09:08 15:31:02.176 - DEBUG : Scale image with size '259x32' to preferred width 500 px.
+2017:09:08 15:31:02.177 - DEBUG : Scale image by ratio 15.625.
+2017:09:08 15:31:02.177 - DEBUG : Scaled image size is '4046x500'.
+2017:09:08 15:31:10.587 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:09:08 15:31:10.599 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:31:10.628 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:31:11.896 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:31:13.838 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:31:17.302 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:09:08 15:31:17.303 - DEBUG : Scale image with size '259x32' to preferred width 500 px.
+2017:09:08 15:31:17.303 - DEBUG : Scale image by ratio 15.625.
+2017:09:08 15:31:17.303 - DEBUG : Scaled image size is '4046x500'.
+2017:09:08 15:59:48.480 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:09:08 15:59:48.492 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:59:48.522 - DEBUG : Array of CardBean objects provided.
+2017:09:08 15:59:49.785 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:59:51.649 - DEBUG : Try to get CardBean with ID=4.
+2017:09:08 15:59:53.226 - DEBUG : Try to deserialize EditionBean data at data/editiondata.
+2017:09:08 15:59:53.227 - DEBUG : Array of EditionBean objects provided.
+2017:09:08 15:59:53.279 - DEBUG : Card maintenance dialog opened.
+2017:09:08 15:59:53.279 - DEBUG : Try to get CardBean with ID=4.
+2017:09:08 15:59:53.282 - DEBUG : Card bean with ID=4 loaded for maintenance.
+2017:09:08 15:59:55.256 - DEBUG : Card maintenance dialog closed.
+2017:09:08 15:59:56.56 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 15:59:56.745 - DEBUG : Display image /Users/sebastiandine/Eclipse workspace/CardCollectionManager/data/images/1+LimitedEditionAlpha+BlackLotus+IMG_FRONT.png.
+2017:09:08 15:59:56.746 - DEBUG : Scale image with size '259x32' to preferred width 500 px.
+2017:09:08 15:59:56.746 - DEBUG : Scale image by ratio 15.625.
+2017:09:08 15:59:56.746 - DEBUG : Scaled image size is '4046x500'.
+2017:09:08 16:00:45.842 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:09:08 16:00:45.854 - DEBUG : Array of CardBean objects provided.
+2017:09:08 16:00:45.883 - DEBUG : Array of CardBean objects provided.
+2017:09:08 16:00:47.132 - DEBUG : Try to get CardBean with ID=1.
+2017:09:08 16:03:27.686 - DEBUG : Try to deserialize CardBean data at 'data/carddata'.
+2017:09:08 16:03:27.699 - DEBUG : Array of CardBean objects provided.
+2017:09:08 16:03:27.729 - DEBUG : Array of CardBean objects provided.
+2017:09:08 16:03:28.998 - DEBUG : Try to get CardBean with ID=1.

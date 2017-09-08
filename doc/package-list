@@ -1,0 +1,9 @@
+com.sebastiandine.cardcollectionmanager
+com.sebastiandine.cardcollectionmanager.bean
+com.sebastiandine.cardcollectionmanager.container
+com.sebastiandine.cardcollectionmanager.enums
+com.sebastiandine.cardcollectionmanager.factories
+com.sebastiandine.cardcollectionmanager.logging
+com.sebastiandine.cardcollectionmanager.services
+com.sebastiandine.cardcollectionmanager.ui.dialogs.cards
+com.sebastiandine.cardcollectionmanager.ui.tables
