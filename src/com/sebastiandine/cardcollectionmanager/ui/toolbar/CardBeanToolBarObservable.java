@@ -15,6 +15,15 @@ import javax.swing.JToolBar;
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
 import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogMaintainCardData;
 
+/**
+ * This class represents the application's toolbar by managing an internal {@link JToolBar} object and
+ * extending {@link Observable} to provide observers the functionality to react user interactions with 
+ * the toolbar.
+ * The actual toolbar can be retrieved through method {@link CardBeanToolBarObservable#getToolBar()}.
+ * 
+ * @author Sebastian Dine
+ *
+ */
 public class CardBeanToolBarObservable  extends Observable implements ActionListener{
 	
 	private JButton btn_refresh;
@@ -34,6 +43,9 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 		initUiElements();
 	}
 	
+	/**
+	 * Init all UI elements and connect them to the JToolbar object.
+	 */
 	private void initUiElements(){
 		
 		/* init toolbar */
@@ -84,14 +96,21 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 		toolBar.add(btn_deleteCardBean);
 	}
 	
+	/**
+	 * Update the internally referenced {@link CardBean} object which is used to provide corresponding
+	 * toolbar functionalities.
+	 */
 	public void update(CardBean cardBean){
 		this.cardBean = cardBean;
 	}
 	
-	
+	/**
+	 * Return the {@link JToolBar} object which provides the toolbar functionality.
+	 */
 	public JToolBar getToolBar(){
 		return this.toolBar;
 	}
+	
 	
 
 	@Override
@@ -105,7 +124,7 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 		}
 		if(e.getSource() == btn_deleteCardBean){
 			this.setChanged();
-			this.notifyObservers("refresh");
+			this.notifyObservers("delete");
 		}
 		if(e.getSource() == btn_editCardBean){
 			new DialogMaintainCardData(cardBean.getId());

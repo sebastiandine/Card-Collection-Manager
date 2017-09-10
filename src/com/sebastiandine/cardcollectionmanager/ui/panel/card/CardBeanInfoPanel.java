@@ -279,6 +279,7 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 		this.cardBean = bean;
 		populateUiElements(this.cardBean);
 	}
+	
 
 	/**
 	 * This method creates a {@link DialogShowCardImage} object with the front or back image of 

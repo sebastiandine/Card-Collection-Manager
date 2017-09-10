@@ -13,6 +13,7 @@ import javax.swing.table.TableModel;
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
 import com.sebastiandine.cardcollectionmanager.container.CardBeanContainer;
 import com.sebastiandine.cardcollectionmanager.factories.PropertiesFactory;
+import com.sebastiandine.cardcollectionmanager.logging.Logger;
 
 /**
  * This class provides a {@link JTable}, which displays all {@link CardBean} objects,
@@ -134,5 +135,83 @@ public class CardContainerTable extends JTable {
 			row.add(9,i.getNote());
 			tableModel.addRow(row);
 		}
+	}
+	
+	/**
+	 * This method updates the currently selected row by populating each of its columns again with 
+	 * the data of the corresponding {@link CardBean} object.
+	 */
+	public void updateSelectedRow(){
+		int selectedRow = this.getSelectedRow();
+		CardBean cardBean = CardBeanContainer.getCardBeanById((int) this.getValueAt(selectedRow, 0));
+		
+		this.setValueAt(cardBean.getName(), selectedRow, 1);
+		this.setValueAt(cardBean.getEdition().getName(), selectedRow, 2);
+		this.setValueAt(cardBean.getLanguage(), selectedRow, 3);
+		this.setValueAt(cardBean.getCondition(), selectedRow, 4);
+		this.setValueAt(cardBean.getAmount(), selectedRow, 5);
+		
+		if(cardBean.isFoil()){
+			this.setValueAt(new ImageIcon(PropertiesFactory.getIconFoilUrl()), selectedRow, 6);
+		}
+		else{
+			this.setValueAt(null, selectedRow, 6);
+		}
+		if(cardBean.isSigned()){
+			this.setValueAt(new ImageIcon(PropertiesFactory.getIconSignedUrl()), selectedRow, 7);
+		}
+		else{
+			this.setValueAt(null, selectedRow, 7);
+		}
+		if(cardBean.isAltered()){
+			this.setValueAt(new ImageIcon(PropertiesFactory.getIconAlteredUrl()), selectedRow, 8);
+		}
+		else{
+			this.setValueAt(null, selectedRow, 8);
+		}
+		
+		this.setValueAt(cardBean.getNote(), selectedRow, 9);
+	}
+	
+	/**
+	 * This method deletes the currently selected row and sets the selection to the next row.
+	 */
+	public void deleteSelectedRow(){
+		int selectedRow = this.getSelectedRow();
+		int newSelectedRow = selectedRow; 
+		
+		/* if the last element of the table gets deleted, the selection will be set to the
+		 * previous element.
+		 * In all other cases the next row will be selected after the deletion.
+		 */
+		if(selectedRow == (this.getRowCount()-1)){
+			newSelectedRow--;
+		}
+
+		/* Since some listeners throw an IndexOutOfBoundsException when a row is deleted,
+		 * such an exption gets catched.
+		 */
+		try{
+			Logger.debug("Delete row "+selectedRow+" of table.");
+			this.tableModel.removeRow(selectedRow);
+		}
+		catch(IndexOutOfBoundsException e){}
+		finally{
+			/* fire notification in order to render the deletion */
+			this.tableModel.fireTableRowsDeleted(0, this.getRowCount()-1);
+		}
+	
+		/* select a new row */
+		Logger.debug("Set row selection to row "+newSelectedRow+" of table.");
+		this.setRowSelectionInterval(newSelectedRow, newSelectedRow);
+	}
+	
+	/**
+	 * This method returns the {@link CardBean} object corresponding to the selected row within the table.
+	 * @return Selected {@link CardBean} object.
+	 */
+	public CardBean getSelectedCardBean(){
+		int selectedRow = this.getSelectedRow();
+		return CardBeanContainer.getCardBeanById((int) this.getValueAt(selectedRow, 0));
 	}
 }
