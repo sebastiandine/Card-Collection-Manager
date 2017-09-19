@@ -14,6 +14,25 @@ import com.sebastiandine.cardcollectionmanager.enums.LanguageEnum;
  */
 public class CardBean implements CardCollectionBean, Serializable, Comparable<CardCollectionBean> {
 	
+	/**
+	 * This static dummy object can be used, if no specific {@link CardBean} object is required.
+	 */
+	public static CardBean DUMMY;
+	
+	static{
+		DUMMY = new CardBean();
+		DUMMY.setName("");
+		DUMMY.setEdition(EditionBean.DUMMY);
+		DUMMY.setAmount(0);
+		DUMMY.setCondition(ConditionEnum.Near_Mint);
+		DUMMY.setLanguage(LanguageEnum.English);
+		DUMMY.setFoil(false);
+		DUMMY.setAltered(false);
+		DUMMY.setSigned(false);
+		DUMMY.setNote("");
+	}
+	
+	
 	private static final long serialVersionUID = -2061031864369665770L;
 
 	private int id;

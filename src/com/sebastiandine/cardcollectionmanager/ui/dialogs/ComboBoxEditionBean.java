@@ -1,4 +1,4 @@
-package com.sebastiandine.cardcollectionmanager.ui.dialogs.card;
+package com.sebastiandine.cardcollectionmanager.ui.dialogs;
 
 import java.awt.Component;
 import java.awt.event.ActionEvent;

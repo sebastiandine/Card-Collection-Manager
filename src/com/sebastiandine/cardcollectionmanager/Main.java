@@ -17,24 +17,14 @@ import com.sebastiandine.cardcollectionmanager.enums.ConditionEnum;
 import com.sebastiandine.cardcollectionmanager.enums.LanguageEnum;
 import com.sebastiandine.cardcollectionmanager.ui.MainFrame;
 import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogMaintainCardData;
+import com.sebastiandine.cardcollectionmanager.ui.dialogs.edition.DialogMaintainEditionData;
 import com.sebastiandine.cardcollectionmanager.ui.tables.card.CardContainerTable;
 
 public class Main {
 
 	public static void main(String[] args) throws IOException {
 
-		/*
-		for(CardBean i : CardBeanContainer.getCardBeanList()){
-			System.out.println(i);
-		}
-		*/
-		
-		//new DialogMaintainCardData(1); 
-		
-		//assist_AddCard();
-		new MainFrame();
-		System.out.println(CardBeanContainer.getCardBeanById(1).getImageFront().getAbsolutePath());
-		
+		new MainFrame();		
 	}
 	
 	

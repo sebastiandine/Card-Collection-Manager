@@ -85,7 +85,11 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 		
 		this.setSize(400, 800);
 		this.setVisible(true);
-		
+	}
+	
+	
+	public CardBeanInfoPanel(){
+		this(CardBean.DUMMY);
 	}
 	
 	/**

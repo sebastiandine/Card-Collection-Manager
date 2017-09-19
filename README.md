@@ -9,7 +9,7 @@ The application is completely written in Java, using Swing for the graphic inter
 This project is licensed under the zlib license. See also the attached LICENSE file.
 
 ## How to use
-tbd
+You find the lastest build in folder `build/`. Unzip and use it.
 
 ## How to build
 tbd
@@ -20,3 +20,5 @@ tbd
 * [Eclipse Java EE IDE for Web Developers v.4.5.0 (Mars)](https://www.eclipse.org) - Maybe the most famous IDE for Java developers.
 
 * [Apache Log4j v.2.8.2](https://logging.apache.org/log4j/2.x/) - The famous logging framework for Java applications.
+
+* [JDatePicker v.1.3.4](https://jdatepicker.org) - JDatePicker and JDatePanel is an set of advanced DatePicker controls for Java Swing applications.

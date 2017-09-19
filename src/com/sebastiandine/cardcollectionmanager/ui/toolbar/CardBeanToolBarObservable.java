@@ -17,9 +17,9 @@ import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogMaintainCar
 
 /**
  * This class represents the application's toolbar by managing an internal {@link JToolBar} object and
- * extending {@link Observable} to provide observers the functionality to react user interactions with 
+ * extending {@link Observable} to provide observers the possibility to react to user interaction with 
  * the toolbar.
- * The actual toolbar can be retrieved through method {@link CardBeanToolBarObservable#getToolBar()}.
+ * The actual {@link JToolBar} object can be retrieved through method {@link CardBeanToolBarObservable#getToolBar()}.
  * 
  * @author Sebastian Dine
  *
@@ -44,7 +44,7 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 	}
 	
 	/**
-	 * Init all UI elements and connect them to the JToolbar object.
+	 * Initialize all UI elements and connect them to the internal {@link JToolBar} object.
 	 */
 	private void initUiElements(){
 		
@@ -105,14 +105,29 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 	}
 	
 	/**
-	 * Return the {@link JToolBar} object which provides the toolbar functionality.
+	 * Return the internal {@link JToolBar} object which provides the toolbar functionality.
 	 */
 	public JToolBar getToolBar(){
 		return this.toolBar;
 	}
 	
 	
-
+	/**
+	 * This method notifies observers about an action, the used did on the toolbar.
+	 * It is sending strings in order to identify, which action has been taken:
+	 *  - "refesh" - user hit the refesh button on the toolbar
+	 *  - "delete" - user hit the delete button on the toolbar
+	 */
+	/**
+	 * This method handels the user input on the toolbar.
+	 * <ul>
+	 * <li>If the user hits the refresh button, observers will be notified and the string "refresh" will be send together
+	 *   with the notification.</li>
+	 * <li>If the user hits the delete button, observers will be notified and the string "delete" will be send together 
+	 *   with the notification.</li>
+	 * <li>If the user hits the edit button, a {@link DialogMaintainCardData} object will be created and displayed in order
+	 *   to provide the maintenance UI for the currently selected {@link CardBean} object.</li>
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == btn_refresh){
@@ -127,7 +142,8 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 			this.notifyObservers("delete");
 		}
 		if(e.getSource() == btn_editCardBean){
-			new DialogMaintainCardData(cardBean.getId());
+			//new DialogMaintainCardData(cardBean.getId());
+			new DialogMaintainCardData(cardBean);
 		}
 		
 	}

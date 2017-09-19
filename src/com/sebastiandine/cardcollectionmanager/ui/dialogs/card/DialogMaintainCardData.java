@@ -33,6 +33,7 @@ import com.sebastiandine.cardcollectionmanager.enums.ConditionEnum;
 import com.sebastiandine.cardcollectionmanager.enums.ImageEnum;
 import com.sebastiandine.cardcollectionmanager.enums.LanguageEnum;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
+import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxEditionBean;
 
 /**
  * This class provides a {@link JDialog} based dialog to add or edit {@link CardBean} objects.
@@ -92,7 +93,8 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 	 * Create dialog to add a new card to the system resp. to container {@link CardBeanContainer}.
 	 */
 	public DialogMaintainCardData(){
-		this.cardBean = null;
+		
+		this.cardBean = new CardBean();
 		
 		initUiElements();
 		
@@ -113,15 +115,16 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 		Logger.debug("Card maintenance dialog opened.");
 	}
 	
+
 	/**
-	 * Create dialog to edit/overwrite an existing card with given ID from container {@link CardBeanContainer}.
+	 * Create dialog to edit an existing {@link CardBean} object from container {@link CardBeanContainer}.
 	 * 
-	 * @param cardID ID of {@link CardBean} object in container {@link CardBeanContainer}, which should be edited.
+	 * @param {@link CardBean} object in container {@link CardBeanContainer}, which should be edited.
 	 */
-	public DialogMaintainCardData(int cardID){
+	public DialogMaintainCardData(CardBean cardBean){
 		this();
 		this.setTitle(TITLE_EDIT);
-		this.cardBean = CardBeanContainer.getCardBeanById(cardID);
+		this.cardBean = cardBean;
 		populateUiElements(this.cardBean);
 		
 		Logger.debug("Card bean with ID="+this.cardBean.getId()+" loaded for maintenance.");
@@ -343,22 +346,18 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 		if (e.getSource() == btn_save){						
 			Logger.debug("Button 'Save' has been pressed.");
 			
-			if(cardBean != null){								
+			if(cardBean.getId() != -1){								
 				updateInternalCardBeanFromUi();					/* edit existing entry in CardBeanContainer */
-				
-				Logger.info("New card bean has been stored to the system.");
-			}
-			else{												
-				cardBean = new CardBean();
-				updateInternalCardBeanFromUi();
-				CardBeanContainer.addCardBean(cardBean);		/* add new entry to CardBeanContainer */
-				
 				Logger.info("Edited card bean has been restored to the system.");
 				
-				
 			}
-			CardBeanContainer.saveCardBeanList();				/* save updated CardBeanContainer */
+			else{												
+				updateInternalCardBeanFromUi();
+				CardBeanContainer.addCardBean(cardBean);		/* add new entry to CardBeanContainer */
+				Logger.info("New card bean has been stored to the system.");
+			}
 			
+			CardBeanContainer.saveCardBeanList();				/* save updated CardBeanContainer */
 			this.dispose();
 		}
 		

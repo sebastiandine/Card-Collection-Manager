@@ -1,7 +1,7 @@
 package com.sebastiandine.cardcollectionmanager.bean;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.util.Calendar;
 
 /**
  * This bean class represents a card game edition.
@@ -11,11 +11,26 @@ import java.util.Date;
  */
 public class EditionBean implements CardCollectionBean, Serializable, Comparable<CardCollectionBean> {
 	
+	/**
+	 * This static dummy object can be used, if no specific {@link EditionBean} object is required.
+	 */
+	public static EditionBean DUMMY;
+	
+	static{
+		DUMMY = new EditionBean();
+		DUMMY.setName("");
+		DUMMY.setAcronym("");
+		DUMMY.setCardAmount(0);
+		DUMMY.setRelease(Calendar.getInstance());
+	}
+	
+	
 	private static final long serialVersionUID = 4506343002161746959L;
 	
 	private int id;
 	private String name;
-	private Date release;
+	private String acronym;
+	private Calendar release;
 	private int cardAmount;
 	
 	
@@ -35,10 +50,16 @@ public class EditionBean implements CardCollectionBean, Serializable, Comparable
 	public void setName(String name) {
 		this.name = name;
 	}
-	public Date getRelease() {
+	public String getAcronym() {
+		return acronym;
+	}
+	public void setAcronym(String acronym) {
+		this.acronym = acronym;
+	}
+	public Calendar getRelease() {
 		return release;
 	}
-	public void setRelease(Date release) {
+	public void setRelease(Calendar release) {
 		this.release = release;
 	}
 	public int getCardAmount() {
@@ -53,7 +74,7 @@ public class EditionBean implements CardCollectionBean, Serializable, Comparable
 		
 		out += "ID: " + this.id;
 		out += ", Name: " + this.name;
-		out += ", Release: " + this.release.toString();
+		out += ", Release: " + this.release;
 		out += ", Card amount:" + this.cardAmount;
 		
 		return out;
@@ -70,5 +91,7 @@ public class EditionBean implements CardCollectionBean, Serializable, Comparable
 		}
 		return 0;
 	}
+
+
 	
 }

@@ -214,4 +214,20 @@ public class CardContainerTable extends JTable {
 		int selectedRow = this.getSelectedRow();
 		return CardBeanContainer.getCardBeanById((int) this.getValueAt(selectedRow, 0));
 	}
+	
+	/**
+	 * This methods select the row of the table, which represents the given {@link CardBean} object.
+	 * It uses the attribute {@link CardBean#getId()} for checking matching entries.
+	 * 
+	 * @param cardBean {@link CardBean} which should be selected in the table.
+	 */
+	public void selectRowByCardBean(CardBean cardBean){
+		int rowCount = this.getRowCount();
+		
+		for(int i = 0; i < rowCount; i++){
+			if(cardBean.getId() == ((int)this.getValueAt(i, 0))){
+				this.setRowSelectionInterval(i, i);
+			}
+		}
+	}
 }
