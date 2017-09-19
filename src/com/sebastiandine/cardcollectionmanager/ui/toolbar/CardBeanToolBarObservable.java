@@ -122,6 +122,9 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 	/**
 	 * Sets the internally referenced {@link CardBean} object which is used to provide corresponding
 	 * toolbar functionalities.
+	 * 
+	 * @param cardBean {@link CardBean} object to which the toolbar should offer its functionalities.
+	 * 
 	 */
 	public void setSelectedCard(CardBean cardBean){
 		this.cardBean = cardBean;
@@ -130,6 +133,8 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 	
 	/**
 	 * Return the internal {@link JToolBar} object which provides the toolbar functionality.
+	 * 
+	 * @return {@link JToolBar} object, which provides functionalities in order to work with the currently selected card.
 	 */
 	public JToolBar getToolBar(){
 		return this.toolBar;
@@ -151,6 +156,7 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 	 *   with the notification.</li>
 	 * <li>If the user hits the edit button, a {@link DialogMaintainCardData} object will be created and displayed in order
 	 *   to provide the maintenance UI for the currently selected {@link CardBean} object.</li>
+	 * </ul>
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {

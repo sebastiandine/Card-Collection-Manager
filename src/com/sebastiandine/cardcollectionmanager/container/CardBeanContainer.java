@@ -88,7 +88,7 @@ public class CardBeanContainer extends AbstractBeanContainer {
 	 * This method searches for the {@link CardBean} element with the given 'id' from the internal list of {@link CardBean} objects.
 	 * 
 	 * @param id ID of the {@link CardBean} element which should be returned from the internal list.
-	 * @return {@link CardBean} element with the given ID. {@value null}, if no element with the given ID exists.
+	 * @return {@link CardBean} element with the given ID. {@code null}, if no element with the given ID exists.
 	 */
 	public static CardBean getCardBeanById(int id){
 		Logger.debug("Try to get CardBean with ID="+id+".");
@@ -112,8 +112,6 @@ public class CardBeanContainer extends AbstractBeanContainer {
 	/**
 	 * This method saves the current internal list of {@link CardBean} objects to the local system.
 	 * The save destination is defined by property 'url_carddata' in config file 'config/config.properties'.
-	 * 
-	 * @throws IOException
 	 */
 	public static void saveCardBeanList(){
 		try {

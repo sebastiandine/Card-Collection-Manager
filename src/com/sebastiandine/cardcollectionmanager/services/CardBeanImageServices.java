@@ -34,7 +34,8 @@ public class CardBeanImageServices {
 	 * 					within the given {@link CardBean} object. {@link ImageEnum#IMG_FRONT} stores the image as front image of 
 	 * 					the {@link CardBean} object, {@link ImageEnum#IMG_BACK} as a back image.
 	 * 
-	 * @throws IOException
+	 * @throws IOException If interaction with the file system is not possible, e.g. through restricted permissions, an {@link IOException}
+	 * will be thrown.
 	 */
 	public static void uploadImageFile(CardBean cardBean, File imageFile, ImageEnum imgType) throws IOException{
 		
@@ -83,7 +84,8 @@ public class CardBeanImageServices {
 	 * Afterwards,i t sets the corresponding attributes of the {@link CardBean} object to null.
 	 * @param cardBean {@link CardBean} object for which the corresponding image files should be deleted.
 	 * 
-	 * @throws IOException
+	 * @throws IOException If interaction with the file system is not possible, e.g. through restricted permissions, an {@link IOException}
+	 * will be thrown.
 	 */
 	public static void deleteImageFiles(CardBean cardBean) throws IOException{
 		

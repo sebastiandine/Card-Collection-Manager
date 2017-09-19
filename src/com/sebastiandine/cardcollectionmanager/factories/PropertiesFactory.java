@@ -126,7 +126,7 @@ public class PropertiesFactory {
 	/**
 	 * This method returns the active log level of the application.
 	 * 
-	 * @return Current active log level. If no proper log level was specified, {@link ERROR} will be used as default log level.
+	 * @return Current active log level. If no proper log level was specified, {@code ERROR} will be used as default log level.
 	 */
 	public static Level getLogLevel(){
 		String level = propertiesReader.getProperty(LOGLEVEL_KEY);

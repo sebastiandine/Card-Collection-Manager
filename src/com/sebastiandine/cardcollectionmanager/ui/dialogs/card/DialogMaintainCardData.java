@@ -37,10 +37,12 @@ import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxEditionBean;
 
 /**
  * This class provides a {@link JDialog} based dialog to add or edit {@link CardBean} objects.
- * Use constructor {@link DialogMaintainCardData#DialogMaintainCardData()} in order to add a new
- * card.
- * Use constructor (@link {@link DialogMaintainCardData#DialogMaintainCardData(int)) in order to edit
- * an existing card.
+ * <ul>
+ * <li>Use constructor {@link DialogMaintainCardData#DialogMaintainCardData()} in order to create a new
+ * card.</li>
+ * <li>Use constructor {@link DialogMaintainCardData#DialogMaintainCardData(CardBean)} in order to edit
+ * an existing card.</li>
+ * </ul>
  * 
  * @author Sebastian Dine
  *
@@ -119,7 +121,7 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 	/**
 	 * Create dialog to edit an existing {@link CardBean} object from container {@link CardBeanContainer}.
 	 * 
-	 * @param {@link CardBean} object in container {@link CardBeanContainer}, which should be edited.
+	 * @param cardBean {@link CardBean} object in container {@link CardBeanContainer}, which should be edited.
 	 */
 	public DialogMaintainCardData(CardBean cardBean){
 		this();
@@ -330,13 +332,13 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 	/**
 	 * This method coordinates action events, to which this class listens to.
 	 * 
-	 * - if the source of the action event is button {@link 'Save'}, the cardData of the UI will be stored to the
+	 * - if the source of the action event is button <b>'Save'</b>, the cardData of the UI will be stored to the
 	 *   container {@link CardBeanContainer}.
 	 *   
-	 * - if the source of the action event is button {@code '...'} related to the front image, a {@link FileChooserImageUpload}
+	 * - if the source of the action event is button <b>'...'</b>, related to the front image, a {@link FileChooserImageUpload}
 	 * 	 will be generated in order to maintain the front image of the internal {@link CardBean} object. 
 	 *   
-	 * - if the source of the action event is button {@code '...'} related to the back image, a {@link FileChooserImageUpload}
+	 * - if the source of the action event is button <b>'...'</b> related to the back image, a {@link FileChooserImageUpload}
 	 *   will be generated in order to maintain the back image of the internal {@link CardBean} object. 
 	 */
 	@Override

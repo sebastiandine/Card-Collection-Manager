@@ -27,10 +27,12 @@ import net.sourceforge.jdatepicker.JDatePicker;
 
 /**
  * This class provides a {@link JDialog} based dialog to add or edit {@link EditionBean} objects.
- * Use constructor {@link DialogMaintainEditionData#DialogMaintainEditionData()} in order to add a new
- * card.
- * Use constructor (@link {@link DialogMaintainEditionData#DialogMaintainEditionData(EditionBean)) in order to edit
- * an existing edition.
+ * <ul>
+ * <li>Use constructor {@link DialogMaintainEditionData#DialogMaintainEditionData()} in order to add a new
+ * card.</li>
+ * <li>Use constructor {@link DialogMaintainEditionData#DialogMaintainEditionData(EditionBean)} in order to edit
+ * an existing edition.</li>
+ * </ul>
  * 
  * @author Sebastian Dine
  *
@@ -85,7 +87,7 @@ public class DialogMaintainEditionData extends JDialog implements ActionListener
 	/**
 	 * Create dialog to edit an existing {@link EditionBean} object from container {@link EditionBeanContainer}.
 	 * 
-	 * @param {@link EditionBean} object in container {@link EditionBeanContainer}, which should be edited.
+	 * @param editionBean {@link EditionBean} object in container {@link EditionBeanContainer}, which should be edited.
 	 */
 	public DialogMaintainEditionData(EditionBean editionBean){
 		this();

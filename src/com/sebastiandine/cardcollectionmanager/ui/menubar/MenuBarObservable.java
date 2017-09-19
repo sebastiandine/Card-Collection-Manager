@@ -68,6 +68,8 @@ public class MenuBarObservable extends Observable implements ActionListener {
 	
 	/**
 	 * Return the internal {@link JMenuBar} object which provides the menubar functionality.
+	 * 
+	 * @return {@link JMenuBar} object with applications menu functionalities.
 	 */
 	public JMenuBar getMenuBar(){
 		return this.menuBar;

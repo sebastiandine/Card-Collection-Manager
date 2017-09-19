@@ -15,7 +15,7 @@ import javax.swing.table.TableCellRenderer;
  * <br><br>
  * {@code JTable.getColumnModel().getColumn(<cell_no>).setCellRenderer(new CardContainerTableCellImageRenderer())}
  * <br><br>
- * <b>Note:</b> Code is loosely based on {@see <a href="https://mdsaputra.wordpress.com/2011/06/13/swing-hack-show-image-in-jtable/">this example</a>}.
+ * <b>Note:</b> Code is loosely based on <a href="https://mdsaputra.wordpress.com/2011/06/13/swing-hack-show-image-in-jtable/">this example</a>.
  * 
  * @author Sebastian Dine
  *
@@ -24,8 +24,8 @@ import javax.swing.table.TableCellRenderer;
 public class CardContainerTableCellImageRenderer extends DefaultTableCellRenderer {
 
 	/**
-	 * This method enables to render the given {@link Object} parameter as a {@Link ImageIcon} to the corresponding
-	 * cell.
+	 * This method enables to render the given {@link Object} parameter as an {@link ImageIcon} object within the corresponding
+	 * cell of a {@link JTable} object.
 	 */
     @Override
     public Component getTableCellRendererComponent(JTable table,Object value, boolean isSelected,boolean hasFocus, int row, int column)

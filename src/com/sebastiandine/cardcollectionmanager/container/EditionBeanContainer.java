@@ -56,13 +56,13 @@ public class EditionBeanContainer extends AbstractBeanContainer {
 	/**
 	 * This method adds a {@link EditionBean} object to the internal list of {@link EditionBean} objects.
 	 * 
-	 * @param card Predefined {@link editionBean} object. Attribute 'id' will be defined by this method so it
-	 * 		  does not need to be predefined.
+	 * @param editionBean Predefined {@link EditionBean} object. Attribute 'id' will be defined by this method so it 
+	 * does not need to be predefined.
 	 */
-	public static void addEditionBean(EditionBean edition){
-		addBeanToContainer(editionBeanList, edition);
+	public static void addEditionBean(EditionBean editionBean){
+		addBeanToContainer(editionBeanList, editionBean);
 		saveEditionBeanList();
-		Logger.info("EditonBean added to CardBeanContainer: "+edition.toString()+".");
+		Logger.info("EditonBean added to CardBeanContainer: "+editionBean.toString()+".");
 	}
 	
 	/**
@@ -95,8 +95,6 @@ public class EditionBeanContainer extends AbstractBeanContainer {
 	/**
 	 * This method saves the current internal list of {@link CardBean} objects to the local system.
 	 * The save destination is defined by property 'url_carddata' in config file 'config/config.properties'.
-	 * 
-	 * @throws IOException
 	 */
 	public static void saveEditionBeanList(){
 		try {
