@@ -198,21 +198,30 @@ public class CardContainerTable extends JTable {
 		catch(IndexOutOfBoundsException e){}
 		finally{
 			/* fire notification in order to render the deletion */
-			this.tableModel.fireTableRowsDeleted(0, this.getRowCount()-1);
+			if(this.getRowCount() > 0){
+				this.tableModel.fireTableRowsDeleted(0, this.getRowCount()-1);
+			}
 		}
 	
-		/* select a new row */
-		Logger.debug("Set row selection to row "+newSelectedRow+" of table.");
-		this.setRowSelectionInterval(newSelectedRow, newSelectedRow);
+		/* select a new row if there is at least one row left */
+		if(this.getRowCount() > 0){	
+			Logger.debug("Set row selection to row "+newSelectedRow+" of table.");
+			this.setRowSelectionInterval(newSelectedRow, newSelectedRow);
+		}
 	}
 	
 	/**
 	 * This method returns the {@link CardBean} object corresponding to the selected row within the table.
-	 * @return Selected {@link CardBean} object.
+	 * @return Selected {@link CardBean} object. {@link CardBean#DUMMY}, if there is no entry left in the table.
 	 */
 	public CardBean getSelectedCardBean(){
-		int selectedRow = this.getSelectedRow();
-		return CardBeanContainer.getCardBeanById((int) this.getValueAt(selectedRow, 0));
+		if(this.getRowCount() > 0){
+			int selectedRow = this.getSelectedRow();
+			return CardBeanContainer.getCardBeanById((int) this.getValueAt(selectedRow, 0));
+		}
+		else{
+			return CardBean.DUMMY;
+		}
 	}
 	
 	/**

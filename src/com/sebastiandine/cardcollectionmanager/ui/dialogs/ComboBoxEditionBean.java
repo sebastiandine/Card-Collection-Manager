@@ -23,25 +23,33 @@ public class ComboBoxEditionBean extends JComboBox<EditionBean> {
 	
 	public ComboBoxEditionBean(){
 		super(EditionBeanContainer.getEditionBeanList());
-		this.addActionListener(this);
 		
-		/* Since by default, JComboBoxes of objects use the .toString method of the dedicated objects 
-		 * to render their items, we need to override it in order to only display the name of an edtion.
-		 */
-		this.setRenderer(new DefaultListCellRenderer() {
+		/* first check, if any edition is available. If not, grey out the element */
+		if(EditionBeanContainer.getEditionBeanList().length > 0){
 			
-            @SuppressWarnings("rawtypes")
-			@Override
-            public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
-                super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-                if(value instanceof EditionBean){
-                    EditionBean edition = (EditionBean) value;
-                    setText(edition.getName());
-                }
-                return this;
-
-            }
-        } );
+			this.addActionListener(this);
+			
+			/* Since by default, JComboBoxes of objects use the .toString method of the dedicated objects 
+			 * to render their items, we need to override it in order to only display the name of an edtion.
+			 */
+			this.setRenderer(new DefaultListCellRenderer() {
+				
+	            @SuppressWarnings("rawtypes")
+				@Override
+	            public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+	                super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+	                if(value instanceof EditionBean){
+	                    EditionBean edition = (EditionBean) value;
+	                    setText(edition.getName());
+	                }
+	                return this;
+	
+	            }
+	        } );
+		}
+		else{
+			this.setEnabled(false);
+		}
 		
 	}
 	

@@ -41,6 +41,11 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 		
 		this.cardBean = cardBean;
 		initUiElements();
+		refreshUiElements();
+	}
+	
+	public CardBeanToolBarObservable(){
+		this(CardBean.DUMMY);
 	}
 	
 	/**
@@ -88,7 +93,6 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 		btn_deleteCardBean.setIcon(new ImageIcon(img_delete));
 		btn_deleteCardBean.addActionListener(this);
 		
-		
 		/* put everything together */
 		toolBar.add(btn_refresh);
 		toolBar.add(btn_addCardBean);
@@ -97,11 +101,31 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 	}
 	
 	/**
-	 * Update the internally referenced {@link CardBean} object which is used to provide corresponding
+	 * Since some toolbar functionalities should not be provided, if no actual {@link CardBean} object is selected,
+	 * the corresponding buttons will be disabled through this method.
+	 */
+	private void refreshUiElements(){
+		
+		if(cardBean.getId() != -1){
+			btn_refresh.setEnabled(true);
+			btn_deleteCardBean.setEnabled(true);
+			btn_editCardBean.setEnabled(true);
+		}
+		else{
+			btn_refresh.setEnabled(false);
+			btn_deleteCardBean.setEnabled(false);
+			btn_editCardBean.setEnabled(false);
+		}
+		
+	}
+	
+	/**
+	 * Sets the internally referenced {@link CardBean} object which is used to provide corresponding
 	 * toolbar functionalities.
 	 */
-	public void update(CardBean cardBean){
+	public void setSelectedCard(CardBean cardBean){
 		this.cardBean = cardBean;
+		refreshUiElements();
 	}
 	
 	/**
@@ -142,7 +166,6 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 			this.notifyObservers("delete");
 		}
 		if(e.getSource() == btn_editCardBean){
-			//new DialogMaintainCardData(cardBean.getId());
 			new DialogMaintainCardData(cardBean);
 		}
 		

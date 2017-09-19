@@ -279,7 +279,7 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 	 * 
 	 * @param bean {@link CardBean} object, which should be displayed via this {@link JPanel}.
 	 */
-	public void update(CardBean bean){
+	public void setSelectedCard(CardBean bean){
 		this.cardBean = bean;
 		populateUiElements(this.cardBean);
 	}

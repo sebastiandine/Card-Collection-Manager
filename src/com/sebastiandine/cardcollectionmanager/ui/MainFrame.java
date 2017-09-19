@@ -47,7 +47,7 @@ public class MainFrame extends JFrame implements ListSelectionListener, Observer
 		/* init and add CardBeanInfoPanel */
 		cardInfoPanel = new CardBeanInfoPanel();
 		cardInfoPanel.setPreferredSize(new Dimension (300,200));
-		cardInfoPanel.update(selectedCard);
+		cardInfoPanel.setSelectedCard(selectedCard);
 		this.getContentPane().add(cardInfoPanel, BorderLayout.WEST);
 		
 		/* init and add CardBeanTable */
@@ -96,8 +96,8 @@ public class MainFrame extends JFrame implements ListSelectionListener, Observer
 		 * by filter a series of multiple events using 'ListSelectionEvent#getValueIsAdjusting' 
 		 */
 		if(e.getValueIsAdjusting()){
-			cardInfoPanel.update(cardTable.getSelectedCardBean());
-			cardToolBarObservable.update(cardTable.getSelectedCardBean());
+			cardInfoPanel.setSelectedCard(cardTable.getSelectedCardBean());
+			cardToolBarObservable.setSelectedCard(cardTable.getSelectedCardBean());
 		}
 		
 	}
@@ -118,7 +118,7 @@ public class MainFrame extends JFrame implements ListSelectionListener, Observer
 		
 		/* refresh routine */
 		if(((String)arg).equals("refresh")){
-			cardInfoPanel.update(cardTable.getSelectedCardBean());
+			cardInfoPanel.setSelectedCard(cardTable.getSelectedCardBean());
 			cardTable.updateSelectedRow();
 		}
 		
@@ -139,8 +139,8 @@ public class MainFrame extends JFrame implements ListSelectionListener, Observer
 			cardTable.deleteSelectedRow();
 			
 			/* update toolbar and info panel with the newly selected card bean */
-			cardInfoPanel.update(cardTable.getSelectedCardBean());
-			cardToolBarObservable.update(cardTable.getSelectedCardBean());
+			cardInfoPanel.setSelectedCard(cardTable.getSelectedCardBean());
+			cardToolBarObservable.setSelectedCard(cardTable.getSelectedCardBean());
 		}
 		
 		/* close application routine */

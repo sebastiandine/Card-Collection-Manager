@@ -12,6 +12,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 import com.sebastiandine.cardcollectionmanager.bean.EditionBean;
+import com.sebastiandine.cardcollectionmanager.container.EditionBeanContainer;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
 import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxEditionBean;
 
@@ -67,12 +68,16 @@ public class DialogSelectEdition extends JDialog implements ActionListener {
 		lbl_selectEdition.setAlignmentX(Component.CENTER_ALIGNMENT);
 		
 		btn_select = new JButton(LBL_SELECT);
-		btn_select.addActionListener(this);
 		
-		cmb_edition = new ComboBoxEditionBean();
+		/* check if any edition is available. If not, grey out the 'Select' button. */
+		if(EditionBeanContainer.getEditionBeanList().length > 0){
+			btn_select.addActionListener(this);
+		}
+		else{
+			btn_select.setEnabled(false);
+		}
 		
-		
-		
+		cmb_edition = new ComboBoxEditionBean();	
 	}
 
 	/**
