@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JToolBar;
 
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
+import com.sebastiandine.cardcollectionmanager.factories.PropertiesFactory;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
 import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogMaintainCardObservable;
 
@@ -64,9 +65,9 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 		Image img_edit = null;
 		Image img_delete = null;
 		try {
-			img_add = ImageIO.read(new File("data/icons/icon_add.png"));
-			img_edit = ImageIO.read(new File("data/icons/icon_edit.png"));
-			img_delete = ImageIO.read(new File("data/icons/icon_delete.png"));
+			img_add = ImageIO.read(new File(PropertiesFactory.getIconAddUrl()));
+			img_edit = ImageIO.read(new File(PropertiesFactory.getIconEditUrl()));
+			img_delete = ImageIO.read(new File(PropertiesFactory.getIconDeleteUrl()));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

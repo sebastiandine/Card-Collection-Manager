@@ -28,6 +28,9 @@ public class PropertiesFactory {
 	private static final String ICON_SIGNED_KEY = "icon_signed";
 	private static final String ICON_FOIL_KEY = "icon_foil";
 	private static final String ICON_IMAGE_KEY = "icon_image";
+	private static final String ICON_ADD_KEY = "icon_add";
+	private static final String ICON_EDIT_KEY = "icon_edit";
+	private static final String ICON_DELETE_KEY = "icon_delete";
 	
 	
 	private static Properties propertiesReader;
@@ -121,6 +124,33 @@ public class PropertiesFactory {
 	 */
 	public static String getIconImageUrl(){
 		return propertiesReader.getProperty(ICON_IMAGE_KEY);
+	}
+	
+	/**
+	 * This method returns the url to the image, which is used to display the functionality to add a card.
+	 * 
+	 * @return URL to 'add' image.
+	 */
+	public static String getIconAddUrl(){
+		return propertiesReader.getProperty(ICON_ADD_KEY);
+	}
+	
+	/**
+	 * This method returns the url to the image, which is used to display the functionality to edit a card.
+	 * 
+	 * @return URL to 'edit' image.
+	 */
+	public static String getIconEditUrl(){
+		return propertiesReader.getProperty(ICON_EDIT_KEY);
+	}
+	
+	/**
+	 * This method returns the url to the image, which is used to display the functionality to delete a card.
+	 * 
+	 * @return URL to 'delete' image.
+	 */
+	public static String getIconDeleteUrl(){
+		return propertiesReader.getProperty(ICON_DELETE_KEY);
 	}
 	
 	/**
