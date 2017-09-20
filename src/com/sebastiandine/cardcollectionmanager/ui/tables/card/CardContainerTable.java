@@ -103,37 +103,9 @@ public class CardContainerTable extends JTable {
 	 * @throws IOException
 	 */
 	private void populateTable() throws IOException{
-		Vector<Object> row;
+		
 		for(CardBean i : CardBeanContainer.getCardBeanList()){
-			row = new Vector<Object>();
-			row.add(0,i.getId());
-			row.add(1,i.getName());
-			row.add(2,i.getEdition().getName());
-			row.add(3,i.getLanguage());
-			row.add(4,i.getCondition());
-			row.add(5,i.getAmount());
-			
-			
-			if(i.isFoil()){
-				row.add(6, new ImageIcon(PropertiesFactory.getIconFoilUrl()));
-			}
-			else{
-				row.add(6,null);
-			}
-			if(i.isSigned()){
-				row.add(7, new ImageIcon(PropertiesFactory.getIconSignedUrl()));
-			}
-			else{
-				row.add(7, null);
-			}
-			if(i.isAltered()){
-				row.add(8, new ImageIcon(PropertiesFactory.getIconAlteredUrl()));
-			}
-			else{
-				row.add(8, null);
-			}
-			row.add(9,i.getNote());
-			tableModel.addRow(row);
+			appendRowByCardBean(i);
 		}
 	}
 	
@@ -238,5 +210,45 @@ public class CardContainerTable extends JTable {
 				this.setRowSelectionInterval(i, i);
 			}
 		}
+	}
+	
+	/**
+	 * This method appends the given {@link CardBean} object as a new row to the {@link TableModel} of this table.
+	 * 
+	 * @param cardBean {@link CardBean} object, which should be appended to the table.
+	 */
+	public void appendRowByCardBean(CardBean cardBean){
+		
+		Vector<Object> row = new Vector<Object>();
+		
+		row.add(0,cardBean.getId());
+		row.add(1,cardBean.getName());
+		row.add(2,cardBean.getEdition().getName());
+		row.add(3,cardBean.getLanguage());
+		row.add(4,cardBean.getCondition());
+		row.add(5,cardBean.getAmount());
+		
+		
+		if(cardBean.isFoil()){
+			row.add(6, new ImageIcon(PropertiesFactory.getIconFoilUrl()));
+		}
+		else{
+			row.add(6,null);
+		}
+		if(cardBean.isSigned()){
+			row.add(7, new ImageIcon(PropertiesFactory.getIconSignedUrl()));
+		}
+		else{
+			row.add(7, null);
+		}
+		if(cardBean.isAltered()){
+			row.add(8, new ImageIcon(PropertiesFactory.getIconAlteredUrl()));
+		}
+		else{
+			row.add(8, null);
+		}
+		row.add(9,cardBean.getNote());
+		
+		tableModel.addRow(row);
 	}
 }

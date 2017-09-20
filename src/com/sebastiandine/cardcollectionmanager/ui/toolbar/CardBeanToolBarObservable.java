@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
 import java.util.Observable;
+import java.util.Observer;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -13,7 +14,8 @@ import javax.swing.JButton;
 import javax.swing.JToolBar;
 
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
-import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogMaintainCardData;
+import com.sebastiandine.cardcollectionmanager.logging.Logger;
+import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogMaintainCardObservable;
 
 /**
  * This class represents the application's toolbar by managing an internal {@link JToolBar} object and
@@ -24,9 +26,8 @@ import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogMaintainCar
  * @author Sebastian Dine
  *
  */
-public class CardBeanToolBarObservable  extends Observable implements ActionListener{
+public class CardBeanToolBarObservable  extends Observable implements ActionListener, Observer {
 	
-	private JButton btn_refresh;
 	private JButton btn_addCardBean;
 	private JButton btn_deleteCardBean;
 	private JButton btn_editCardBean;
@@ -60,11 +61,9 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 	
 		/* init buttons */
 		Image img_add = null;
-		Image img_refresh = null;
 		Image img_edit = null;
 		Image img_delete = null;
 		try {
-			img_refresh = ImageIO.read(new File("data/icons/icon_refresh.png"));
 			img_add = ImageIO.read(new File("data/icons/icon_add.png"));
 			img_edit = ImageIO.read(new File("data/icons/icon_edit.png"));
 			img_delete = ImageIO.read(new File("data/icons/icon_delete.png"));
@@ -73,10 +72,6 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 			e.printStackTrace();
 		}
 		
-		btn_refresh = new JButton();
-		btn_refresh.setToolTipText("Refresh");
-		btn_refresh.setIcon(new ImageIcon(img_refresh));;
-		btn_refresh.addActionListener(this); /* eventuell die aufrufende klasse ?? */
 		
 		btn_addCardBean = new JButton();
 		btn_addCardBean.setToolTipText("Add a new card");
@@ -94,7 +89,6 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 		btn_deleteCardBean.addActionListener(this);
 		
 		/* put everything together */
-		toolBar.add(btn_refresh);
 		toolBar.add(btn_addCardBean);
 		toolBar.add(btn_editCardBean);
 		toolBar.add(btn_deleteCardBean);
@@ -107,12 +101,10 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 	private void refreshUiElements(){
 		
 		if(cardBean.getId() != -1){
-			btn_refresh.setEnabled(true);
 			btn_deleteCardBean.setEnabled(true);
 			btn_editCardBean.setEnabled(true);
 		}
 		else{
-			btn_refresh.setEnabled(false);
 			btn_deleteCardBean.setEnabled(false);
 			btn_editCardBean.setEnabled(false);
 		}
@@ -142,37 +134,50 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 	
 	
 	/**
-	 * This method notifies observers about an action, the used did on the toolbar.
-	 * It is sending strings in order to identify, which action has been taken:
-	 *  - "refesh" - user hit the refesh button on the toolbar
-	 *  - "delete" - user hit the delete button on the toolbar
-	 */
-	/**
 	 * This method handels the user input on the toolbar.
 	 * <ul>
-	 * <li>If the user hits the refresh button, observers will be notified and the string "refresh" will be send together
-	 *   with the notification.</li>
-	 * <li>If the user hits the delete button, observers will be notified and the string "delete" will be send together 
-	 *   with the notification.</li>
-	 * <li>If the user hits the edit button, a {@link DialogMaintainCardData} object will be created and displayed in order
+	 * <li>If the user hits the delete button, observers will be notified together with notification object {@link String} {@code 'delete'}.</li>
+	 * <li>If the user hits the edit button, a {@link DialogMaintainCardObservable} object will be created and displayed in order
 	 *   to provide the maintenance UI for the currently selected {@link CardBean} object.</li>
 	 * </ul>
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == btn_refresh){
-			this.setChanged();
-			this.notifyObservers("refresh");
-		}
+
 		if(e.getSource() == btn_addCardBean){
-			new DialogMaintainCardData();
+			/* create maintain card dialog in 'add new card' mode and observe it */
+			Observable dialog = new DialogMaintainCardObservable();
+			dialog.addObserver(this);
 		}
 		if(e.getSource() == btn_deleteCardBean){
 			this.setChanged();
 			this.notifyObservers("delete");
 		}
 		if(e.getSource() == btn_editCardBean){
-			new DialogMaintainCardData(cardBean);
+			/* create maintain card dialog in 'edit card' mode and observe it */
+			Observable dialog = new DialogMaintainCardObservable(cardBean);
+			dialog.addObserver(this);
+		}
+		
+	}
+
+	/**
+	 * This method implements the reaction of regarding notifications from observed objects.
+	 * <ul>
+	 * <li>If the source of the notification is an {@link DialogMaintainCardObservable} object, the notification will simply be forwarded to
+	 * observers of this class</li>
+	 * </ul>
+	 * 
+	 * @param o
+	 * @param arg
+	 */
+	@Override
+	public void update(Observable o, Object arg) {
+		/* if source is an DialogMaintainCardObservable object, just forward the message */
+		if(o.getClass() == DialogMaintainCardObservable.class){
+			this.setChanged();
+			this.notifyObservers(arg);
+			Logger.debug("Forward notification from observed DialogMaintainCardObservable object to observers");
 		}
 		
 	}

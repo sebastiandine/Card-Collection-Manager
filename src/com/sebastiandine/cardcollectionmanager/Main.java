@@ -16,7 +16,7 @@ import com.sebastiandine.cardcollectionmanager.container.EditionBeanContainer;
 import com.sebastiandine.cardcollectionmanager.enums.ConditionEnum;
 import com.sebastiandine.cardcollectionmanager.enums.LanguageEnum;
 import com.sebastiandine.cardcollectionmanager.ui.MainFrame;
-import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogMaintainCardData;
+import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogMaintainCardObservable;
 import com.sebastiandine.cardcollectionmanager.ui.dialogs.edition.DialogMaintainEditionData;
 import com.sebastiandine.cardcollectionmanager.ui.tables.card.CardContainerTable;
 

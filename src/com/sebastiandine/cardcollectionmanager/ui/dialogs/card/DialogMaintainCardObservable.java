@@ -36,11 +36,15 @@ import com.sebastiandine.cardcollectionmanager.logging.Logger;
 import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxEditionBean;
 
 /**
- * This class provides a {@link JDialog} based dialog to add or edit {@link CardBean} objects.
+ * This class provides the functionality to add or edit {@link CardBean} objects, by managing an internal
+ * {@link JDialog} object which provides the corresponding UI. It also extends {@link Observable} to provide
+ * observers the possibility to react on the creation of new {@link CardBean} objects resp. editing of existing
+ * {@link CardBean} objects.
+ * 
  * <ul>
- * <li>Use constructor {@link DialogMaintainCardData#DialogMaintainCardData()} in order to create a new
+ * <li>Use constructor {@link DialogMaintainCardObservable#DialogMaintainCardObservable()} in order to create a new
  * card.</li>
- * <li>Use constructor {@link DialogMaintainCardData#DialogMaintainCardData(CardBean)} in order to edit
+ * <li>Use constructor {@link DialogMaintainCardObservable#DialogMaintainCardObservable(CardBean)} in order to edit
  * an existing card.</li>
  * </ul>
  * 
@@ -48,7 +52,7 @@ import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxEditionBean;
  *
  */
 @SuppressWarnings("serial")
-public class DialogMaintainCardData extends JDialog implements ActionListener, MouseListener, WindowListener, Observer {
+public class DialogMaintainCardObservable extends Observable implements ActionListener, MouseListener, WindowListener, Observer {
 	
 	private static final JLabel LBL_NAME = new JLabel("Name: "); 
 	private static final JLabel LBL_EDITION = new JLabel("Edition: "); 
@@ -56,8 +60,8 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 	private static final JLabel LBL_CONDITION = new JLabel("Condition: "); 
 	private static final JLabel LBL_AMOUNT = new JLabel("Amount: ");
 	private static final JLabel LBL_FOIL = new JLabel("Foil: "); 
-	private static final JLabel LBL_ALTERED = new JLabel("Signed: "); 
-	private static final JLabel LBL_SIGNED = new JLabel("Altered: "); 
+	private static final JLabel LBL_ALTERED = new JLabel("Altered: "); 
+	private static final JLabel LBL_SIGNED = new JLabel("Signed: "); 
 	private static final JLabel LBL_IMG1 = new JLabel("Front: "); 
 	private static final JLabel LBL_IMG2 = new JLabel("Back: "); 
 	private static final JLabel LBL_NOTE = new JLabel("Note: ");
@@ -70,6 +74,8 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 	private static final String TITLE_EDIT = "Edit card";
 
 	private CardBean cardBean;
+	
+	private JDialog dia_maintainCard;
 	
 	private JTextField txt_name;
 	private JTextField txt_note;
@@ -92,40 +98,43 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 	
 
 	/**
-	 * Create dialog to add a new card to the system resp. to container {@link CardBeanContainer}.
+	 * Create and open dialog to add a new card to the system resp. to container {@link CardBeanContainer}.
 	 */
-	public DialogMaintainCardData(){
+	public DialogMaintainCardObservable(){
 		
 		this.cardBean = new CardBean();
 		
 		initUiElements();
+		
+		/* create internal JDialog */
+		dia_maintainCard = new JDialog();
 		
 		/* Configure main panel */
 		JPanel mainPanel = new JPanel();
 		mainPanel.setLayout(createUiLayout(mainPanel));
 		
 		/* Configure general dialog settings */
-		this.setTitle(TITLE_ADD);
-		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		dia_maintainCard.setTitle(TITLE_ADD);
+		dia_maintainCard.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		
-		this.add(mainPanel);
-		this.pack();
-		this.setResizable(false);
-		this.addWindowListener(this);
-		this.setVisible(true);
+		dia_maintainCard.add(mainPanel);
+		dia_maintainCard.pack();
+		dia_maintainCard.setResizable(false);
+		dia_maintainCard.addWindowListener(this);
+		dia_maintainCard.setVisible(true);
 		
 		Logger.debug("Card maintenance dialog opened.");
 	}
 	
 
 	/**
-	 * Create dialog to edit an existing {@link CardBean} object from container {@link CardBeanContainer}.
+	 * Create and open dialog to edit an existing {@link CardBean} object from container {@link CardBeanContainer}.
 	 * 
 	 * @param cardBean {@link CardBean} object in container {@link CardBeanContainer}, which should be edited.
 	 */
-	public DialogMaintainCardData(CardBean cardBean){
+	public DialogMaintainCardObservable(CardBean cardBean){
 		this();
-		this.setTitle(TITLE_EDIT);
+		dia_maintainCard.setTitle(TITLE_EDIT);
 		this.cardBean = cardBean;
 		populateUiElements(this.cardBean);
 		
@@ -263,7 +272,7 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 		
 		
 			
-		ckb_foil = new JCheckBox();;
+		ckb_foil = new JCheckBox();
 		ckb_signed = new JCheckBox();
 		ckb_altered = new JCheckBox();
 
@@ -332,14 +341,23 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 	/**
 	 * This method coordinates action events, to which this class listens to.
 	 * 
-	 * - if the source of the action event is button <b>'Save'</b>, the cardData of the UI will be stored to the
-	 *   container {@link CardBeanContainer}.
+	 * <ul>
+	 * <li>If the source of the action event is button <b>'Save'</b>, the internal {@link CardBean} object will be stored to 
+	 * container {@link CardBeanContainer}.
+	 * 		<ul>
+	 * 		<li>If an existing {@link CardBean} object has been edited, the container {@link CardBeanContainer} will be updated 
+	 * 		with the edited {@link CardBean} object. observers will be notified together with notification object
+	 * 		{@link String} {@code 'card_edited'}.</li>
+	 *		<li>If a new {@link CardBean} object has been created, this object will be added to container {@link CardBeanContainer}.
+	 *		 observers will be notified together with notification object {@link CardBean}, which is the newly created {@link CardBean} object.</li>
+	 *		</ul> 		
+	 * </li>  
+	 * <li>if the source of the action event is button <b>'...'</b>, related to the front image, a {@link FileChooserImageUpload}
+	 * 	 will be generated in order to maintain the front image of the internal {@link CardBean} object.</li> 
 	 *   
-	 * - if the source of the action event is button <b>'...'</b>, related to the front image, a {@link FileChooserImageUpload}
-	 * 	 will be generated in order to maintain the front image of the internal {@link CardBean} object. 
-	 *   
-	 * - if the source of the action event is button <b>'...'</b> related to the back image, a {@link FileChooserImageUpload}
-	 *   will be generated in order to maintain the back image of the internal {@link CardBean} object. 
+	 * <li>if the source of the action event is button <b>'...'</b> related to the back image, a {@link FileChooserImageUpload}
+	 *   will be generated in order to maintain the back image of the internal {@link CardBean} object.</li> 
+	 * </ul>
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -351,16 +369,22 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 			if(cardBean.getId() != -1){								
 				updateInternalCardBeanFromUi();					/* edit existing entry in CardBeanContainer */
 				Logger.info("Edited card bean has been restored to the system.");
+				this.setChanged();
+				notifyObservers("card_edited");
+				Logger.debug("Notifed observers about the editing of a card.");
 				
 			}
 			else{												
 				updateInternalCardBeanFromUi();
 				CardBeanContainer.addCardBean(cardBean);		/* add new entry to CardBeanContainer */
 				Logger.info("New card bean has been stored to the system.");
+				this.setChanged();
+				notifyObservers(cardBean);
+				Logger.debug("Notifed observers about the creation of a new card by sending the new CardBean object.");
 			}
 			
 			CardBeanContainer.saveCardBeanList();				/* save updated CardBeanContainer */
-			this.dispose();
+			dia_maintainCard.dispose();
 		}
 		
 		/* Action, if button btn_img1 is pressed */
@@ -477,7 +501,7 @@ public class DialogMaintainCardData extends JDialog implements ActionListener, M
 			Logger.debug("Update card maintenace dialog UI.");
 			
 			populateUiElements(cardBean);
-			this.repaint();
+			dia_maintainCard.repaint();
 		}
 		
 	}

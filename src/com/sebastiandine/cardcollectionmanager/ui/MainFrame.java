@@ -104,49 +104,76 @@ public class MainFrame extends JFrame implements ListSelectionListener, Observer
 
 	
 	/**
-	 * This method implements the reaction to menubar and toolbar actions of the user.
+	 * This method implements the reaction of regarding notifications from observed objects.
 	 * 
 	 * <ul>
-	 * <li>If the user hits the 'refesh' button on the toolbar, the card info panel and the card table will be updated</li>
-	 * <li>If the user hits the 'delete' button on the toolbar, the currently selected {@link CardBean} object will be deleted and 
-	 * the next element of the table gets selected. UI elements will be updaed automatially.</li>
-	 * <li>If the user hits the 'close application' menu item on the menu bar, the application will be terminated</li>
+	 * <li>If the user hits the 'delete' button on the toolbar, the currently selected {@link CardBean} object will be
+	 * deleted and the next element of the table gets selected. The info panel and table will be updated automatically.</li>
+	 * <li>If the user edits the currently selected {@link CardBean} object, the corresponding entry in the info panel
+	 * and table will be updated automatically.</li>
+	 * <li>If the user creates a new {@link CardBean} object, it will be added to the table automatically. Also the
+	 * new entry will be selected in the table automatically and is therefore also displayed by the info panel.
+	 * </li>
+	 * <li>If the user hits the 'close application' menu item on the menubar, the application will be terminated.</li>
+	 * <li>
 	 * </ul>
 	 */
 	@Override
 	public void update(Observable o, Object arg) {
 		
-		/* refresh routine */
-		if(((String)arg).equals("refresh")){
-			cardInfoPanel.setSelectedCard(cardTable.getSelectedCardBean());
-			cardTable.updateSelectedRow();
-		}
-		
-		/* card bean deletion routine */
-		if(((String)arg).equals("delete")){
-			/* delete card bean images */
-			try {
-				CardBeanImageServices.deleteImageFiles(cardTable.getSelectedCardBean());
-			} catch (IOException e) {
-				Logger.warn("Failed to delete image files of card bean "+cardTable.getSelectedCardBean().getName()+".");
-				Logger.warn(e.getMessage());
+		if(o.getClass() == CardBeanToolBarObservable.class){
+			
+			if(arg.getClass() == String.class){
+				
+				/* update routine in reaction of an update of the currently selected card */
+				if(((String)arg).equals("card_edited")){
+					cardInfoPanel.setSelectedCard(cardTable.getSelectedCardBean());
+					cardTable.updateSelectedRow();
+				}
+			
+				/* card bean deletion routine */
+				if(((String)arg).equals("delete")){
+					/* delete card bean images */
+					try {
+						CardBeanImageServices.deleteImageFiles(cardTable.getSelectedCardBean());
+					} catch (IOException e) {
+						Logger.warn("Failed to delete image files of card bean "+cardTable.getSelectedCardBean().getName()+".");
+						Logger.warn(e.getMessage());
+					}
+					/* delete card bean data */
+					CardBeanContainer.deleteCardBeanById(cardTable.getSelectedCardBean().getId());
+					CardBeanContainer.saveCardBeanList();
+					
+					/* remove corrsponding entry from list */
+					cardTable.deleteSelectedRow();
+					
+					/* update toolbar and info panel with the newly selected card bean */
+					cardInfoPanel.setSelectedCard(cardTable.getSelectedCardBean());
+					cardToolBarObservable.setSelectedCard(cardTable.getSelectedCardBean());
+				}
 			}
-			/* delete card bean data */
-			CardBeanContainer.deleteCardBeanById(cardTable.getSelectedCardBean().getId());
-			CardBeanContainer.saveCardBeanList();
 			
-			/* remove corrsponding entry from list */
-			cardTable.deleteSelectedRow();
-			
-			/* update toolbar and info panel with the newly selected card bean */
-			cardInfoPanel.setSelectedCard(cardTable.getSelectedCardBean());
-			cardToolBarObservable.setSelectedCard(cardTable.getSelectedCardBean());
+			/* update routine in reaction of the creation of a new CardBean object */
+			if(arg.getClass() == CardBean.class){
+				cardToolBarObservable.setSelectedCard((CardBean)arg);
+				cardInfoPanel.setSelectedCard((CardBean)arg);
+				cardTable.appendRowByCardBean((CardBean)arg);
+				cardTable.selectRowByCardBean((CardBean)arg);
+				
+			}
 		}
 		
-		/* close application routine */
-		if(((String)arg).equals("close")){
-			Logger.debug("User hit the close menu item in order to terminate the application.");
-			this.dispose();
+		
+		if(o.getClass() == MenuBarObservable.class){
+			
+			if(arg.getClass() == String.class){
+				
+				/* close application routine */
+				if(((String)arg).equals("close")){
+					Logger.debug("User hit the close menu item in order to terminate the application.");
+					this.dispose();
+				}
+			}
 		}
 		
 	}
