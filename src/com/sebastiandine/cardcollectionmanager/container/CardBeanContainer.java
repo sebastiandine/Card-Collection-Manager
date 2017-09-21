@@ -65,6 +65,14 @@ public class CardBeanContainer extends AbstractBeanContainer {
 	}
 	
 	/**
+	 * This method returns the next free ID within the {@link CardBeanContainer}.
+	 * @return Next free ID within container.
+	 */
+	public static int getNextId(){
+		return getNextId(cardBeanList);
+	}
+	
+	/**
 	 * This method deletes the {@link CardBean} element with the given 'id' from the internal list of {@link CardBean} objects.
 	 * 
 	 * @param id ID of the {@link CardBean} element which should be deleted from the internal list. Use {@link CardBean#getId()} to retrieve

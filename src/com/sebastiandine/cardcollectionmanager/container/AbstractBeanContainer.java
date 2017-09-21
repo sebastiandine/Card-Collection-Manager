@@ -31,14 +31,24 @@ public abstract class AbstractBeanContainer {
 	 * @param bean {@link CardCollectionBean} object which should be added to @param container.
 	 */
 	protected static void addBeanToContainer(List<CardCollectionBean> container, CardCollectionBean bean){
+		
+		bean.setId(getNextId(container));
+		container.add(bean);
+	}
+	
+	/**
+	 * This method returns the next free ID within the given container.
+	 * 
+	 * @param container Container to which the next free ID should be calculated.
+	 * @return Next free ID within container.
+	 */
+	protected static int getNextId(List<CardCollectionBean> container){
 		if(container.isEmpty()){
-			bean.setId(1);
-			container.add(bean);
+			return 1;
 		}
 		else{
 			Collections.sort(container);
-			bean.setId(container.get(container.size()-1).getId() + 1);
-			container.add(bean);
+			return (container.get(container.size()-1).getId() + 1);
 		}
 	}
 	

@@ -24,6 +24,8 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.GroupLayout.ParallelGroup;
 import javax.swing.GroupLayout.SequentialGroup;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.text.NumberFormatter;
 
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
@@ -52,7 +54,7 @@ import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxEditionBean;
  *
  */
 @SuppressWarnings("serial")
-public class DialogMaintainCardObservable extends Observable implements ActionListener, MouseListener, WindowListener, Observer {
+public class DialogMaintainCardObservable extends Observable implements ActionListener, MouseListener, DocumentListener, Observer {
 	
 	private static final JLabel LBL_NAME = new JLabel("Name: "); 
 	private static final JLabel LBL_EDITION = new JLabel("Edition: "); 
@@ -103,6 +105,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 	public DialogMaintainCardObservable(){
 		
 		this.cardBean = new CardBean();
+		this.cardBean.setId(CardBeanContainer.getNextId()); /* reserve next free ID within container */
 		
 		initUiElements();
 		
@@ -120,7 +123,6 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		dia_maintainCard.add(mainPanel);
 		dia_maintainCard.pack();
 		dia_maintainCard.setResizable(false);
-		dia_maintainCard.addWindowListener(this);
 		dia_maintainCard.setVisible(true);
 		
 		Logger.debug("Card maintenance dialog opened.");
@@ -257,11 +259,13 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 	 */
 	private void initUiElements(){
 		txt_name = new JTextField(30);
+		txt_name.getDocument().addDocumentListener(this);
+		
 		txt_note = new JTextField(30);
 		
 		NumberFormatter formatter = new NumberFormatter(NumberFormat.getInstance());
-		formatter.setAllowsInvalid(false);
 		txt_amount = new JFormattedTextField(formatter);
+		//txt_amount.setText("1");
 		 
 		txt_img1 = new JTextField(256);
 		txt_img2 = new JTextField(256);
@@ -280,12 +284,20 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		cmb_condition = new JComboBox<ConditionEnum>(ConditionEnum.values());
 		cmb_edition = new ComboBoxEditionBean();
 		
+		
 		btn_img1 = new JButton(LBL_EXTEND);
 		btn_img1.addActionListener(this);
 		btn_img2 = new JButton(LBL_EXTEND);
 		btn_img2.addActionListener(this);
 		btn_save = new JButton(LBL_SAVE);
 		btn_save.addActionListener(this);
+		
+		/* disable buttons, if name of CardBean has not been specified */
+		if(cardBean.getName() == null){
+			btn_img1.setEnabled(false);
+			btn_img2.setEnabled(false);
+			btn_save.setEnabled(false);
+		}
 		
 	}
 	
@@ -338,6 +350,12 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		cardBean.setAltered(ckb_altered.isSelected());
 	}
 
+	
+/*################################################################################################################################################################
+ * ActionListener Implementation
+ *################################################################################################################################################################
+ */
+	
 	/**
 	 * This method coordinates action events, to which this class listens to.
 	 * 
@@ -352,35 +370,34 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 	 *		 observers will be notified together with notification object {@link CardBean}, which is the newly created {@link CardBean} object.</li>
 	 *		</ul> 		
 	 * </li>  
-	 * <li>if the source of the action event is button <b>'...'</b>, related to the front image, a {@link FileChooserImageUpload}
+	 * <li>if the source of the action event is button <b>'...'</b>, related to the front image, a {@link ImageFileChooserObservable}
 	 * 	 will be generated in order to maintain the front image of the internal {@link CardBean} object.</li> 
 	 *   
-	 * <li>if the source of the action event is button <b>'...'</b> related to the back image, a {@link FileChooserImageUpload}
+	 * <li>if the source of the action event is button <b>'...'</b> related to the back image, a {@link ImageFileChooserObservable}
 	 *   will be generated in order to maintain the back image of the internal {@link CardBean} object.</li> 
 	 * </ul>
 	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+			
 		/* Action, if button btn_save is pressed */
 		if (e.getSource() == btn_save){						
 			Logger.debug("Button 'Save' has been pressed.");
 			
-			if(cardBean.getId() != -1){								
-				updateInternalCardBeanFromUi();					/* edit existing entry in CardBeanContainer */
-				Logger.info("Edited card bean has been restored to the system.");
-				this.setChanged();
-				notifyObservers("card_edited");
-				Logger.debug("Notifed observers about the editing of a card.");
-				
-			}
-			else{												
+			if(cardBean.getId() == CardBeanContainer.getNextId()){	/* check if cardBean is a new entry */							
 				updateInternalCardBeanFromUi();
 				CardBeanContainer.addCardBean(cardBean);		/* add new entry to CardBeanContainer */
 				Logger.info("New card bean has been stored to the system.");
 				this.setChanged();
 				notifyObservers(cardBean);
 				Logger.debug("Notifed observers about the creation of a new card by sending the new CardBean object.");
+			}
+			else{	
+				updateInternalCardBeanFromUi();					/* edit existing entry in CardBeanContainer */
+				Logger.info("Edited card bean has been restored to the system.");
+				this.setChanged();
+				notifyObservers("card_edited");
+				Logger.debug("Notifed observers about the editing of a card.");
 			}
 			
 			CardBeanContainer.saveCardBeanList();				/* save updated CardBeanContainer */
@@ -390,17 +407,30 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		/* Action, if button btn_img1 is pressed */
 		if(e.getSource() == btn_img1){
 			Logger.debug("Button '...' for front image has been pressed.");
-			new FileChooserImageUpload(this, cardBean, ImageEnum.IMG_FRONT);  /* this object will be observed by this (calling) class */
+			updateInternalCardBeanFromUi();
+			ImageFileChooserObservable fileChooserFront = new ImageFileChooserObservable(cardBean, ImageEnum.IMG_FRONT);
+			fileChooserFront.addObserver(this);
+			fileChooserFront.showDialog();
+			
 		}
 		
 		/* Action, if button btn_img2 is pressed */
 		if(e.getSource() == btn_img2){
 			Logger.debug("Button '...' for back image has been pressed.");
-			new FileChooserImageUpload(this, cardBean, ImageEnum.IMG_BACK);   /* this object will be observed by this (calling) class */
+			updateInternalCardBeanFromUi();
+			ImageFileChooserObservable fileChooserBack = new ImageFileChooserObservable(cardBean, ImageEnum.IMG_BACK); 
+			fileChooserBack.addObserver(this);
+			fileChooserBack.showDialog();
+			
 		}
 	}
 
 
+/*################################################################################################################################################################
+ * MouseListener Implementation
+ *################################################################################################################################################################
+ */	
+	
 	/**
 	 * This method coordinates mouse click events, to which this class listens to.
 	 * 
@@ -488,63 +518,80 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 	}
 	
 	
+
+
+
+/*################################################################################################################################################################
+ * DocumentListener Implementation
+ *################################################################################################################################################################
+ */	
 	/**
-	 * This method coordinates updates, once an observed object notifies a change.
-	 * When the {@link Observable} object is an object of class {@link FileChooserImageUpload},
-	 * the internal {@link CardBean} objects will be reloaded to the UI.
+	 * This method checks, if the user inserts something into the textfield corresponding to the name of the card.
+	 * If the textfield is not empty, the save button as well as both image upload buttons will be enabled.
 	 */
 	@Override
-	public void update(Observable o, Object arg) {
-		if (o.getClass() == FileChooserImageUpload.class){
-			
-			Logger.debug("New incoming update notification from "+o.getClass()+".");
-			Logger.debug("Update card maintenace dialog UI.");
-			
-			populateUiElements(cardBean);
-			dia_maintainCard.repaint();
+	public void insertUpdate(DocumentEvent e) {
+		/* Action, if user enters text into textfield 'txt_name' */
+		if(e.getDocument() == txt_name.getDocument()){
+			if(!txt_name.getText().equals("")){
+				btn_img1.setEnabled(true);
+				btn_img2.setEnabled(true);
+				btn_save.setEnabled(true);
+			}
+		}
+
+	}
+
+	/**
+	 * This method checks, if the user removes something from tge textfield corresponding to the name of the card.
+	 * If the textfield is empty, the save button as well as both image upload buttons will be disabled.
+	 */
+	@Override
+	public void removeUpdate(DocumentEvent e) {
+		/* Action, if user removes text from textfield 'txt_name' */
+		if(e.getDocument() == txt_name.getDocument()){
+			if(txt_name.getText().equals("")){
+				btn_img1.setEnabled(false);
+				btn_img2.setEnabled(false);
+				btn_save.setEnabled(false);
+			}
 		}
 		
 	}
 
+
 	@Override
-	public void windowActivated(WindowEvent e) {
+	public void changedUpdate(DocumentEvent e) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void windowClosed(WindowEvent e) {
-		Logger.debug("Card maintenance dialog closed.");
-		
-	}
 
+/*################################################################################################################################################################
+ * Observer Implementation
+ *################################################################################################################################################################
+ */	
+	
+	/**
+	 * This method coordinates updates, once an observed object notifies a change.
+	 * <ul>
+	 * <li>When the {@link Observable} object is an object of class {@link ImageFileChooserObservable}, the corresponding image textfield
+	 * will be updated.</li>
+	 * </ul>
+	 */
 	@Override
-	public void windowClosing(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void windowDeactivated(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void windowDeiconified(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void windowIconified(WindowEvent e) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void windowOpened(WindowEvent e) {
-		// TODO Auto-generated method stub
+	public void update(Observable o, Object arg) {
+		if (o.getClass() == ImageFileChooserObservable.class){
+			
+			if(arg.equals(ImageEnum.IMG_FRONT)){
+				Logger.debug("Update front image textfield.");
+				txt_img1.setText(cardBean.getImageFront().getName());
+			}
+			if(arg.equals(ImageEnum.IMG_BACK)){
+				Logger.debug("Update back image textfield.");
+				txt_img2.setText(cardBean.getImageBack().getName());
+			}
+		}
 		
 	}
 	
