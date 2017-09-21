@@ -85,7 +85,7 @@ public class MenuBarObservable extends Observable implements ActionListener {
 		}
 		
 		if(e.getSource() == men_addEdition){
-			new DialogMaintainEditionData();
+			DialogMaintainEditionData.getInstance();
 		}
 		
 		if(e.getSource() == men_editEdition){

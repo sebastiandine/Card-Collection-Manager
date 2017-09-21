@@ -6,8 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
 import java.text.NumberFormat;
 import java.util.Observable;
 import java.util.Observer;
@@ -43,17 +41,15 @@ import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxEditionBean;
  * observers the possibility to react on the creation of new {@link CardBean} objects resp. editing of existing
  * {@link CardBean} objects.
  * 
+ * This class implements the Singleton pattern, therefore there can only be one card maintenance dialog at a time:
  * <ul>
- * <li>Use constructor {@link DialogMaintainCardObservable#DialogMaintainCardObservable()} in order to create a new
- * card.</li>
- * <li>Use constructor {@link DialogMaintainCardObservable#DialogMaintainCardObservable(CardBean)} in order to edit
- * an existing card.</li>
+ * <li>Use constructor {@link DialogMaintainCardObservable#getInstance()} in order to create a new card.</li>
+ * <li>Use constructor {@link DialogMaintainCardObservable#getInstance(CardBean)} in order to edit an existing card.</li>
  * </ul>
  * 
  * @author Sebastian Dine
  *
  */
-@SuppressWarnings("serial")
 public class DialogMaintainCardObservable extends Observable implements ActionListener, MouseListener, DocumentListener, Observer {
 	
 	private static final JLabel LBL_NAME = new JLabel("Name: "); 
@@ -98,11 +94,48 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 	private JButton btn_img2;
 	private JButton btn_save;
 	
+	private static DialogMaintainCardObservable singletonInstance;		// the singleton object
+	
+	/**
+	 * Retrieve singleton object which provides a {@link JDialog} to create a new {@link CardBean} object.
+	 * 
+	 * @return Singleton instance in 'create' mode.
+	 */
+	public static DialogMaintainCardObservable getInstance(){
+		
+		/* terminate old instance */
+		if(singletonInstance != null){
+			singletonInstance.deleteObservers();
+			singletonInstance.dia_maintainCard.dispose();
+		}
+		/* create new instance */
+		singletonInstance = new DialogMaintainCardObservable();
+		return singletonInstance;
+	}
+	
+	/**
+	 * Retrive singletion object which provides a {@link JDialog} to edit an existing {@link CardBean} object.
+	 * 
+	 * @param cardBean {@link CardBean} object, which should be edited.
+	 * @return Singleton instance in 'edit' mode.
+	 */
+	public static DialogMaintainCardObservable getInstance(CardBean cardBean){
+		
+		/* terminate old instance */
+		if(singletonInstance != null){
+			singletonInstance.deleteObservers();
+			singletonInstance.dia_maintainCard.dispose();
+		}
+		
+		/* create new instance */
+		singletonInstance = new DialogMaintainCardObservable(cardBean);
+		return singletonInstance;
+	}
 
 	/**
 	 * Create and open dialog to add a new card to the system resp. to container {@link CardBeanContainer}.
 	 */
-	public DialogMaintainCardObservable(){
+	private DialogMaintainCardObservable(){
 		
 		this.cardBean = new CardBean();
 		this.cardBean.setId(CardBeanContainer.getNextId()); /* reserve next free ID within container */
@@ -134,7 +167,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 	 * 
 	 * @param cardBean {@link CardBean} object in container {@link CardBeanContainer}, which should be edited.
 	 */
-	public DialogMaintainCardObservable(CardBean cardBean){
+	private DialogMaintainCardObservable(CardBean cardBean){
 		this();
 		dia_maintainCard.setTitle(TITLE_EDIT);
 		this.cardBean = cardBean;
@@ -349,7 +382,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		cardBean.setSigned(ckb_signed.isSelected());
 		cardBean.setAltered(ckb_altered.isSelected());
 	}
-
+	
 	
 /*################################################################################################################################################################
  * ActionListener Implementation

@@ -87,7 +87,7 @@ public class DialogSelectEdition extends JDialog implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == btn_select){
-			new DialogMaintainEditionData((EditionBean) cmb_edition.getSelectedItem());
+			DialogMaintainEditionData.getInstance((EditionBean) cmb_edition.getSelectedItem());
 			this.dispose();
 		}
 		

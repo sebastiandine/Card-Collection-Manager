@@ -17,6 +17,7 @@ import javax.swing.GroupLayout.ParallelGroup;
 import javax.swing.GroupLayout.SequentialGroup;
 import javax.swing.text.NumberFormatter;
 
+import com.sebastiandine.cardcollectionmanager.bean.CardBean;
 import com.sebastiandine.cardcollectionmanager.bean.EditionBean;
 import com.sebastiandine.cardcollectionmanager.container.EditionBeanContainer;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
@@ -27,11 +28,11 @@ import net.sourceforge.jdatepicker.JDatePicker;
 
 /**
  * This class provides a {@link JDialog} based dialog to add or edit {@link EditionBean} objects.
+ * This class implements the Singleton pattern, therefore there can only be one card maintenance dialog at a time:
  * <ul>
- * <li>Use constructor {@link DialogMaintainEditionData#DialogMaintainEditionData()} in order to add a new
+ * <li>Use constructor {@link DialogMaintainEditionData#getInstance()} in order to add a new
  * card.</li>
- * <li>Use constructor {@link DialogMaintainEditionData#DialogMaintainEditionData(EditionBean)} in order to edit
- * an existing edition.</li>
+ * <li>Use constructor {@link DialogMaintainEditionData#getInstance(EditionBean)} in order to edit an existing edition.</li>
  * </ul>
  * 
  * @author Sebastian Dine
@@ -59,10 +60,40 @@ public class DialogMaintainEditionData extends JDialog implements ActionListener
 	
 	private EditionBean editionBean;
 	
+	private static DialogMaintainEditionData singletonInstance;		//the singleton object
+	
+	/**
+	 * Retrieve singleton {@link JDialog} object to create a new {@link EditionBean} object.
+	 * 
+	 * @return Singleton instance in 'create' mode.
+	 */
+	public static DialogMaintainEditionData getInstance(){
+		if(singletonInstance != null){
+			singletonInstance.dispose();
+		}
+		singletonInstance = new DialogMaintainEditionData();
+		return singletonInstance;
+	}
+	
+	/**
+	 * Retrieve singleton {@link JDialog} to create edit an existing {@link EditionBean} object.
+	 * 
+	 * @param editionBean {@link EditionBean} object, which should be edited.
+	 * 
+	 * @return Singleton instance in 'edit' mode.
+	 */
+	public static DialogMaintainEditionData getInstance(EditionBean editionBean){
+		if(singletonInstance != null){
+			singletonInstance.dispose();
+		}
+		singletonInstance = new DialogMaintainEditionData(editionBean);
+		return singletonInstance;
+	}
+	
 	/**
 	 * Create dialog to add a new card to the system resp. to container {@link EditionBeanContainer}.
 	 */
-	public DialogMaintainEditionData(){
+	private DialogMaintainEditionData(){
 		
 		this.editionBean = new EditionBean();
 		
@@ -89,7 +120,7 @@ public class DialogMaintainEditionData extends JDialog implements ActionListener
 	 * 
 	 * @param editionBean {@link EditionBean} object in container {@link EditionBeanContainer}, which should be edited.
 	 */
-	public DialogMaintainEditionData(EditionBean editionBean){
+	private DialogMaintainEditionData(EditionBean editionBean){
 		this();
 		this.setTitle(TITLE_EDIT);
 		this.editionBean = editionBean;

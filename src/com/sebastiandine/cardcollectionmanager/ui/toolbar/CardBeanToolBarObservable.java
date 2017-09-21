@@ -147,7 +147,7 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 
 		if(e.getSource() == btn_addCardBean){
 			/* create maintain card dialog in 'add new card' mode and observe it */
-			Observable dialog = new DialogMaintainCardObservable();
+			Observable dialog = DialogMaintainCardObservable.getInstance();
 			dialog.addObserver(this);
 		}
 		if(e.getSource() == btn_deleteCardBean){
@@ -156,7 +156,7 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 		}
 		if(e.getSource() == btn_editCardBean){
 			/* create maintain card dialog in 'edit card' mode and observe it */
-			Observable dialog = new DialogMaintainCardObservable(cardBean);
+			Observable dialog = DialogMaintainCardObservable.getInstance(cardBean);
 			dialog.addObserver(this);
 		}
 		
