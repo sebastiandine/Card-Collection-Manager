@@ -6,6 +6,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.Observable;
 import java.util.Observer;
@@ -33,6 +36,7 @@ import com.sebastiandine.cardcollectionmanager.enums.ConditionEnum;
 import com.sebastiandine.cardcollectionmanager.enums.ImageEnum;
 import com.sebastiandine.cardcollectionmanager.enums.LanguageEnum;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
+import com.sebastiandine.cardcollectionmanager.services.CardBeanImageServices;
 import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxEditionBean;
 
 /**
@@ -50,7 +54,7 @@ import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxEditionBean;
  * @author Sebastian Dine
  *
  */
-public class DialogMaintainCardObservable extends Observable implements ActionListener, MouseListener, DocumentListener, Observer {
+public class DialogMaintainCardObservable extends Observable implements ActionListener, MouseListener, DocumentListener, Observer, WindowListener {
 	
 	private static final JLabel LBL_NAME = new JLabel("Name: "); 
 	private static final JLabel LBL_EDITION = new JLabel("Edition: "); 
@@ -154,9 +158,13 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		dia_maintainCard.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
 		
 		dia_maintainCard.add(mainPanel);
+		
+		dia_maintainCard.addWindowListener(this);
+		
 		dia_maintainCard.pack();
 		dia_maintainCard.setResizable(false);
 		dia_maintainCard.setVisible(true);
+		
 		
 		Logger.debug("Card maintenance dialog opened.");
 	}
@@ -627,5 +635,72 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		}
 		
 	}
+
+	
+	
+/*################################################################################################################################################################
+ * WindowListener Implementation
+ *################################################################################################################################################################
+ */			
+	
+/**
+ * This method triggers, if the internal {@link JDialog} gets closed.
+ * If the internal {@link CardBean} object has not been saved to the {@link CardBeanContainer},
+ * it assumes, that the user hit the 'abort' button on the upper corner (the 'X' button) in order
+ * to abort the creation of a new {@link CardBean} object.
+ * In this case, uploaded image files should be deleted from the disk. Therefore this method
+ * calls {@link CardBeanImageServices#deleteImageFiles(CardBean)}, in this special case. 
+ */
+@Override
+public void windowClosed(WindowEvent e) {
+	
+	/* check if card is in collection */
+	if(CardBeanContainer.getCardBeanById(cardBean.getId()) == null){
+		Logger.info("User aborted the creation of a new card.");
+		try {
+			CardBeanImageServices.deleteImageFiles(cardBean);
+		} catch (IOException e1) {
+			Logger.error("Failed to delete image files of an unsaved card.");
+			Logger.error(e1.getMessage());
+		}
+	}
+}
+
+
+@Override
+public void windowOpened(WindowEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void windowClosing(WindowEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void windowIconified(WindowEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void windowDeiconified(WindowEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void windowActivated(WindowEvent e) {
+	// TODO Auto-generated method stub
+	
+}
+
+@Override
+public void windowDeactivated(WindowEvent e) {
+	// TODO Auto-generated method stub
+	
+}
 	
 }
