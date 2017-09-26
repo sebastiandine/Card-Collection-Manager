@@ -21,7 +21,11 @@ import javax.swing.JDialog;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSpinner;
+import javax.swing.JSpinner.DefaultEditor;
 import javax.swing.JTextField;
+import javax.swing.SpinnerModel;
+import javax.swing.SpinnerNumberModel;
 import javax.swing.UIManager;
 import javax.swing.GroupLayout.ParallelGroup;
 import javax.swing.GroupLayout.SequentialGroup;
@@ -84,7 +88,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 	private JTextField txt_img1;
 	private JTextField txt_img2;
 	
-	private JFormattedTextField txt_amount;
+	private JSpinner spn_amount;
 	
 	private JCheckBox ckb_foil;
 	private JCheckBox ckb_signed;
@@ -214,7 +218,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 								.addComponent(cmb_condition,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
 		verticalGroup.addGroup(layout.createParallelGroup()
 								.addComponent(LBL_AMOUNT)
-								.addComponent(txt_amount,19,19,19));
+								.addComponent(spn_amount,19,19,19));
 		verticalGroup.addGroup(layout.createParallelGroup()
 								.addComponent(LBL_FOIL)
 								.addComponent(ckb_foil,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE)
@@ -259,7 +263,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		horizontalGroup.addGroup(layout.createSequentialGroup()
 								.addGap(10,10,10)
 								.addComponent(LBL_AMOUNT,70,70,70)
-								.addComponent(txt_amount,50,50,50));
+								.addComponent(spn_amount,50,50,50));
 		horizontalGroup.addGroup(layout.createSequentialGroup()
 								.addGap(92,92,92)
 								.addComponent(LBL_FOIL)
@@ -304,9 +308,9 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		
 		txt_note = new JTextField(30);
 		
-		NumberFormatter formatter = new NumberFormatter(NumberFormat.getInstance());
-		txt_amount = new JFormattedTextField(formatter);
-		//txt_amount.setText("1");
+		SpinnerModel spinModel = new SpinnerNumberModel(1, 1, 1000, 1);
+		spn_amount = new JSpinner(spinModel);
+		((DefaultEditor)spn_amount.getEditor()).getTextField().setEditable(false);
 		 
 		txt_img1 = new JTextField(256);
 		txt_img2 = new JTextField(256);
@@ -350,7 +354,8 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 	private void populateUiElements(CardBean cardBean){
 		txt_name.setText(cardBean.getName());
 		txt_note.setText(cardBean.getNote());
-		txt_amount.setText(""+cardBean.getAmount());
+		
+		spn_amount.getModel().setValue(cardBean.getAmount());
 		
 		if(cardBean.getImageFront() != null){
 			txt_img1.setText(cardBean.getImageFront().getName());
@@ -382,7 +387,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 	private void updateInternalCardBeanFromUi(){
 		cardBean.setName(txt_name.getText());
 		cardBean.setNote(txt_note.getText());
-		cardBean.setAmount(Integer.parseInt(txt_amount.getText()));
+		cardBean.setAmount((int) spn_amount.getModel().getValue());
 		cardBean.setLanguage((LanguageEnum) cmb_language.getSelectedItem());
 		cardBean.setEdition((EditionBean) cmb_edition.getSelectedItem());
 		cardBean.setCondition((ConditionEnum) cmb_condition.getSelectedItem());
