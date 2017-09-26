@@ -17,14 +17,13 @@ import javax.swing.GroupLayout.ParallelGroup;
 import javax.swing.GroupLayout.SequentialGroup;
 import javax.swing.text.NumberFormatter;
 
-import com.sebastiandine.cardcollectionmanager.bean.CardBean;
 import com.sebastiandine.cardcollectionmanager.bean.EditionBean;
 import com.sebastiandine.cardcollectionmanager.container.EditionBeanContainer;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
 import com.sebastiandine.cardcollectionmanager.services.CardBeanContainerServices;
 
-import net.sourceforge.jdatepicker.JDateComponentFactory;
-import net.sourceforge.jdatepicker.JDatePicker;
+import org.jdatepicker.JDateComponentFactory;
+import org.jdatepicker.JDatePicker;
 
 /**
  * This class provides a {@link JDialog} based dialog to add or edit {@link EditionBean} objects.
@@ -145,7 +144,7 @@ public class DialogMaintainEditionData extends JDialog implements ActionListener
 		txt_amount = new JFormattedTextField(formatter);
 		
 		/* use jdatepicker library in order to create the date picker ui elements */	
-		pck_date = JDateComponentFactory.createJDatePicker();
+		pck_date = new JDateComponentFactory().createJDatePicker();
 		pck_date.addActionListener(this);
 		
 		btn_save = new JButton(LBL_SAVE);
