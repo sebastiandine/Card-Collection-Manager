@@ -62,14 +62,27 @@ public class CardBeanImageServices {
 		if(imgType.equals(ImageEnum.IMG_FRONT)){
 			if(cardBean.getImageFront() != null){
 				Logger.debug("Delete old file at "+cardBean.getImageFront().getAbsolutePath()+" from card bean.");
-				Files.delete(cardBean.getImageFront().toPath());
+				
+				try{
+					Files.delete(cardBean.getImageFront().toPath());
+				}
+				catch(Exception e){
+					Logger.warn("Old file not found at the specified path.");
+				}
+				
 			}
 			cardBean.setImageFront(newImageFile); /* store absolute path in corresponding CardBean object */
 		}
 		if(imgType.equals(ImageEnum.IMG_BACK)){
 			if(cardBean.getImageBack() != null){
 				Logger.debug("Delete old file at "+cardBean.getImageBack().getAbsolutePath()+" from card bean.");
-				Files.delete(cardBean.getImageBack().toPath());
+				
+				try{
+					Files.delete(cardBean.getImageBack().toPath());
+				}
+				catch(Exception e){
+					Logger.warn("Old file not found at the specified path.");
+				}
 			}
 			cardBean.setImageBack(newImageFile); /* store absolute path in corresponding CardBean object */
 		}

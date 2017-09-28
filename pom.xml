@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>Card-Collection-Manager</groupId>
 	<artifactId>Card-Collection-Manager</artifactId>
-	<version>0.1-01</version>
+	<version>0.1-02</version>
 	<name>Card Collection Manager</name>
 	<description>An application for managing Magic the Gathering card collections.</description>
 
