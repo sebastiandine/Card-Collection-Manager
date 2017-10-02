@@ -1,15 +1,1 @@
-com.sebastiandine.cardcollectionmanager
-com.sebastiandine.cardcollectionmanager.bean
-com.sebastiandine.cardcollectionmanager.container
-com.sebastiandine.cardcollectionmanager.enums
-com.sebastiandine.cardcollectionmanager.factories
-com.sebastiandine.cardcollectionmanager.logging
 com.sebastiandine.cardcollectionmanager.services
-com.sebastiandine.cardcollectionmanager.ui
-com.sebastiandine.cardcollectionmanager.ui.dialogs
-com.sebastiandine.cardcollectionmanager.ui.dialogs.card
-com.sebastiandine.cardcollectionmanager.ui.dialogs.edition
-com.sebastiandine.cardcollectionmanager.ui.menubar
-com.sebastiandine.cardcollectionmanager.ui.panel.card
-com.sebastiandine.cardcollectionmanager.ui.tables.card
-com.sebastiandine.cardcollectionmanager.ui.toolbar

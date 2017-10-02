@@ -31,6 +31,7 @@ public class PropertiesFactory {
 	private static final String ICON_ADD_KEY = "icon_add";
 	private static final String ICON_EDIT_KEY = "icon_edit";
 	private static final String ICON_DELETE_KEY = "icon_delete";
+	private static final String ICON_MTGBACK_KEY = "icon_mtgback";
 	
 	
 	private static Properties propertiesReader;
@@ -151,6 +152,15 @@ public class PropertiesFactory {
 	 */
 	public static String getIconDeleteUrl(){
 		return propertiesReader.getProperty(ICON_DELETE_KEY);
+	}
+	
+	/**
+	 * This method returns the url to the image of a cards back.
+	 * 
+	 * @return URL to 'card back' image.
+	 */
+	public static String getIconMtgBackUrl(){
+		return propertiesReader.getProperty(ICON_MTGBACK_KEY);
 	}
 	
 	/**

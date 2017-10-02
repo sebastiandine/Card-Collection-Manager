@@ -78,7 +78,7 @@ public class MainFrame extends JFrame implements ListSelectionListener, Observer
 		
 		/* other configurations of panel */
 		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-		this.setSize(1200, 400);
+		this.setSize(1200, 700);
 		this.setVisible(true);
 		
 		

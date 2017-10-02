@@ -20,6 +20,7 @@ import javax.swing.GroupLayout.SequentialGroup;
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
 import com.sebastiandine.cardcollectionmanager.factories.PropertiesFactory;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
+import com.sebastiandine.cardcollectionmanager.services.MtgApiClient;
 import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogShowCardImage;
 
 /**
@@ -75,6 +76,7 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 	private JLabel lbl_img_altered;
 	private JLabel lbl_img_front;
 	private JLabel lbl_img_back;
+	private JLabel lbl_img_card;
 
 	
  
@@ -108,6 +110,8 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 		SequentialGroup verticalGroup = layout.createSequentialGroup();
 		
 		verticalGroup.addGap(20,20,20);
+		verticalGroup.addGroup(layout.createParallelGroup()
+								.addComponent(lbl_img_card,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
 		verticalGroup.addGroup(layout.createParallelGroup()
 								.addComponent(LBL_NAME)
 								.addComponent(lbl_txt_name,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
@@ -147,7 +151,9 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 		
 		/* set up horizontal group */
 		ParallelGroup horizontalGroup = layout.createParallelGroup();
-		
+		horizontalGroup.addGroup(layout.createSequentialGroup()
+								.addGap(10,10,10)
+								.addComponent(lbl_img_card,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
 		horizontalGroup.addGroup(layout.createSequentialGroup()
 								.addGap(10,10,10)
 								.addComponent(LBL_NAME,70,70,70)
@@ -209,6 +215,7 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 		lbl_img_altered = new JLabel();
 		lbl_img_front = new JLabel();
 		lbl_img_back = new JLabel();
+		lbl_img_card = new JLabel();
 	}
 	
 	/**
@@ -225,6 +232,8 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 		lbl_txt_condition.setText(cardBean.getCondition().toString());
 		lbl_txt_amount.setText(""+cardBean.getAmount());
 		lbl_txt_note.setText(cardBean.getNote());
+		
+		lbl_img_card.setIcon(new ImageIcon(MtgApiClient.getCardImage(cardBean)));
 		
 		if(cardBean.isFoil()){
 			lbl_img_foil.setIcon(new ImageIcon(IMG_FOIL));
