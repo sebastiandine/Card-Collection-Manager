@@ -31,6 +31,7 @@ public class PropertiesFactory {
 	private static final String ICON_ADD_KEY = "icon_add";
 	private static final String ICON_EDIT_KEY = "icon_edit";
 	private static final String ICON_DELETE_KEY = "icon_delete";
+	private static final String ICON_LOAD_KEY = "icon_load";
 	private static final String ICON_MTGBACK_KEY = "icon_mtgback";
 	
 	
@@ -161,6 +162,11 @@ public class PropertiesFactory {
 	 */
 	public static String getIconMtgBackUrl(){
 		return propertiesReader.getProperty(ICON_MTGBACK_KEY);
+	}
+	
+
+	public static String getIconLoadUrl(){
+		return propertiesReader.getProperty(ICON_LOAD_KEY);
 	}
 	
 	/**

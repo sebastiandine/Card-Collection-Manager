@@ -30,7 +30,7 @@ import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogShowCardIma
  *
  */
 @SuppressWarnings("serial")
-public class CardBeanInfoPanel extends JPanel implements MouseListener {
+public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable {
 	
 	private CardBean cardBean;
 	
@@ -45,6 +45,7 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 	private static Image IMG_SIGNED;
 	private static Image IMG_ALTERED;
 	private static Image IMG_IMAGE;
+	private static ImageIcon IMG_LOAD;
 	
 	/* get icon images */
 	static{
@@ -52,6 +53,7 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 		IMG_SIGNED = null;
 		IMG_ALTERED = null;
 		IMG_IMAGE = null;
+		IMG_LOAD = null;
 		try {
 			IMG_FOIL = ImageIO.read(new File(PropertiesFactory.getIconFoilUrl()));
 			IMG_SIGNED = ImageIO.read(new File(PropertiesFactory.getIconSignedUrl()));
@@ -81,6 +83,9 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 	
  
 	public CardBeanInfoPanel(CardBean cardBean){
+		
+		IMG_LOAD = new ImageIcon(PropertiesFactory.getIconLoadUrl());
+		
 		this.cardBean = cardBean;
 		this.initUiElements();
 		this.setLayout(this.createUiLayout(this));
@@ -233,7 +238,11 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 		lbl_txt_amount.setText(""+cardBean.getAmount());
 		lbl_txt_note.setText(cardBean.getNote());
 		
-		lbl_img_card.setIcon(new ImageIcon(MtgApiClient.getCardImage(cardBean)));
+		/* since the loading of the card image from the official MtG API might take 
+		 * some seconds, it is separated to another thread.
+		 */
+		Thread thread = new Thread(this);
+		thread.start();
 		
 		if(cardBean.isFoil()){
 			lbl_img_foil.setIcon(new ImageIcon(IMG_FOIL));
@@ -349,6 +358,20 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener {
 	@Override
 	public void mouseReleased(MouseEvent e) {
 		// TODO Auto-generated method stub
+		
+	}
+
+
+	/**
+	 * This method displays a loading spinner at the card image section until 
+	 * the corresponding card image has been loaded from the official API.
+	 * Afterwards the correct image will be shown.
+	 */
+	@Override
+	public void run() {
+		lbl_img_card.setIcon(IMG_LOAD);
+		
+		lbl_img_card.setIcon(new ImageIcon(MtgApiClient.getCardImage(cardBean)));
 		
 	}
 
