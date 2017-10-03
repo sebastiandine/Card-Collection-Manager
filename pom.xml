@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.sebastiandine</groupId>
 	<artifactId>card-collection-manager</artifactId>
-	<version>0.1-05</version>
+	<version>0.1-06</version>
 	<name>Card Collection Manager</name>
 	<description>An application for managing Magic the Gathering card collections.</description>
 

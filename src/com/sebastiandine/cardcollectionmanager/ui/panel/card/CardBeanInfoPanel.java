@@ -41,32 +41,6 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable
 	private static final JLabel LBL_AMOUNT = new JLabel("Amount: ");
 	private static final JLabel LBL_NOTE = new JLabel("Note: ");
 	
-	private static Image IMG_FOIL;
-	private static Image IMG_SIGNED;
-	private static Image IMG_ALTERED;
-	private static Image IMG_IMAGE;
-	private static ImageIcon IMG_LOAD;
-	
-	/* get icon images */
-	static{
-		IMG_FOIL = null;
-		IMG_SIGNED = null;
-		IMG_ALTERED = null;
-		IMG_IMAGE = null;
-		IMG_LOAD = null;
-		try {
-			IMG_FOIL = ImageIO.read(new File(PropertiesFactory.getIconFoilUrl()));
-			IMG_SIGNED = ImageIO.read(new File(PropertiesFactory.getIconSignedUrl()));
-			IMG_ALTERED = ImageIO.read(new File(PropertiesFactory.getIconAlteredUrl()));
-			IMG_IMAGE = ImageIO.read(new File(PropertiesFactory.getIconImageUrl()));
-		} 
-		catch (IOException e) {
-			Logger.error("Failed to load icon images");
-			Logger.error(e.getMessage());
-		}
-	}
-	
-	
 	private JLabel lbl_txt_name;
 	private JLabel lbl_txt_edition;
 	private JLabel lbl_txt_language;
@@ -83,8 +57,6 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable
 	
  
 	public CardBeanInfoPanel(CardBean cardBean){
-		
-		IMG_LOAD = new ImageIcon(PropertiesFactory.getIconLoadUrl());
 		
 		this.cardBean = cardBean;
 		this.initUiElements();
@@ -245,49 +217,49 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable
 		thread.start();
 		
 		if(cardBean.isFoil()){
-			lbl_img_foil.setIcon(new ImageIcon(IMG_FOIL));
+			lbl_img_foil.setIcon(PropertiesFactory.getFoilImageIcon(true));
 		}
 		else{
 			/* gray out icon, if attribute is false */
-			lbl_img_foil.setIcon(new ImageIcon(GrayFilter.createDisabledImage(IMG_FOIL)));
+			lbl_img_foil.setIcon(PropertiesFactory.getFoilImageIcon(false));
 		}
 		
 		if(cardBean.isSigned()){
-			lbl_img_signed.setIcon(new ImageIcon(IMG_SIGNED));
+			lbl_img_signed.setIcon(PropertiesFactory.getSignedImageIcon(true));
 		}
 		else{
 			/* gray out icon, if attribute is false */
-			lbl_img_signed.setIcon(new ImageIcon(GrayFilter.createDisabledImage(IMG_SIGNED)));
+			lbl_img_signed.setIcon(PropertiesFactory.getSignedImageIcon(false));
 		}
 		
 		if(cardBean.isAltered()){
-			lbl_img_altered.setIcon(new ImageIcon(IMG_ALTERED));
+			lbl_img_altered.setIcon(PropertiesFactory.getAlteredImageIcon(true));
 		}
 		else{
 			/* gray out icon, if attribute is false */
-			lbl_img_altered.setIcon(new ImageIcon(GrayFilter.createDisabledImage(IMG_ALTERED)));
+			lbl_img_altered.setIcon(PropertiesFactory.getAlteredImageIcon(false));
 		}
 		
 		if(cardBean.getImageFront() != null){
-			lbl_img_front.setIcon(new ImageIcon(IMG_IMAGE));
+			lbl_img_front.setIcon(PropertiesFactory.getUploadedImageIcon(true));
 			if(lbl_img_front.getMouseListeners().length == 0){  /* check if no listener was assigned before to avoid multiple listeners */
 				lbl_img_front.addMouseListener(this);
 			}
 		}
 		else{
 			/* gray out icon, if attribute is false */
-			lbl_img_front.setIcon(new ImageIcon(GrayFilter.createDisabledImage(IMG_IMAGE)));
+			lbl_img_front.setIcon(PropertiesFactory.getUploadedImageIcon(false));
 			lbl_img_front.removeMouseListener(this);
 		}
 		if(cardBean.getImageBack() != null){
-			lbl_img_back.setIcon(new ImageIcon(IMG_IMAGE));
+			lbl_img_back.setIcon(PropertiesFactory.getUploadedImageIcon(true));
 			if(lbl_img_back.getMouseListeners().length == 0){   /* check if no listener was assigned before to avoid multiple listeners */
 				lbl_img_back.addMouseListener(this);
 			}
 		}
 		else{
 			/* gray out icon, if attribute is false */
-			lbl_img_back.setIcon(new ImageIcon(GrayFilter.createDisabledImage(IMG_IMAGE)));
+			lbl_img_back.setIcon(PropertiesFactory.getUploadedImageIcon(false));
 			lbl_img_back.removeMouseListener(this);
 		}
 	}
@@ -326,10 +298,10 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable
 	@Override
 	public void mouseEntered(MouseEvent e) {
 		if(e.getSource() == lbl_img_front){
-			lbl_img_front.setIcon(new ImageIcon(GrayFilter.createDisabledImage(IMG_IMAGE)));
+			lbl_img_front.setIcon(PropertiesFactory.getUploadedImageIcon(false));
 		}
 		if(e.getSource() == lbl_img_back){
-			lbl_img_back.setIcon(new ImageIcon(GrayFilter.createDisabledImage(IMG_IMAGE)));
+			lbl_img_back.setIcon(PropertiesFactory.getUploadedImageIcon(false));
 		}
 		
 	}
@@ -341,10 +313,10 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable
 	@Override
 	public void mouseExited(MouseEvent e) {
 		if(e.getSource() == lbl_img_front){
-			lbl_img_front.setIcon(new ImageIcon(IMG_IMAGE));
+			lbl_img_front.setIcon(PropertiesFactory.getUploadedImageIcon(true));
 		}
 		if(e.getSource() == lbl_img_back){
-			lbl_img_back.setIcon(new ImageIcon(IMG_IMAGE));
+			lbl_img_back.setIcon(PropertiesFactory.getUploadedImageIcon(true));
 		}
 		
 	}
@@ -369,9 +341,9 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable
 	 */
 	@Override
 	public void run() {
-		lbl_img_card.setIcon(IMG_LOAD);
+		lbl_img_card.setIcon(PropertiesFactory.getLoadingImageIcon());
 		
-		lbl_img_card.setIcon(new ImageIcon(MtgApiClient.getCardImage(cardBean)));
+		lbl_img_card.setIcon(MtgApiClient.getCardImage(cardBean));
 		
 	}
 

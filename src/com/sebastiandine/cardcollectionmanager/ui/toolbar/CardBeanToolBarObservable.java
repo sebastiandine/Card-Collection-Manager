@@ -59,34 +59,20 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 		toolBar = new JToolBar();
 		toolBar.setFloatable(false);
 		
-	
-		/* init buttons */
-		Image img_add = null;
-		Image img_edit = null;
-		Image img_delete = null;
-		try {
-			img_add = ImageIO.read(new File(PropertiesFactory.getIconAddUrl()));
-			img_edit = ImageIO.read(new File(PropertiesFactory.getIconEditUrl()));
-			img_delete = ImageIO.read(new File(PropertiesFactory.getIconDeleteUrl()));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
 		
 		btn_addCardBean = new JButton();
 		btn_addCardBean.setToolTipText("Add a new card");
-		btn_addCardBean.setIcon(new ImageIcon(img_add));
+		btn_addCardBean.setIcon(PropertiesFactory.getAddImageIcon());
 		btn_addCardBean.addActionListener(this);
 		
 		btn_editCardBean = new JButton();
 		btn_editCardBean.setToolTipText("Edit selected card");
-		btn_editCardBean.setIcon(new ImageIcon(img_edit));
+		btn_editCardBean.setIcon(PropertiesFactory.getEditImageIcon());
 		btn_editCardBean.addActionListener(this);
 		
 		btn_deleteCardBean = new JButton();
 		btn_deleteCardBean.setToolTipText("Delete selected card");
-		btn_deleteCardBean.setIcon(new ImageIcon(img_delete));
+		btn_deleteCardBean.setIcon(PropertiesFactory.getDeleteImageIcon());
 		btn_deleteCardBean.addActionListener(this);
 		
 		/* put everything together */

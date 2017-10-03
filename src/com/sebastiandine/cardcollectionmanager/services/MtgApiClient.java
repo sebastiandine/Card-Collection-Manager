@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
 
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
 import com.sebastiandine.cardcollectionmanager.factories.PropertiesFactory;
@@ -31,14 +32,14 @@ public class MtgApiClient {
 	 * {@link CardBean} object. If no image has been found, it returns the standard MtG card back image.
 	 * 
 	 * @param cardBean {@link CardBean} object to which an image request should be posted to the API.
-	 * @return {@link Image} object of the offical image of the given {@link CardBean} object. If no image
+	 * @return {@link ImageIcon} object of the offical image of the given {@link CardBean} object. If no image
 	 * 			has been found, the standard MtG card back image will be provided.
 	 */
-	public static Image getCardImage(CardBean cardBean){
+	public static ImageIcon getCardImage(CardBean cardBean){
 		
 		/* fist check if the bean is the dummy bean */
 		if(cardBean.getId() == -1){
-			return getMtgBackImage();
+			return PropertiesFactory.getMtgBackImageIcon();
 		}
 		
 		/* try to get the offical image */
@@ -51,7 +52,7 @@ public class MtgApiClient {
 		if(!cardList.isEmpty()){
 			try {
 				BufferedImage img = ImageIO.read(new URL(cardList.get(0).getImageUrl()));
-				return img;
+				return new ImageIcon(img);
 			} catch (Exception e) {
 				Logger.warn("No image for CardBean object with id="+cardBean.getId()+" has been found.");
 				Logger.warn(e.getMessage());
@@ -59,24 +60,8 @@ public class MtgApiClient {
 		}
 		
 		/* return back image if offical image could not be found */
-		return getMtgBackImage();
+		return PropertiesFactory.getMtgBackImageIcon();
 	}
 	
-	/**
-	 * This method returns an {@link Image} object of a MtG card's back.
-	 * @return {@link Image} object, displaying of a MtG card's back.
-	 */
-	private static Image getMtgBackImage(){
-		
-		try {
-			BufferedImage img = ImageIO.read(new File(PropertiesFactory.getIconMtgBackUrl()));
-			return img;
-		} catch (IOException e) {
-			Logger.fatal("Failed to load standard MtG card back image from local system.");
-			Logger.fatal(e.getMessage());
-		}
-		
-		return null;
-	}
 
 }

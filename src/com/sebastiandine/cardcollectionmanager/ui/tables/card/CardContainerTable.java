@@ -124,19 +124,19 @@ public class CardContainerTable extends JTable {
 		this.setValueAt(cardBean.getAmount(), selectedRow, 5);
 		
 		if(cardBean.isFoil()){
-			this.setValueAt(new ImageIcon(PropertiesFactory.getIconFoilUrl()), selectedRow, 6);
+			this.setValueAt(PropertiesFactory.getFoilImageIcon(true), selectedRow, 6);
 		}
 		else{
 			this.setValueAt(null, selectedRow, 6);
 		}
 		if(cardBean.isSigned()){
-			this.setValueAt(new ImageIcon(PropertiesFactory.getIconSignedUrl()), selectedRow, 7);
+			this.setValueAt(PropertiesFactory.getSignedImageIcon(true), selectedRow, 7);
 		}
 		else{
 			this.setValueAt(null, selectedRow, 7);
 		}
 		if(cardBean.isAltered()){
-			this.setValueAt(new ImageIcon(PropertiesFactory.getIconAlteredUrl()), selectedRow, 8);
+			this.setValueAt(PropertiesFactory.getAlteredImageIcon(true), selectedRow, 8);
 		}
 		else{
 			this.setValueAt(null, selectedRow, 8);
@@ -230,19 +230,19 @@ public class CardContainerTable extends JTable {
 		
 		
 		if(cardBean.isFoil()){
-			row.add(6, new ImageIcon(PropertiesFactory.getIconFoilUrl()));
+			row.add(6, PropertiesFactory.getFoilImageIcon(true));
 		}
 		else{
 			row.add(6,null);
 		}
 		if(cardBean.isSigned()){
-			row.add(7, new ImageIcon(PropertiesFactory.getIconSignedUrl()));
+			row.add(7, PropertiesFactory.getSignedImageIcon(true));
 		}
 		else{
 			row.add(7, null);
 		}
 		if(cardBean.isAltered()){
-			row.add(8, new ImageIcon(PropertiesFactory.getIconAlteredUrl()));
+			row.add(8, PropertiesFactory.getAlteredImageIcon(true));
 		}
 		else{
 			row.add(8, null);

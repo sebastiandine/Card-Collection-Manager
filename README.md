@@ -15,9 +15,7 @@ You find the latest build as archive files in folder `build/`. Unpack and use th
 * Increase the build count of the current version in file `pom.xml`. Tag `<version>` is representing the current version and build number. So if the current version is 0.1-01, you should change it to 0.1-02 before you commit your changes. The number before the dash is the current main release which should not be changed, except by the main contributor. 
 
 * Execute `mvn clean` in order to cleanup the build directory.
-* Execute `mvn package` in order to create the runnable .jar file.
-
-* Package the newly created .jar file as well as the `config/` and `data/` directories within the `build/` directory to a .zip file which is labled **CardCollectionManager_v.<newVersion>.zip**.
+* Execute `mvn package` in order to compile the project and create various archive files in folder `build/`, ready for shipping.
 
 ## Toolkit
 * [JDK v.1.8.0_65](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) - Java Development Kit. What else can I say?
