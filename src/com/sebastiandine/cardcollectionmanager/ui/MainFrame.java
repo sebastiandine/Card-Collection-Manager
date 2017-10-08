@@ -2,11 +2,14 @@ package com.sebastiandine.cardcollectionmanager.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 import java.io.IOException;
 import java.util.Observable;
 import java.util.Observer;
 
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
@@ -21,7 +24,7 @@ import com.sebastiandine.cardcollectionmanager.ui.tables.card.CardContainerTable
 import com.sebastiandine.cardcollectionmanager.ui.toolbar.CardBeanToolBarObservable;
 
 @SuppressWarnings("serial")
-public class MainFrame extends JFrame implements ListSelectionListener, Observer {
+public class MainFrame extends JFrame implements ListSelectionListener, Observer, WindowListener {
 
 	private CardBean selectedCard;
 	private CardContainerTable cardTable;
@@ -77,7 +80,8 @@ public class MainFrame extends JFrame implements ListSelectionListener, Observer
 		this.add(cardToolBarObservable.getToolBar(), BorderLayout.NORTH);
 		
 		/* other configurations of panel */
-		this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		this.addWindowListener(this);
 		this.setSize(1200, 700);
 		this.setVisible(true);
 		
@@ -171,10 +175,62 @@ public class MainFrame extends JFrame implements ListSelectionListener, Observer
 				/* close application routine */
 				if(((String)arg).equals("close")){
 					Logger.debug("User hit the close menu item in order to terminate the application.");
-					this.dispose();
+					this.windowClosing(null);
 				}
 			}
 		}
+		
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		
+		int closeConfirmation = JOptionPane.showConfirmDialog(this,
+				"Do you really want to close this application?",
+				"Close Application",
+				JOptionPane.YES_NO_OPTION);
+		
+		if(closeConfirmation == JOptionPane.YES_OPTION){
+			System.exit(0);
+		}
+		else{
+			return;
+		}
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
 		
 	}
 	

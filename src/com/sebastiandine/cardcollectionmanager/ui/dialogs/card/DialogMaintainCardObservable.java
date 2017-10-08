@@ -9,7 +9,6 @@ import java.awt.event.MouseListener;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import java.io.IOException;
-import java.text.NumberFormat;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -18,8 +17,8 @@ import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JDialog;
-import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JSpinner;
 import javax.swing.JSpinner.DefaultEditor;
@@ -31,7 +30,6 @@ import javax.swing.GroupLayout.ParallelGroup;
 import javax.swing.GroupLayout.SequentialGroup;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import javax.swing.text.NumberFormatter;
 
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
 import com.sebastiandine.cardcollectionmanager.bean.EditionBean;
@@ -159,7 +157,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		
 		/* Configure general dialog settings */
 		dia_maintainCard.setTitle(TITLE_ADD);
-		dia_maintainCard.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+		dia_maintainCard.setDefaultCloseOperation(JDialog.DO_NOTHING_ON_CLOSE);
 		
 		dia_maintainCard.add(mainPanel);
 		
@@ -440,6 +438,17 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 			}
 			else{	
 				updateInternalCardBeanFromUi();					/* edit existing entry in CardBeanContainer */
+				
+				/* ask user to confirm editing */
+				int editConfirmation = JOptionPane.showConfirmDialog(dia_maintainCard,
+						"Do you really want to save the editing you made?",
+						"Confirm editing",
+						JOptionPane.YES_NO_OPTION);
+				
+				if(editConfirmation == 1){
+					return;
+				}
+				
 				Logger.info("Edited card bean has been restored to the system.");
 				this.setChanged();
 				notifyObservers("card_edited");
@@ -648,27 +657,10 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
  *################################################################################################################################################################
  */			
 	
-/**
- * This method triggers, if the internal {@link JDialog} gets closed.
- * If the internal {@link CardBean} object has not been saved to the {@link CardBeanContainer},
- * it assumes, that the user hit the 'abort' button on the upper corner (the 'X' button) in order
- * to abort the creation of a new {@link CardBean} object.
- * In this case, uploaded image files should be deleted from the disk. Therefore this method
- * calls {@link CardBeanImageServices#deleteImageFiles(CardBean)}, in this special case. 
- */
+
 @Override
 public void windowClosed(WindowEvent e) {
 	
-	/* check if card is in collection */
-	if(CardBeanContainer.getCardBeanById(cardBean.getId()) == null){
-		Logger.info("User aborted the creation of a new card.");
-		try {
-			CardBeanImageServices.deleteImageFiles(cardBean);
-		} catch (IOException e1) {
-			Logger.error("Failed to delete image files of an unsaved card.");
-			Logger.error(e1.getMessage());
-		}
-	}
 }
 
 
@@ -678,9 +670,43 @@ public void windowOpened(WindowEvent e) {
 	
 }
 
+/**
+ * This method triggers, if the internal {@link JDialog} gets closed.
+ * If the internal {@link CardBean} object has not been saved to the {@link CardBeanContainer},
+ * it assumes, that the user hit the 'abort' button on the upper corner (the 'X' button) in order
+ * to abort the creation of a new {@link CardBean} object.
+ * In this case, uploaded image files should be deleted from the disk. Therefore this method
+ * calls {@link CardBeanImageServices#deleteImageFiles(CardBean)}, in this special case. 
+ */
 @Override
 public void windowClosing(WindowEvent e) {
-	// TODO Auto-generated method stub
+	
+	/* ask user to confirm editing */
+	int editConfirmation = JOptionPane.showConfirmDialog(dia_maintainCard,
+			"Do you really want to abort maintenance of this card?",
+			"Abort Maintenance",
+			JOptionPane.YES_NO_OPTION);
+	
+	if(editConfirmation == JOptionPane.NO_OPTION){
+		return;
+	}
+	
+	/* check if card is in collection. If not, potentially uploaded image files will be deleted. */
+	if(CardBeanContainer.getCardBeanById(cardBean.getId()) == null){
+		Logger.info("User aborted the creation of a new card.");
+		try {
+			CardBeanImageServices.deleteImageFiles(cardBean);
+		} catch (IOException e1) {
+			Logger.error("Failed to delete image files of an unsaved card.");
+			Logger.error(e1.getMessage());
+		}
+		finally {
+			dia_maintainCard.dispose();
+		}
+	}
+	else{
+		dia_maintainCard.dispose();
+	}
 	
 }
 
