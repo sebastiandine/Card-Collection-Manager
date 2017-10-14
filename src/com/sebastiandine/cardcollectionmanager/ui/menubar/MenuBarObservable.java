@@ -8,8 +8,6 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-import com.sebastiandine.cardcollectionmanager.ui.dialogs.edition.DialogMaintainEditionData;
-import com.sebastiandine.cardcollectionmanager.ui.dialogs.edition.DialogSelectEdition;
 
 /**
  * This class represents the application's menubar by managing an internal {@link JMenuBar} object and
@@ -28,8 +26,7 @@ public class MenuBarObservable extends Observable implements ActionListener {
 	private JMenu men_advanced;
 	
 	private JMenuItem men_close;
-	private JMenuItem men_addEdition;
-	private JMenuItem men_editEdition;
+	private JMenuItem men_updateEdition;
 	
 	public MenuBarObservable(){
 		
@@ -50,16 +47,12 @@ public class MenuBarObservable extends Observable implements ActionListener {
 		men_close = new JMenuItem("Close application");
 		men_close.addActionListener(this);
 		
-		men_addEdition = new JMenuItem("Add edition");
-		men_addEdition.addActionListener(this);
-		
-		men_editEdition = new JMenuItem("Edit edition");
-		men_editEdition.addActionListener(this);
+		men_updateEdition = new JMenuItem("Update editions");
+		men_updateEdition.addActionListener(this);
 		
 		men_file.add(men_close);
 		
-		men_advanced.add(men_addEdition);
-		men_advanced.add(men_editEdition);
+		men_advanced.add(men_updateEdition);
 		
 		menuBar.add(men_file);
 		menuBar.add(men_advanced);	
@@ -83,15 +76,6 @@ public class MenuBarObservable extends Observable implements ActionListener {
 			this.setChanged();
 			this.notifyObservers("close");
 		}
-		
-		if(e.getSource() == men_addEdition){
-			DialogMaintainEditionData.getInstance();
-		}
-		
-		if(e.getSource() == men_editEdition){
-			new DialogSelectEdition();
-		}
-		
 	}
 	
 }

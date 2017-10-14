@@ -20,7 +20,6 @@ public class EditionBean implements CardCollectionBean, Serializable, Comparable
 		DUMMY = new EditionBean();
 		DUMMY.setName("");
 		DUMMY.setAcronym("");
-		DUMMY.setCardAmount(0);
 		DUMMY.setRelease(Calendar.getInstance());
 	}
 	
@@ -31,7 +30,6 @@ public class EditionBean implements CardCollectionBean, Serializable, Comparable
 	private String name;
 	private String acronym;
 	private Calendar release;
-	private int cardAmount;
 	
 	
 	public EditionBean(){
@@ -62,12 +60,6 @@ public class EditionBean implements CardCollectionBean, Serializable, Comparable
 	public void setRelease(Calendar release) {
 		this.release = release;
 	}
-	public int getCardAmount() {
-		return cardAmount;
-	}
-	public void setCardAmount(int cardAmount) {
-		this.cardAmount = cardAmount;
-	}
 	
 	public String toString(){
 		String out = "";
@@ -75,7 +67,6 @@ public class EditionBean implements CardCollectionBean, Serializable, Comparable
 		out += "ID: " + this.id;
 		out += ", Name: " + this.name;
 		out += ", Release: " + this.release;
-		out += ", Card amount:" + this.cardAmount;
 		
 		return out;
 	}

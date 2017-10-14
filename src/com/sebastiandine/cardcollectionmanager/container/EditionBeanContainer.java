@@ -2,8 +2,11 @@
 package com.sebastiandine.cardcollectionmanager.container;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
@@ -11,6 +14,9 @@ import com.sebastiandine.cardcollectionmanager.bean.CardCollectionBean;
 import com.sebastiandine.cardcollectionmanager.bean.EditionBean;
 import com.sebastiandine.cardcollectionmanager.factories.PropertiesFactory;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
+import com.sebastiandine.cardcollectionmanager.services.MtgApiClient;
+
+import io.magicthegathering.javasdk.resource.MtgSet;
 
 /**
  * This container class provides holds a list of {@link EditionBean} objects and provides
@@ -31,6 +37,8 @@ public class EditionBeanContainer extends AbstractBeanContainer {
 	/**
 	 * Static constructor. Here the serialized {@link EditionBean} objects are getting
 	 * deserialized and stored to list {@link #editionBeanList}.
+	 * If no data could be found, the offical MtG API will be called in order to load all sets and
+	 * store them as {@link EditionBean} objects to list {@link #editionBeanList}. 
 	 */
 	static{
 		try {
@@ -39,9 +47,11 @@ public class EditionBeanContainer extends AbstractBeanContainer {
 		} catch (ClassNotFoundException e) {
 			Logger.fatal(e.getMessage());
 		} catch (IOException e) {									/* If no editiondata file gets detected, a new one will be created */	
-			editionBeanList = new ArrayList<CardCollectionBean>();
 			Logger.warn("No serialized EditionBean data found at "+PropertiesFactory.getEditionDataUrl()+".");
-			Logger.info("Plain EditionBean container created.");
+			Logger.info("Try to call offical MtG API in order to receive up to date edition data.");
+			editionBeanList = new ArrayList<CardCollectionBean>();
+			createEditionBeanListFromApi();
+			Logger.info("Serialized EditionBean data created.");
 		}
 		
 	}
@@ -52,29 +62,31 @@ public class EditionBeanContainer extends AbstractBeanContainer {
 	 */
 	private EditionBeanContainer(){}
 	
-	
 	/**
-	 * This method adds a {@link EditionBean} object to the internal list of {@link EditionBean} objects.
-	 * 
-	 * @param editionBean Predefined {@link EditionBean} object. Attribute 'id' will be defined by this method so it 
-	 * does not need to be predefined.
+	 * This method receives all sets from the official Mtg interface and creates an internal 
+	 * list of {@link EditionBean} objects from it.
 	 */
-	public static void addEditionBean(EditionBean editionBean){
-		addBeanToContainer(editionBeanList, editionBean);
+	private static void createEditionBeanListFromApi(){
+		
+		for(MtgSet i : MtgApiClient.getAllSets()){
+			EditionBean bean = new EditionBean();
+			bean.setName(i.getName());
+			bean.setAcronym(i.getCode());
+			
+			try {
+				Calendar releaseDate = Calendar.getInstance();
+				SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+				releaseDate.setTime(formatter.parse(i.getReleaseDate()));
+				bean.setRelease(releaseDate);
+			} catch (ParseException e) {
+				Logger.warn("Unable to parse release date of set "+i.getName()+".");
+				Logger.warn(e.getMessage());
+			}
+			
+			addBeanToContainer(editionBeanList, bean);
+		}
+		
 		saveEditionBeanList();
-		Logger.info("EditonBean added to CardBeanContainer: "+editionBean.toString()+".");
-	}
-	
-	/**
-	 * This method deletes the {@link EditionBean} element with the given 'id' from the internal list of {@link EditionBean} objects.
-	 * 
-	 * @param id ID of the {@link EditionBean} element which should be deleted from the internal list. Use {@link EditionBean#getId()} to retrieve
-	 * 	      the id of a target object.
-	 */
-	public static void deleteEditionBeanById(int id){
-		deleteBeanById(editionBeanList, id);
-		saveEditionBeanList();
-		Logger.info("EditionBean with ID="+id+" deleted.");
 	}
 	
 	
@@ -105,8 +117,5 @@ public class EditionBeanContainer extends AbstractBeanContainer {
 		}
 		Logger.info("EditionBean data stored to file "+PropertiesFactory.getEditionDataUrl());
 	}
-	
-	
-	
 	
 }

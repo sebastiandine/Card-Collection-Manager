@@ -1,5 +1,5 @@
 # Card Collection Manager
-
+![img1](img1.png)
 ## Project Description
 This projects provides a management application for Magic the Gathering card collections. Its aim is to be a simple solution to keep track of collections. The main reason why I wrote this application because I required a tool, which can manage single card images of a large collection, beside common card collection management features.
 

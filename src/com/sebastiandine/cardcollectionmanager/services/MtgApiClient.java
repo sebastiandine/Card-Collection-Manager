@@ -1,11 +1,13 @@
 package com.sebastiandine.cardcollectionmanager.services;
 
-import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 import javax.imageio.ImageIO;
@@ -16,7 +18,9 @@ import com.sebastiandine.cardcollectionmanager.factories.PropertiesFactory;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
 
 import io.magicthegathering.javasdk.api.CardAPI;
+import io.magicthegathering.javasdk.api.SetAPI;
 import io.magicthegathering.javasdk.resource.Card;
+import io.magicthegathering.javasdk.resource.MtgSet;
 
 /**
  * This class acts as a client to the official <a href="https://magicthegathering.io">MTG API</a>. It is using the 
@@ -63,5 +67,48 @@ public class MtgApiClient {
 		return PropertiesFactory.getMtgBackImageIcon();
 	}
 	
+	/**
+	 *  This method posts a request to the official MtG API and returns a list of all sets as a list {@link MtgSet} objects.
+	 *  This method filters the response of the API and throws out online-only sets. Furthermore the list is sorted by release date
+	 *  ascending.
+	 *  
+	 * @return List of all Mtg sets, sorted by the release date.
+	 */
+	public static MtgSet[] getAllSets(){
+		
+		List<MtgSet> setList = SetAPI.getAllSets();
+
+		Collections.sort(setList, new Comparator<MtgSet>() {
+
+			public int compare(MtgSet o1, MtgSet o2) {
+				SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+
+				try {
+					Date date1 = formatter.parse(o1.getReleaseDate());
+					Date date2 = formatter.parse(o2.getReleaseDate());
+
+					if (date1.before(date2)) {
+						return -1;
+					}
+					if (date1.after(date2)) {
+						return 1;
+					}
+					if (date1.equals(date2)) {
+						return 0;
+					}
+
+				} catch (ParseException e) {
+					Logger.warn("Unable to parse release date of sets.");
+					return 0;
+
+				}
+				return 0;
+			}
+		});
+		
+		MtgSet[] setArray = new MtgSet[setList.size()];
+		setList.toArray(setArray);
+		return setArray;
+	}
 
 }
