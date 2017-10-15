@@ -8,6 +8,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
+import com.sebastiandine.cardcollectionmanager.container.EditionBeanContainer;
+
 
 /**
  * This class represents the application's menubar by managing an internal {@link JMenuBar} object and
@@ -75,6 +77,10 @@ public class MenuBarObservable extends Observable implements ActionListener {
 		if(e.getSource() == men_close){
 			this.setChanged();
 			this.notifyObservers("close");
+		}
+		
+		if(e.getSource() == men_updateEdition){
+			EditionBeanContainer.updateEditionBeanListFromApi();
 		}
 	}
 	

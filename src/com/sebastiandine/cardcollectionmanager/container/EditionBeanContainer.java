@@ -9,6 +9,8 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
 import com.sebastiandine.cardcollectionmanager.bean.CardCollectionBean;
 import com.sebastiandine.cardcollectionmanager.bean.EditionBean;
@@ -71,7 +73,7 @@ public class EditionBeanContainer extends AbstractBeanContainer {
 		for(MtgSet i : MtgApiClient.getAllSets()){
 			EditionBean bean = new EditionBean();
 			bean.setName(i.getName());
-			bean.setAcronym(i.getCode());
+			bean.setCode(i.getCode());
 			
 			try {
 				Calendar releaseDate = Calendar.getInstance();
@@ -89,6 +91,49 @@ public class EditionBeanContainer extends AbstractBeanContainer {
 		saveEditionBeanList();
 	}
 	
+	/**
+	 * This method checks the offical Mtg API for the latest set. If the latest set of the API response
+	 * and the latest set within the internal {@link EditionBean} list do net match, the internal {@link EditionBean}
+	 * list will be updated with all new sets.
+	 */
+	public static void updateEditionBeanListFromApi(){
+		
+		EditionBean bean = (EditionBean)  editionBeanList.get(editionBeanList.size()-1);
+		String codeLastSetSerialzed = bean.getCode();
+		MtgSet set = MtgApiClient.getAllSets()[MtgApiClient.getAllSets().length-1];
+		String codeLastSetFromApi = set.getCode();
+
+		Logger.debug("Try to update set data from API. Latest set in internal list is "+bean.getName()+"."
+					+"Latest set within API response is "+set.getName()+".");
+		
+		if(codeLastSetSerialzed.equals(codeLastSetFromApi)){
+			JOptionPane.showMessageDialog(null, 
+					"No new set data found. Latest set is "+set.getName()+".",
+					"Update Set Data",
+					JOptionPane.NO_OPTION);
+			Logger.debug("Internal list is already up to date.");
+		}
+		else{
+			Logger.debug("Try to update set data.");
+			deleteEditionBeanList();
+			createEditionBeanListFromApi();
+			JOptionPane.showMessageDialog(null,
+					"New set data maintained. Latest set is "+set.getName()+".",
+					"Update Set Data",
+					JOptionPane.NO_OPTION);
+			Logger.info("Set data has been updated. Latest set is "+set.getName()+".");
+		}
+		
+	}
+	
+	/**
+	 * This method clears {@link EditionBeanContainer#editionBeanList} and deletes the corresponding serialized file
+	 * (specified by {@link PropertiesFactory#getEditionDataUrl()}) from the local disk.
+	 */
+	private static void deleteEditionBeanList(){
+		deleteSerializedContainerFileFromDisk(PropertiesFactory.getEditionDataUrl());
+		editionBeanList.clear();
+	}
 	
 	/**
 	 * This method returns the internal list of {@link EditionBean} objects as an array.

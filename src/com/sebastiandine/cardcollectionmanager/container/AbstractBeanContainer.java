@@ -115,6 +115,23 @@ public abstract class AbstractBeanContainer {
 	}
 	
 	/**
+	 * This method deletes a file, which holds serialized data, from local disk.
+	 * 
+	 * @param url URL of the file, which should be deleted.
+	 */
+	protected static void deleteSerializedContainerFileFromDisk(String url){
+		
+		Logger.debug("Try to delete file with serialized data at "+url+".");
+		File file = new File(url);
+		if(file.delete()){
+			Logger.debug("File at"+url+" has been deleted.");
+		}
+		else{
+			Logger.error("Failed to delete file at "+url+".");
+		}
+	}
+	
+	/**
 	 * This method deserializes a file, specified by parameter {@code url} and returns the data as list of {@link CardCollectionBean} 
 	 * objects.
 	 * 

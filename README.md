@@ -9,7 +9,7 @@ The application is completely written in Java, using Swing for the graphic inter
 This project is licensed under the zlib license. See also the attached LICENSE file.
 
 ## How to use
-You find the latest build as archive files in folder `build/`. Unpack and use them.
+You find the latest build as archive files in folder [build](./build). Unpack and use them.
 
 ## How to build/ contribute
 * Increase the build count of the current version in file `pom.xml`. Tag `<version>` is representing the current version and build number. So if the current version is 0.1-01, you should change it to 0.1-02 before you commit your changes. The number before the dash is the current main release which should not be changed, except by the main contributor. 

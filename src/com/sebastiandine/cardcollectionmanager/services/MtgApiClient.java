@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 
 import javax.imageio.ImageIO;
@@ -49,7 +50,7 @@ public class MtgApiClient {
 		/* try to get the offical image */
 		List<String> query = new ArrayList<String>();
 		query.add("name="+cardBean.getName());
-		query.add("set="+cardBean.getEdition().getAcronym());
+		query.add("set="+cardBean.getEdition().getCode());
 		
 		List<Card> cardList = CardAPI.getAllCards(query);
 		
@@ -78,6 +79,16 @@ public class MtgApiClient {
 		
 		List<MtgSet> setList = SetAPI.getAllSets();
 
+		/* filter online only sets */
+		Iterator<MtgSet> iterator = setList.iterator();
+		
+		while(iterator.hasNext()){
+			if(iterator.next().getOnlineOnly()){
+				iterator.remove();
+			}
+		}
+		
+		/* sort by release date ascending */
 		Collections.sort(setList, new Comparator<MtgSet>() {
 
 			public int compare(MtgSet o1, MtgSet o2) {

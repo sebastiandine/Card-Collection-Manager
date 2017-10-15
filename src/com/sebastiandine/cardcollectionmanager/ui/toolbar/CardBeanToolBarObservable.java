@@ -155,8 +155,8 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 	 * observers of this class</li>
 	 * </ul>
 	 * 
-	 * @param o
-	 * @param arg
+	 * @param o {@link Observable}, which sent the update message.
+	 * @param arg Update message argument.
 	 */
 	@Override
 	public void update(Observable o, Object arg) {
