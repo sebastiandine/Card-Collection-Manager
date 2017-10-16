@@ -3,7 +3,6 @@ package com.sebastiandine.cardcollectionmanager.ui.tables.card;
 import java.io.IOException;
 import java.util.Vector;
 
-import javax.swing.ImageIcon;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
@@ -25,7 +24,7 @@ import com.sebastiandine.cardcollectionmanager.logging.Logger;
 @SuppressWarnings("serial")
 public class CardContainerTable extends JTable {
 	
-	private static final String[] HEADER_COLUMN = {"ID","Name","Edition","Language","Condition",
+	private static final String[] HEADER_COLUMN = {"ID","Name","Set","Language","Condition",
 													"Amount","Foil","Signed","Altered","Note"};
 	
 	private DefaultTableModel tableModel;
@@ -118,7 +117,7 @@ public class CardContainerTable extends JTable {
 		CardBean cardBean = CardBeanContainer.getCardBeanById((int) this.getValueAt(selectedRow, 0));
 		
 		this.setValueAt(cardBean.getName(), selectedRow, 1);
-		this.setValueAt(cardBean.getEdition().getName(), selectedRow, 2);
+		this.setValueAt(cardBean.getSet().getName(), selectedRow, 2);
 		this.setValueAt(cardBean.getLanguage(), selectedRow, 3);
 		this.setValueAt(cardBean.getCondition(), selectedRow, 4);
 		this.setValueAt(cardBean.getAmount(), selectedRow, 5);
@@ -223,7 +222,7 @@ public class CardContainerTable extends JTable {
 		
 		row.add(0,cardBean.getId());
 		row.add(1,cardBean.getName());
-		row.add(2,cardBean.getEdition().getName());
+		row.add(2,cardBean.getSet().getName());
 		row.add(3,cardBean.getLanguage());
 		row.add(4,cardBean.getCondition());
 		row.add(5,cardBean.getAmount());

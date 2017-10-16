@@ -8,7 +8,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
-import com.sebastiandine.cardcollectionmanager.container.EditionBeanContainer;
+import com.sebastiandine.cardcollectionmanager.container.SetBeanContainer;
 
 
 /**
@@ -28,7 +28,7 @@ public class MenuBarObservable extends Observable implements ActionListener {
 	private JMenu men_advanced;
 	
 	private JMenuItem men_close;
-	private JMenuItem men_updateEdition;
+	private JMenuItem men_updateSets;
 	
 	public MenuBarObservable(){
 		
@@ -49,12 +49,12 @@ public class MenuBarObservable extends Observable implements ActionListener {
 		men_close = new JMenuItem("Close application");
 		men_close.addActionListener(this);
 		
-		men_updateEdition = new JMenuItem("Update editions");
-		men_updateEdition.addActionListener(this);
+		men_updateSets = new JMenuItem("Update Sets");
+		men_updateSets.addActionListener(this);
 		
 		men_file.add(men_close);
 		
-		men_advanced.add(men_updateEdition);
+		men_advanced.add(men_updateSets);
 		
 		menuBar.add(men_file);
 		menuBar.add(men_advanced);	
@@ -79,8 +79,8 @@ public class MenuBarObservable extends Observable implements ActionListener {
 			this.notifyObservers("close");
 		}
 		
-		if(e.getSource() == men_updateEdition){
-			EditionBeanContainer.updateEditionBeanListFromApi();
+		if(e.getSource() == men_updateSets){
+			SetBeanContainer.updateSetBeanListFromApi();
 		}
 	}
 	

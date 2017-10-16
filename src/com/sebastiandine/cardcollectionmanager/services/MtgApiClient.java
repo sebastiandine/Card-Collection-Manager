@@ -50,7 +50,7 @@ public class MtgApiClient {
 		/* try to get the offical image */
 		List<String> query = new ArrayList<String>();
 		query.add("name="+cardBean.getName());
-		query.add("set="+cardBean.getEdition().getCode());
+		query.add("set="+cardBean.getSet().getCode());
 		
 		List<Card> cardList = CardAPI.getAllCards(query);
 		

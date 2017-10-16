@@ -47,7 +47,7 @@ public class CardBeanImageServices {
 									+"/"
 									+cardBean.getId()
 									+"+"
-									+cardBean.getEdition().getName().replace("'", "").replace("`", "").replace(",","").replace(" ", "")
+									+cardBean.getSet().getName().replace("'", "").replace("`", "").replace(",","").replace(" ", "")
 									+"+"
 									+cardBean.getName().replace("'", "").replace("`", "").replace(",","").replace(" ", "")
 									+"+"

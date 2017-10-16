@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.sebastiandine</groupId>
 	<artifactId>card-collection-manager</artifactId>
-	<version>0.5-01</version>
+	<version>0.5-02</version>
 	<name>Card Collection Manager</name>
 	<description>An application for managing Magic the Gathering card collections.</description>
 
@@ -104,7 +104,7 @@
 						</configuration>
 					</execution>
 					<execution>
-						<id>copy-resources-editiondata</id>
+						<id>copy-resources-setdata</id>
 						<phase>validate</phase>
 						<goals>
 							<goal>copy-resources</goal>
@@ -115,7 +115,7 @@
 								<resource>
 									<directory>${basedir}/data</directory>
 									<includes>
-										<include>editiondata</include>
+										<include>setdata</include>
 									</includes>
 									<filtering>true</filtering>
 								</resource>

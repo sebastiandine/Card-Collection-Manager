@@ -32,14 +32,14 @@ import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
-import com.sebastiandine.cardcollectionmanager.bean.EditionBean;
+import com.sebastiandine.cardcollectionmanager.bean.SetBean;
 import com.sebastiandine.cardcollectionmanager.container.CardBeanContainer;
 import com.sebastiandine.cardcollectionmanager.enums.ConditionEnum;
 import com.sebastiandine.cardcollectionmanager.enums.ImageEnum;
 import com.sebastiandine.cardcollectionmanager.enums.LanguageEnum;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
 import com.sebastiandine.cardcollectionmanager.services.CardBeanImageServices;
-import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxEditionBean;
+import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxSetBean;
 
 /**
  * This class provides the functionality to add or edit {@link CardBean} objects, by managing an internal
@@ -59,7 +59,7 @@ import com.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxEditionBean;
 public class DialogMaintainCardObservable extends Observable implements ActionListener, MouseListener, DocumentListener, Observer, WindowListener {
 	
 	private static final JLabel LBL_NAME = new JLabel("Name: "); 
-	private static final JLabel LBL_EDITION = new JLabel("Edition: "); 
+	private static final JLabel LBL_SET = new JLabel("Set: "); 
 	private static final JLabel LBL_LANGUAGE = new JLabel("Language: "); 
 	private static final JLabel LBL_CONDITION = new JLabel("Condition: "); 
 	private static final JLabel LBL_AMOUNT = new JLabel("Amount: ");
@@ -92,7 +92,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 	private JCheckBox ckb_signed;
 	private JCheckBox ckb_altered;
 	
-	private JComboBox<EditionBean> cmb_edition;
+	private JComboBox<SetBean> cmb_set;
 	private JComboBox<ConditionEnum> cmb_condition;
 	private JComboBox<LanguageEnum> cmb_language;
 	
@@ -206,8 +206,8 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 								.addComponent(LBL_NAME)
 								.addComponent(txt_name,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
 		verticalGroup.addGroup(layout.createParallelGroup()
-								.addComponent(LBL_EDITION)
-								.addComponent(cmb_edition,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
+								.addComponent(LBL_SET)
+								.addComponent(cmb_set,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
 		verticalGroup.addGroup(layout.createParallelGroup()
 								.addComponent(LBL_LANGUAGE)
 								.addComponent(cmb_language,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
@@ -248,8 +248,8 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 								.addComponent(txt_name,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
 		horizontalGroup.addGroup(layout.createSequentialGroup()
 								.addGap(10,10,10)
-								.addComponent(LBL_EDITION,70,70,70)
-								.addComponent(cmb_edition,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
+								.addComponent(LBL_SET,70,70,70)
+								.addComponent(cmb_set,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
 		horizontalGroup.addGroup(layout.createSequentialGroup()
 								.addGap(10,10,10)
 								.addComponent(LBL_LANGUAGE,70,70,70)
@@ -325,7 +325,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 
 		cmb_language = new JComboBox<LanguageEnum>(LanguageEnum.values());
 		cmb_condition = new JComboBox<ConditionEnum>(ConditionEnum.values());
-		cmb_edition = new ComboBoxEditionBean();
+		cmb_set = new ComboBoxSetBean();
 		
 		
 		btn_img1 = new JButton(LBL_EXTEND);
@@ -375,7 +375,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		
 		cmb_language.setSelectedItem(cardBean.getLanguage());
 		cmb_condition.setSelectedItem(cardBean.getCondition());
-		cmb_edition.setSelectedItem(cardBean.getEdition());	
+		cmb_set.setSelectedItem(cardBean.getSet());	
 	}
 	
 	/**
@@ -387,7 +387,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		cardBean.setNote(txt_note.getText());
 		cardBean.setAmount((int) spn_amount.getModel().getValue());
 		cardBean.setLanguage((LanguageEnum) cmb_language.getSelectedItem());
-		cardBean.setEdition((EditionBean) cmb_edition.getSelectedItem());
+		cardBean.setSet((SetBean) cmb_set.getSelectedItem());
 		cardBean.setCondition((ConditionEnum) cmb_condition.getSelectedItem());
 		cardBean.setFoil(ckb_foil.isSelected());
 		cardBean.setSigned(ckb_signed.isSelected());

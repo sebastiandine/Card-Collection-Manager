@@ -1,17 +1,11 @@
 package com.sebastiandine.cardcollectionmanager.ui.panel.card;
 
 import java.awt.Dimension;
-import java.awt.Image;
 import java.awt.Toolkit;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.io.File;
-import java.io.IOException;
 
-import javax.imageio.ImageIO;
-import javax.swing.GrayFilter;
 import javax.swing.GroupLayout;
-import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.GroupLayout.ParallelGroup;
@@ -19,7 +13,6 @@ import javax.swing.GroupLayout.SequentialGroup;
 
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
 import com.sebastiandine.cardcollectionmanager.factories.PropertiesFactory;
-import com.sebastiandine.cardcollectionmanager.logging.Logger;
 import com.sebastiandine.cardcollectionmanager.services.MtgApiClient;
 import com.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogShowCardImage;
 
@@ -35,14 +28,14 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable
 	private CardBean cardBean;
 	
 	private static final JLabel LBL_NAME = new JLabel("Name: "); 
-	private static final JLabel LBL_EDITION = new JLabel("Edition: "); 
+	private static final JLabel LBL_SET = new JLabel("Set: "); 
 	private static final JLabel LBL_LANGUAGE = new JLabel("Language: "); 
 	private static final JLabel LBL_CONDITION = new JLabel("Condition: "); 
 	private static final JLabel LBL_AMOUNT = new JLabel("Amount: ");
 	private static final JLabel LBL_NOTE = new JLabel("Note: ");
 	
 	private JLabel lbl_txt_name;
-	private JLabel lbl_txt_edition;
+	private JLabel lbl_txt_set;
 	private JLabel lbl_txt_language;
 	private JLabel lbl_txt_condition;
 	private JLabel lbl_txt_amount;
@@ -93,8 +86,8 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable
 								.addComponent(LBL_NAME)
 								.addComponent(lbl_txt_name,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
 		verticalGroup.addGroup(layout.createParallelGroup()
-								.addComponent(LBL_EDITION)
-								.addComponent(lbl_txt_edition,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
+								.addComponent(LBL_SET)
+								.addComponent(lbl_txt_set,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
 		verticalGroup.addGroup(layout.createParallelGroup()
 								.addComponent(LBL_LANGUAGE)
 								.addComponent(lbl_txt_language,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
@@ -137,8 +130,8 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable
 								.addComponent(lbl_txt_name,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
 		horizontalGroup.addGroup(layout.createSequentialGroup()
 								.addGap(10,10,10)
-								.addComponent(LBL_EDITION,70,70,70)
-								.addComponent(lbl_txt_edition,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
+								.addComponent(LBL_SET,70,70,70)
+								.addComponent(lbl_txt_set,GroupLayout.DEFAULT_SIZE,GroupLayout.DEFAULT_SIZE,GroupLayout.PREFERRED_SIZE));
 		horizontalGroup.addGroup(layout.createSequentialGroup()
 								.addGap(10,10,10)
 								.addComponent(LBL_LANGUAGE,70,70,70)
@@ -182,7 +175,7 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable
 	private void initUiElements(){
 		
 		lbl_txt_name = new JLabel();
-		lbl_txt_edition = new JLabel();
+		lbl_txt_set = new JLabel();
 		lbl_txt_language = new JLabel();
 		lbl_txt_condition = new JLabel();
 		lbl_txt_amount = new JLabel();
@@ -204,7 +197,7 @@ public class CardBeanInfoPanel extends JPanel implements MouseListener, Runnable
 	private void populateUiElements(CardBean cardBean){
 		
 		lbl_txt_name.setText(cardBean.getName());
-		lbl_txt_edition.setText(cardBean.getEdition().getName()); 
+		lbl_txt_set.setText(cardBean.getSet().getName()); 
 		lbl_txt_language.setText(cardBean.getLanguage().toString());
 		lbl_txt_condition.setText(cardBean.getCondition().toString());
 		lbl_txt_amount.setText(""+cardBean.getAmount());

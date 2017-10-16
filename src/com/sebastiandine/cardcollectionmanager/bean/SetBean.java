@@ -6,20 +6,20 @@ import java.util.Calendar;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
 
 /**
- * This bean class represents a card game edition.
+ * This bean class represents a card game set.
  * 
  * @author Sebastian Dine
  *
  */
-public class EditionBean implements CardCollectionBean, Serializable, Comparable<CardCollectionBean> {
+public class SetBean implements CardCollectionBean, Serializable, Comparable<CardCollectionBean> {
 	
 	/**
-	 * This static dummy object can be used, if no specific {@link EditionBean} object is required.
+	 * This static dummy object can be used, if no specific {@link SetBean} object is required.
 	 */
-	public static EditionBean DUMMY;
+	public static SetBean DUMMY;
 	
 	static{
-		DUMMY = new EditionBean();
+		DUMMY = new SetBean();
 		DUMMY.setName("");
 		DUMMY.setCode("");
 		DUMMY.setRelease(Calendar.getInstance());
@@ -62,41 +62,41 @@ public class EditionBean implements CardCollectionBean, Serializable, Comparable
 	
 
 	/**
-	 * This method is only implemented due to legacy reasons. Beforehand, {@link EditionBean} had a local ID system.
+	 * This method is only implemented due to legacy reasons. Beforehand, {@link SetBean} had a local ID system.
 	 * This was abandoned due to the introduction of the official MtG set codes. However, the method needs to be implemented
 	 * in order to serve the interface {@link CardCollectionBean}.
 	 */
 	@Deprecated
 	@Override
 	public int getId() {
-		Logger.warn("Deprecated method EditionBean#getId() has been used.");
+		Logger.warn("Deprecated method SetBean#getId() has been used.");
 		return 0;
 	}
 	
 	/**
-	 * This method is only implemented due to legacy reasons. Beforehand, {@link EditionBean} had a local ID system.
+	 * This method is only implemented due to legacy reasons. Beforehand, {@link SetBean} had a local ID system.
 	 * This was abandoned due to the introduction of the official MtG set codes. However, the method needs to be implemented
 	 * in order to serve the interface {@link CardCollectionBean}.
 	 */
 	@Deprecated
 	@Override
 	public void setId(int Id) {
-		Logger.warn("Deprecated method EditionBean#setId() has been used.");
+		Logger.warn("Deprecated method SetBean#setId() has been used.");
 		
 	}
 	
 	/**
 	 * Implementation of interface {@link Comparable}.
-	 * The comparation is based on the attribute {@link EditionBean#release}.
+	 * The comparation is based on the attribute {@link SetBean#release}.
 	 * <ul>
-	 * <li>If the release date of this {@link EditionBean} is older than the given {@link EditionBean}, the method returns {@code -1}.</li>
-	 * <li>If the release date of this {@link EditionBean} is younger than the given {@link EditionBean}, the method returns {@code 1}.</li>
-	 * <li>If the release date of both {@link EditionBean} object is the same, the method returns {@code 0}.</li>
+	 * <li>If the release date of this {@link SetBean} is older than the given {@link SetBean}, the method returns {@code -1}.</li>
+	 * <li>If the release date of this {@link SetBean} is younger than the given {@link SetBean}, the method returns {@code 1}.</li>
+	 * <li>If the release date of both {@link SetBean} object is the same, the method returns {@code 0}.</li>
 	 * </ul>
 	 */
 	@Override
-	public int compareTo(CardCollectionBean edition) {
-		EditionBean compare = (EditionBean) edition;
+	public int compareTo(CardCollectionBean set) {
+		SetBean compare = (SetBean) set;
 		if(this.getRelease().before(compare.getRelease())){
 			return -1;
 		}

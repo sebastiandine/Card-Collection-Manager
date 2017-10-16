@@ -22,7 +22,7 @@ public class CardBean implements CardCollectionBean, Serializable, Comparable<Ca
 	static{
 		DUMMY = new CardBean();
 		DUMMY.setName("");
-		DUMMY.setEdition(EditionBean.DUMMY);
+		DUMMY.setSet(SetBean.DUMMY);
 		DUMMY.setAmount(0);
 		DUMMY.setCondition(ConditionEnum.Near_Mint);
 		DUMMY.setLanguage(LanguageEnum.English);
@@ -38,7 +38,7 @@ public class CardBean implements CardCollectionBean, Serializable, Comparable<Ca
 	private int id;
 
 	private String name;
-	private EditionBean edition;
+	private SetBean set;
 	private LanguageEnum language;
 	private int amount;
 	private ConditionEnum condition;
@@ -70,11 +70,11 @@ public class CardBean implements CardCollectionBean, Serializable, Comparable<Ca
 	public void setName(String name) {
 		this.name = name;
 	}
-	public EditionBean getEdition() {
-		return edition;
+	public SetBean getSet() {
+		return set;
 	}
-	public void setEdition(EditionBean edition) {
-		this.edition = edition;
+	public void setSet(SetBean set) {
+		this.set = set;
 	}
 	public LanguageEnum getLanguage() {
 		return language;
@@ -141,7 +141,7 @@ public class CardBean implements CardCollectionBean, Serializable, Comparable<Ca
 		String out = "";
 		out += "ID: " + this.id;
 		out += ", Name: " + this.name;
-		out += ", Edition: " + this.edition;
+		out += ", Set: " + this.set;
 		out += ", Language: " + this.language;
 		out += ", Condition: " + this.name;
 		out += ", Amount: " + this.amount;

@@ -7,25 +7,25 @@ import javax.swing.DefaultListCellRenderer;
 import javax.swing.JComboBox;
 import javax.swing.JList;
 
-import com.sebastiandine.cardcollectionmanager.bean.EditionBean;
-import com.sebastiandine.cardcollectionmanager.container.EditionBeanContainer;
+import com.sebastiandine.cardcollectionmanager.bean.SetBean;
+import com.sebastiandine.cardcollectionmanager.container.SetBeanContainer;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
 
 /**
- * This class encapsulates combo box functionality for {@link EditionBean} objects.
- * Use method {@link #getSelectedObjects()} to retrieve the selected {@link EditionBean} object.
+ * This class encapsulates combo box functionality for {@link SetBean} objects.
+ * Use method {@link #getSelectedObjects()} to retrieve the selected {@link SetBean} object.
  * 
  * @author Sebastian Dine
  *
  */
 @SuppressWarnings("serial")
-public class ComboBoxEditionBean extends JComboBox<EditionBean> {
+public class ComboBoxSetBean extends JComboBox<SetBean> {
 	
-	public ComboBoxEditionBean(){
-		super(EditionBeanContainer.getEditionBeanList());
+	public ComboBoxSetBean(){
+		super(SetBeanContainer.getSetBeanList());
 		
-		/* first check, if any edition is available. If not, grey out the element */
-		if(EditionBeanContainer.getEditionBeanList().length > 0){
+		/* first check, if any set is available. If not, grey out the element */
+		if(SetBeanContainer.getSetBeanList().length > 0){
 			
 			this.addActionListener(this);
 			
@@ -38,9 +38,9 @@ public class ComboBoxEditionBean extends JComboBox<EditionBean> {
 				@Override
 	            public Component getListCellRendererComponent(JList list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
 	                super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-	                if(value instanceof EditionBean){
-	                    EditionBean edition = (EditionBean) value;
-	                    setText(edition.getName());
+	                if(value instanceof SetBean){
+	                    SetBean set = (SetBean) value;
+	                    setText(set.getName());
 	                }
 	                return this;
 	
@@ -58,7 +58,7 @@ public class ComboBoxEditionBean extends JComboBox<EditionBean> {
 	public void actionPerformed(ActionEvent e) {				/* Since a super class of JComboBox already implements interface
 																	ActionListener, we only need to override the actionPerformed method
 																*/
-		Logger.debug("Edition selected: "+this.getSelectedItem().toString()+".");	
+		Logger.debug("Set selected: "+this.getSelectedItem().toString()+".");	
 	}
 	
 	

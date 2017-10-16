@@ -13,7 +13,7 @@ import javax.swing.ImageIcon;
 import org.apache.logging.log4j.Level;
 
 import com.sebastiandine.cardcollectionmanager.bean.CardBean;
-import com.sebastiandine.cardcollectionmanager.bean.EditionBean;
+import com.sebastiandine.cardcollectionmanager.bean.SetBean;
 import com.sebastiandine.cardcollectionmanager.logging.Logger;
 
 /**
@@ -27,7 +27,7 @@ public class PropertiesFactory {
 
 	private static final String CONFIG_URL = "./config/config.properties";
 	private static final String CARDDATA_KEY = "url_carddata";
-	private static final String EDITIONDATA_KEY = "url_editiondata";
+	private static final String SETDATA_KEY = "url_setdata";
 	private static final String IMAGEDATA_KEY = "url_imagedata";
 	private static final String LOGURL_KEY = "log_url";
 	private static final String LOGLEVEL_KEY = "log_level";
@@ -75,13 +75,13 @@ public class PropertiesFactory {
 	}
 
 	/**
-	 * This method returns the url to the edition data file, which holds
-	 * serialized {@link EditionBean} objects.
+	 * This method returns the url to the set data file, which holds
+	 * serialized {@link SetBean} objects.
 	 * 
-	 * @return url to file which holds serialized {@link EditionBean} objects.
+	 * @return url to file which holds serialized {@link SetBean} objects.
 	 */
-	public static String getEditionDataUrl() {
-		return propertiesReader.getProperty(EDITIONDATA_KEY);
+	public static String getSetDataUrl() {
+		return propertiesReader.getProperty(SETDATA_KEY);
 	}
 
 	/**
