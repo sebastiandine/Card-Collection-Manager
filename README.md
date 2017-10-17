@@ -6,7 +6,7 @@ This projects provides a management application for Magic the Gathering card col
 The application is completely written in Java, using Swing for the graphic interface and the built-in serialization for saving the collection data.
 
 ## License
-This project is licensed under the zlib license. See also the attached LICENSE file.
+This project is licensed under the zlib license. See also the attached [LICENSE](./LICENSE) file.
 
 ## How to use
 You find the latest build as archive files in folder [build](./build). Unpack and use them.
