@@ -3,6 +3,7 @@ package org.sebastiandine.cardcollectionmanager.factories;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -27,7 +28,6 @@ public class PropertiesFactory {
 	private static final String CONFIG_URL = "./config/config.properties";
 	private static final String CARDDATA_KEY = "url_carddata";
 	private static final String SETDATA_KEY = "url_setdata";
-	private static final String IMAGEDATA_KEY = "url_imagedata";
 	private static final String LOGURL_KEY = "log_url";
 	private static final String LOGLEVEL_KEY = "log_level";
 	private static final String ICON_ALTERED_KEY = "icon_altered";
@@ -40,13 +40,13 @@ public class PropertiesFactory {
 	private static final String ICON_LOAD_KEY = "icon_load";
 	private static final String ICON_MTGBACK_KEY = "icon_mtgback";
 
-	private static Properties propertiesReader;
+	private static Properties properties;
 
 	static {
-		propertiesReader = new Properties();
+		properties = new Properties();
 
 		try {
-			propertiesReader.load(new FileInputStream(CONFIG_URL));
+			properties.load(new FileInputStream(CONFIG_URL));
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -69,8 +69,37 @@ public class PropertiesFactory {
 	 * 
 	 * @return url to file which holds serialized {@link CardBean} objects.
 	 */
-	public static String getCardDataUrl() {
-		return propertiesReader.getProperty(CARDDATA_KEY);
+	public static String getCardDataFileUrl() {
+		return (properties.getProperty(CARDDATA_KEY)+"/carddata");
+	}
+	
+	/**
+	 * This method returns the url to the card data directory, which is the main
+	 * directory for all carddata files (binary and images).
+	 * 
+	 * @return url to carddata directory.
+	 */
+	public static String getCardDataDirectoryUrl(){
+		return properties.getProperty(CARDDATA_KEY);
+	}
+	
+	/**
+	 * This method writes the given url to the key 'url_carddate' in the config file.
+	 * @param url Updated carddata url.
+	 */
+	public static void setCardDataDirectoryUrl(String url){
+		properties.setProperty(CARDDATA_KEY, url);
+		FileOutputStream fOut;
+		try {
+			fOut = new FileOutputStream(CONFIG_URL);
+			properties.store(fOut, "");
+		} catch (FileNotFoundException e) {
+			Logger.error("Unable to locate properties file at "+CONFIG_URL+".");
+			Logger.error(e.getMessage());
+		} catch (IOException e) {
+			Logger.error("Unable to save properties data.");
+			Logger.error(e.getMessage());
+		}
 	}
 
 	/**
@@ -80,7 +109,7 @@ public class PropertiesFactory {
 	 * @return url to file which holds serialized {@link SetBean} objects.
 	 */
 	public static String getSetDataUrl() {
-		return propertiesReader.getProperty(SETDATA_KEY);
+		return properties.getProperty(SETDATA_KEY);
 	}
 
 	/**
@@ -90,7 +119,7 @@ public class PropertiesFactory {
 	 * @return url to image files.
 	 */
 	public static String getImageDataUrl() {
-		return propertiesReader.getProperty(IMAGEDATA_KEY);
+		return (getCardDataDirectoryUrl()+"/images");
 	}
 
 	/**
@@ -99,7 +128,7 @@ public class PropertiesFactory {
 	 * @return URL to the log file.
 	 */
 	public static String getLogfileUrl() {
-		return propertiesReader.getProperty(LOGURL_KEY);
+		return properties.getProperty(LOGURL_KEY);
 	}
 
 	/**
@@ -224,10 +253,10 @@ public class PropertiesFactory {
 	private static ImageIcon loadImageIconByProperitesKey(String key, boolean enabled){
 		try {
 			if (enabled) {
-				return new ImageIcon(propertiesReader.getProperty(key));
+				return new ImageIcon(properties.getProperty(key));
 			} else {
 				return new ImageIcon(GrayFilter
-						.createDisabledImage(ImageIO.read(new File(propertiesReader.getProperty(key)))));
+						.createDisabledImage(ImageIO.read(new File(properties.getProperty(key)))));
 			}
 
 		} catch (Exception e) {
@@ -243,7 +272,7 @@ public class PropertiesFactory {
 	 *         {@code ERROR} will be used as default log level.
 	 */
 	public static Level getLogLevel() {
-		String level = propertiesReader.getProperty(LOGLEVEL_KEY);
+		String level = properties.getProperty(LOGLEVEL_KEY);
 
 		switch (level.toUpperCase()) {
 		case "DEBUG":

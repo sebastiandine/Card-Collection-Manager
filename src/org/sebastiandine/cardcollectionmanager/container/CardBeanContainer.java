@@ -34,14 +34,14 @@ public class CardBeanContainer extends AbstractBeanContainer {
 	 */
 	static{
 		try {
-			Logger.debug("Try to deserialize CardBean data at '"+PropertiesFactory.getCardDataUrl()+"'.");
-			cardBeanList = deserializeContainer(PropertiesFactory.getCardDataUrl());
+			Logger.debug("Try to deserialize CardBean data at '"+PropertiesFactory.getCardDataFileUrl()+"'.");
+			cardBeanList = deserializeContainer(PropertiesFactory.getCardDataFileUrl());
 		} catch (ClassNotFoundException e) {
 			Logger.fatal(e.getMessage());
 			e.printStackTrace();
 		} catch (IOException e) {									/* If no carddata file gets detected, a new one will be created */					
 			cardBeanList = new ArrayList<CardCollectionBean>();
-			Logger.warn("No serialized CardBean data found at '"+PropertiesFactory.getCardDataUrl()+"'.");
+			Logger.warn("No serialized CardBean data found at '"+PropertiesFactory.getCardDataFileUrl()+"'.");
 			Logger.info("Plain CardBean container created.");
 		}
 	}
@@ -123,12 +123,12 @@ public class CardBeanContainer extends AbstractBeanContainer {
 	 */
 	public static void saveCardBeanList(){
 		try {
-			serializeContainer(cardBeanList, PropertiesFactory.getCardDataUrl());
+			serializeContainer(cardBeanList, PropertiesFactory.getCardDataFileUrl());
 		} catch (IOException e) {
-			Logger.error("Failed to save internal card list to file '"+PropertiesFactory.getCardDataUrl()+"'.");
+			Logger.error("Failed to save internal card list to file '"+PropertiesFactory.getCardDataFileUrl()+"'.");
 			Logger.error(e.getMessage());
 		}
-		Logger.info("CardBean data stored to file '"+PropertiesFactory.getCardDataUrl()+"'.");
+		Logger.info("CardBean data stored to file '"+PropertiesFactory.getCardDataFileUrl()+"'.");
 	}
 
 }

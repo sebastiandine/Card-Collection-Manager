@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.sebastiandine</groupId>
 	<artifactId>card-collection-manager</artifactId>
-	<version>0.5-03</version>
+	<version>1.0-01</version>
 	<name>Card Collection Manager</name>
 	<description>An application for managing Magic the Gathering card collections.</description>
 
@@ -158,14 +158,14 @@
 							<archive>
 								<manifest>
 									<mainClass>
-										com.sebastiandine.cardcollectionmanager.Main
+										org.sebastiandine.cardcollectionmanager.Main
 									</mainClass>
 								</manifest>
 							</archive>
 							<descriptorRefs>
 								<descriptorRef>jar-with-dependencies</descriptorRef>
 							</descriptorRefs>
-							<finalName>CardCollectionManager_${project.version}</finalName>
+							<finalName>CardCollectionManager</finalName>
 							<appendAssemblyId>false</appendAssemblyId>
 						</configuration>
 					</execution>

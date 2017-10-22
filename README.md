@@ -11,6 +11,14 @@ This project is licensed under the zlib license. See also the attached [LICENSE]
 ## How to use
 You find the latest build as archive files in folder [build](./build). Unpack and use them.
 
+Be aware that you can edit the directory in which the application stores both, your card data as well as your uploaded images.
+It is highly recommended to adjust this to your requirements before you start using the application since later editing might
+lead to inconsistent data.
+
+## How to update
+If you want to update your local version of the application. Just overwrite the your local `CardCollectionManager.jar` with the one
+you find in the archive file of the latest release. Do however not overwrite your data or config files.
+
 ## How to build/ contribute
 * Increase the build count of the current version in file `pom.xml`. Tag `<version>` is representing the current version and build number. So if the current version is 0.1-01, you should change it to 0.1-02 before you commit your changes. The number before the dash is the current main release which should not be changed, except by the main contributor. 
 
