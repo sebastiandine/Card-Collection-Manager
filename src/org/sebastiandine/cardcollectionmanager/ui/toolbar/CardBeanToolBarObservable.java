@@ -12,6 +12,7 @@ import org.sebastiandine.cardcollectionmanager.bean.CardBean;
 import org.sebastiandine.cardcollectionmanager.factories.PropertiesFactory;
 import org.sebastiandine.cardcollectionmanager.logging.Logger;
 import org.sebastiandine.cardcollectionmanager.ui.dialogs.card.DialogMaintainCardObservable;
+import org.sebastiandine.cardcollectionmanager.ui.tables.card.CardContainerTableFilterField;
 
 /**
  * This class represents the application's toolbar by managing an internal {@link JToolBar} object and
@@ -74,6 +75,7 @@ public class CardBeanToolBarObservable  extends Observable implements ActionList
 		toolBar.add(btn_addCardBean);
 		toolBar.add(btn_editCardBean);
 		toolBar.add(btn_deleteCardBean);
+		toolBar.add(CardContainerTableFilterField.getInstance());
 	}
 	
 	/**

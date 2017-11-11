@@ -54,21 +54,14 @@ public class MainFrame extends JFrame implements ListSelectionListener, Observer
 		this.getContentPane().add(cardInfoPanel, BorderLayout.WEST);
 		
 		/* init and add CardBeanTable */
-		try {
-			cardTable = new CardContainerTable();
-			cardTable.getSelectionModel().addListSelectionListener(this);
+		cardTable = CardContainerTable.getInstance();
+		cardTable.getSelectionModel().addListSelectionListener(this);
 			
-			if(selectedCard.getId() != -1){		//check if the DUMMY is currently selected card
-				cardTable.selectRowByCardBean(selectedCard);
-			}
-			
-		} 
-		catch (IOException e1) {
-			Logger.fatal("Failed to initialize card container table.");
-			Logger.fatal(e1.getMessage());
+		if(selectedCard.getId() != -1){		//check if the DUMMY is currently selected card
+			cardTable.selectRowByCardBean(selectedCard);
 		}
 		this.getContentPane().add(new JScrollPane(cardTable), BorderLayout.CENTER);
-
+		
 		/* init and add menubar */
 		menuBarObservable = new MenuBarObservable();
 		menuBarObservable.addObserver(this);

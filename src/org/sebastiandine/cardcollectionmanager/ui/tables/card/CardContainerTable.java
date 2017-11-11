@@ -18,6 +18,9 @@ import org.sebastiandine.cardcollectionmanager.logging.Logger;
  * This class provides a {@link JTable}, which displays all {@link CardBean} objects,
  * managed by {@link CardBeanContainer}.
  * 
+ * This class implements the singleton pattern. You can retrieve the singleton instance
+ * by calling methond {@link #getInstance()}.
+ * 
  * @author Sebastian Dine
  *
  */
@@ -29,7 +32,29 @@ public class CardContainerTable extends JTable {
 	
 	private DefaultTableModel tableModel;
 	
-	public CardContainerTable() throws IOException{
+	private static CardContainerTable singletonInstance;
+	
+	/**
+	 * This method returns the singleton object of class {@class CardContainerTable}.
+	 * 
+	 * @return Singleton instance of class.
+	 */
+	public static CardContainerTable getInstance(){
+		
+		if(singletonInstance == null){
+			try{
+				singletonInstance = new CardContainerTable();
+			}
+			catch (IOException e1) {
+				Logger.fatal("Failed to initialize card container table.");
+				Logger.fatal(e1.getMessage());
+			}
+		}
+		
+		return singletonInstance;
+	}
+	
+	private CardContainerTable() throws IOException{
 		super();
 		
 		/* configure table model */
@@ -148,6 +173,7 @@ public class CardContainerTable extends JTable {
 	 * This method deletes the currently selected row and sets the selection to the next row.
 	 */
 	public void deleteSelectedRow(){
+		
 		int selectedRow = this.getSelectedRow();
 		int newSelectedRow = selectedRow; 
 		
@@ -186,7 +212,7 @@ public class CardContainerTable extends JTable {
 	 * @return Selected {@link CardBean} object. {@link CardBean#DUMMY}, if there is no entry left in the table.
 	 */
 	public CardBean getSelectedCardBean(){
-		if(this.getRowCount() > 0){
+		if(this.getRowCount() > 0 && this.getSelectedRow() > -1){
 			int selectedRow = this.getSelectedRow();
 			return CardBeanContainer.getCardBeanById((int) this.getValueAt(selectedRow, 0));
 		}
@@ -250,4 +276,5 @@ public class CardContainerTable extends JTable {
 		
 		tableModel.addRow(row);
 	}
+	
 }

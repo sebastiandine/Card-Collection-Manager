@@ -49,8 +49,8 @@ import org.sebastiandine.cardcollectionmanager.ui.dialogs.ComboBoxSetBean;
  * 
  * This class implements the Singleton pattern, therefore there can only be one card maintenance dialog at a time:
  * <ul>
- * <li>Use constructor {@link DialogMaintainCardObservable#getInstance()} in order to create a new card.</li>
- * <li>Use constructor {@link DialogMaintainCardObservable#getInstance(CardBean)} in order to edit an existing card.</li>
+ * <li>Use method {@link DialogMaintainCardObservable#getInstance()} in order to create a new card.</li>
+ * <li>Use method {@link DialogMaintainCardObservable#getInstance(CardBean)} in order to edit an existing card.</li>
  * </ul>
  * 
  * @author Sebastian Dine
