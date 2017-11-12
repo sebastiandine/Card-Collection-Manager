@@ -138,7 +138,7 @@ public class CardContainerTable extends JTable {
 	 * the data of the corresponding {@link CardBean} object.
 	 */
 	public void updateSelectedRow(){
-		int selectedRow = this.getSelectedRow();
+		int selectedRow = this.convertRowIndexToView(this.getSelectedRow());
 		CardBean cardBean = CardBeanContainer.getCardBeanById((int) this.getValueAt(selectedRow, 0));
 		
 		this.setValueAt(cardBean.getName(), selectedRow, 1);
@@ -173,15 +173,15 @@ public class CardContainerTable extends JTable {
 	 * This method deletes the currently selected row and sets the selection to the next row.
 	 */
 	public void deleteSelectedRow(){
-		
-		int selectedRow = this.getSelectedRow();
-		int newSelectedRow = selectedRow; 
+
+		int selectedRow = this.convertRowIndexToModel(this.getSelectedRow());
+		int newSelectedRow = this.getSelectedRow();
 		
 		/* if the last element of the table gets deleted, the selection will be set to the
 		 * previous element.
 		 * In all other cases the next row will be selected after the deletion.
 		 */
-		if(selectedRow == (this.getRowCount()-1)){
+		if(newSelectedRow == (this.getRowCount()-1)){
 			newSelectedRow--;
 		}
 
@@ -212,13 +212,13 @@ public class CardContainerTable extends JTable {
 	 * @return Selected {@link CardBean} object. {@link CardBean#DUMMY}, if there is no entry left in the table.
 	 */
 	public CardBean getSelectedCardBean(){
+		
 		if(this.getRowCount() > 0 && this.getSelectedRow() > -1){
 			int selectedRow = this.getSelectedRow();
 			return CardBeanContainer.getCardBeanById((int) this.getValueAt(selectedRow, 0));
 		}
-		else{
-			return CardBean.DUMMY;
-		}
+
+		return CardBean.DUMMY;
 	}
 	
 	/**
