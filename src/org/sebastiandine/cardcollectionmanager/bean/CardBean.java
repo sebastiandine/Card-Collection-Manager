@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 import org.sebastiandine.cardcollectionmanager.enums.ConditionEnum;
 import org.sebastiandine.cardcollectionmanager.enums.LanguageEnum;
+import org.sebastiandine.cardcollectionmanager.factories.PropertiesFactory;
 
 /**
  * This bean class represents a single card position.
@@ -48,8 +49,8 @@ public class CardBean implements CardCollectionBean, Serializable, Comparable<Ca
 	private boolean isAltered;
 	
 	private String note;
-	private File imageFront;
-	private File imageBack;
+	private String imageFront;
+	private String imageBack;
 	
 	public CardBean(){
 		this.id = -1; /* -1 indicates, that the bean does not have a proper ID assigned */	
@@ -120,19 +121,33 @@ public class CardBean implements CardCollectionBean, Serializable, Comparable<Ca
 	}
 	
 	public File getImageFront(){
-		return this.imageFront;
+		
+		if(imageFront == null){
+			return null;
+		}
+		else{
+			File img = new File(PropertiesFactory.getImageDataUrl()+"/"+imageFront);
+			return img;
+		}
 		
 	}
 	public File getImageBack(){
-		return this.imageBack;
+		
+		if(imageBack == null){
+			return null;
+		}
+		else{
+			File img = new File(PropertiesFactory.getImageDataUrl()+"/"+imageBack);
+			return img;		
+		}
 	}
 	
 	public void setImageFront(File imgFront){
-		this.imageFront = imgFront;
+		this.imageFront = imgFront.getName();
 		
 	}
 	public void setImageBack(File imgBack){
-		this.imageBack = imgBack;
+		this.imageBack = imgBack.getName();
 	}
 	
 	
