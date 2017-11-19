@@ -120,7 +120,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 	}
 	
 	/**
-	 * Retrive singletion object which provides a {@link JDialog} to edit an existing {@link CardBean} object.
+	 * Retrive singleton object which provides a {@link JDialog} to edit an existing {@link CardBean} object.
 	 * 
 	 * @param cardBean {@link CardBean} object, which should be edited.
 	 * @return Singleton instance in 'edit' mode.
@@ -376,6 +376,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		cmb_language.setSelectedItem(cardBean.getLanguage());
 		cmb_condition.setSelectedItem(cardBean.getCondition());
 		cmb_set.setSelectedItem(cardBean.getSet());	
+
 	}
 	
 	/**

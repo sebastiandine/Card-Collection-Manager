@@ -42,6 +42,8 @@ you find in the archive file of the latest release. Do however not overwrite you
 
 * [Apache Log4j v.2.8.2](https://logging.apache.org/log4j/2.x/) - The famous logging framework for Java applications.
 
+* [Apache POI v.3.17](https://poi.apache.org) - Java based library to work with Microsoft Office files.
+
 * [JDatePicker v.1.3.4](https://jdatepicker.org) - JDatePicker and JDatePanel is an set of advanced DatePicker controls for Java Swing applications.
 
 * [Magic: The Gathering Java SDK v.0.0.6](https://github.com/MagicTheGathering/mtg-sdk-java) - Java based encapsulation of the offical [MtG API](https://magicthegathering.io).

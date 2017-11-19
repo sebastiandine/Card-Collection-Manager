@@ -35,7 +35,7 @@ public class CardContainerTable extends JTable {
 	private static CardContainerTable singletonInstance;
 	
 	/**
-	 * This method returns the singleton object of class {@class CardContainerTable}.
+	 * This method returns the singleton object of class {@link CardContainerTable}.
 	 * 
 	 * @return Singleton instance of class.
 	 */

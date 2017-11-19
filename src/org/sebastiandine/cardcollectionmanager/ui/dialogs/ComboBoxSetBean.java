@@ -61,6 +61,5 @@ public class ComboBoxSetBean extends JComboBox<SetBean> {
 		Logger.debug("Set selected: "+this.getSelectedItem().toString()+".");	
 	}
 	
-	
 
 }

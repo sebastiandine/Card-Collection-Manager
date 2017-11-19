@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.sebastiandine</groupId>
 	<artifactId>card-collection-manager</artifactId>
-	<version>1.0-04</version>
+	<version>1.0-05</version>
 	<name>Card Collection Manager</name>
 	<description>An application for managing Magic the Gathering card collections.</description>
 
@@ -33,6 +33,16 @@
 			<groupId>io.magicthegathering</groupId>
 			<artifactId>javasdk</artifactId>
 			<version>0.0.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.17</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.17</version>
 		</dependency>
 	</dependencies>
 

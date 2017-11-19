@@ -8,6 +8,7 @@ org.sebastiandine.cardcollectionmanager.services
 org.sebastiandine.cardcollectionmanager.ui
 org.sebastiandine.cardcollectionmanager.ui.dialogs
 org.sebastiandine.cardcollectionmanager.ui.dialogs.card
+org.sebastiandine.cardcollectionmanager.ui.dialogs.export
 org.sebastiandine.cardcollectionmanager.ui.dialogs.settings
 org.sebastiandine.cardcollectionmanager.ui.menubar
 org.sebastiandine.cardcollectionmanager.ui.panel.card
