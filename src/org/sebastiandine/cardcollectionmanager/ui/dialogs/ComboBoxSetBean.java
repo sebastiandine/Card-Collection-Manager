@@ -61,5 +61,26 @@ public class ComboBoxSetBean extends JComboBox<SetBean> {
 		Logger.debug("Set selected: "+this.getSelectedItem().toString()+".");	
 	}
 	
+	/**
+	 * This method overrides the parent class method {@link JComboBox#setSelectedItem(Object)} in order to
+	 * work for objects of class {@link SetBean}.
+	 */
+	@Override
+	public void setSelectedItem(Object object){
+		
+		if(object.getClass() == SetBean.class){
+			int setCount = this.getItemCount();
+			for(int i=0; i < setCount; i++){
+				if(this.getItemAt(i).getCode().equals(((SetBean)object).getCode())){
+					this.getModel().setSelectedItem(this.getItemAt(i));
+					this.selectedItemChanged();
+				}
+			}
+		}
+		else{
+			super.setSelectedItem(object);
+		}
+		
+	}
 
 }

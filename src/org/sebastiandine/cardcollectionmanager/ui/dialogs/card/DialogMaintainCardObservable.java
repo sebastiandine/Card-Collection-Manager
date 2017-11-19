@@ -377,6 +377,7 @@ public class DialogMaintainCardObservable extends Observable implements ActionLi
 		cmb_condition.setSelectedItem(cardBean.getCondition());
 		cmb_set.setSelectedItem(cardBean.getSet());	
 
+
 	}
 	
 	/**
