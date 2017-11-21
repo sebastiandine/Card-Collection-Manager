@@ -51,6 +51,18 @@ public class SetBean implements CardCollectionBean, Serializable, Comparable<Car
 	}
 	
 	public String toString(){
+		return this.getName(); /* toString should only contain the name, since it is used by a JComboBox ComboBoxSetBean.
+								  Previously the setRender method was overwritten but this caused bugs when Jidesoft 
+								  AutoComplection got introduced */
+		
+	}
+	
+	/**
+	 * This method returns extended information regarding of the {@link SetBean}.
+	 * @return Extended information of set.
+	 */
+	public String getExtendedString(){
+		
 		String out = "";
 		
 		out += "Code: " + this.code;

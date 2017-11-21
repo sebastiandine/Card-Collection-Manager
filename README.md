@@ -46,4 +46,6 @@ you find in the archive file of the latest release. Do however not overwrite you
 
 * [JDatePicker v.1.3.4](https://jdatepicker.org) - JDatePicker and JDatePanel is an set of advanced DatePicker controls for Java Swing applications.
 
+* [JIDE Common Layer v.3.6.18](https://github.com/jidesoft/jide-oss) - Library of enriched Swing components. This is only the basis for the JIDE software products, which JIDE decided to put under open source.
+
 * [Magic: The Gathering Java SDK v.0.0.6](https://github.com/MagicTheGathering/mtg-sdk-java) - Java based encapsulation of the offical [MtG API](https://magicthegathering.io).
