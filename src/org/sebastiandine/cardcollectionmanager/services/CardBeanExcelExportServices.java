@@ -31,6 +31,7 @@ public class CardBeanExcelExportServices {
 	private static final String HEADER_ID = "Id";
 	private static final String HEADER_NAME = "Name";
 	private static final String HEADER_SET = "Set";
+	private static final String HEADER_LANGUAGE = "Language";
 	private static final String HEADER_CONDITION = "Condition";
 	private static final String HEADER_AMOUNT = "Amount";
 	private static final String HEADER_FOIL = "Foil";
@@ -129,35 +130,39 @@ public class CardBeanExcelExportServices {
 		cellSet.setCellValue(HEADER_SET);
 		cellSet.setCellStyle(headerStyle);
 		
-		Cell cellCondition = row.createCell(3);
+		Cell cellLanguage = row.createCell(3);
+		cellLanguage.setCellValue(HEADER_LANGUAGE);
+		cellLanguage.setCellStyle(headerStyle);
+		
+		Cell cellCondition = row.createCell(4);
 		cellCondition.setCellValue(HEADER_CONDITION);
 		cellCondition.setCellStyle(headerStyle);
 		
-		Cell cellAmount = row.createCell(4);
+		Cell cellAmount = row.createCell(5);
 		cellAmount.setCellValue(HEADER_AMOUNT);
 		cellAmount.setCellStyle(headerStyle);
 		
-		Cell cellFoil = row.createCell(5);
+		Cell cellFoil = row.createCell(6);
 		cellFoil.setCellValue(HEADER_FOIL);
 		cellFoil.setCellStyle(headerStyle);
 		
-		Cell cellSigned = row.createCell(6);
+		Cell cellSigned = row.createCell(7);
 		cellSigned.setCellValue(HEADER_SIGNED);
 		cellSigned.setCellStyle(headerStyle);
 		
-		Cell cellAltered = row.createCell(7);
+		Cell cellAltered = row.createCell(8);
 		cellAltered.setCellValue(HEADER_ALTERED);
 		cellAltered.setCellStyle(headerStyle);
 		
-		Cell cellNote = row.createCell(8);
+		Cell cellNote = row.createCell(9);
 		cellNote.setCellValue(HEADER_NOTE);
 		cellNote.setCellStyle(headerStyle);
 		
-		Cell cellImgFront = row.createCell(9);
+		Cell cellImgFront = row.createCell(10);
 		cellImgFront.setCellValue(HEADER_IMG_FRONT);
 		cellImgFront.setCellStyle(headerStyle);
 		
-		Cell cellImgBack = row.createCell(10);
+		Cell cellImgBack = row.createCell(11);
 		cellImgBack.setCellValue(HEADER_IMG_BACK);
 		cellImgBack.setCellStyle(headerStyle);
 		
@@ -175,28 +180,31 @@ public class CardBeanExcelExportServices {
 			cellSet = row.createCell(2);
 			cellSet.setCellValue(bean.getSet().getName());
 			
-			cellCondition = row.createCell(3);
+			cellLanguage = row.createCell(3);
+			cellLanguage.setCellValue(bean.getLanguage().toString());
+			
+			cellCondition = row.createCell(4);
 			cellCondition.setCellValue(bean.getCondition().toString());
 			
-			cellAmount = row.createCell(4);
+			cellAmount = row.createCell(5);
 			cellAmount.setCellValue(bean.getAmount());
 			
-			cellFoil = row.createCell(5);
+			cellFoil = row.createCell(6);
 			if(bean.isFoil()) cellFoil.setCellValue("Foil");
 			
-			cellSigned = row.createCell(6);
+			cellSigned = row.createCell(7);
 			if(bean.isSigned()) cellSigned.setCellValue("Signed");
 			
-			cellAltered = row.createCell(7);
+			cellAltered = row.createCell(8);
 			if(bean.isSigned()) cellAltered.setCellValue("Altered");
 			
-			cellNote = row.createCell(8);
+			cellNote = row.createCell(9);
 			cellNote.setCellValue(bean.getNote());
 			
-			cellImgFront = row.createCell(9);
+			cellImgFront = row.createCell(10);
 			if(bean.getImageFront() != null) cellImgFront.setCellValue(bean.getImageFront().getName());
 			
-			cellImgBack = row.createCell(10);
+			cellImgBack = row.createCell(11);
 			if(bean.getImageBack() != null) cellImgBack.setCellValue(bean.getImageBack().getName());
 		}
 			
@@ -211,6 +219,7 @@ public class CardBeanExcelExportServices {
 		sheet.autoSizeColumn(8);
 		sheet.autoSizeColumn(9);
 		sheet.autoSizeColumn(10);
+		sheet.autoSizeColumn(11);
 		
 		Logger.info("Parsing data was successful.");
 
