@@ -139,6 +139,11 @@ public class CardContainerTable extends JTable {
 	 */
 	public void updateSelectedRow(){
 		int selectedRow = this.convertRowIndexToView(this.getSelectedRow());
+		
+		if (selectedRow == -1){ /* in case of sorted table (-1), we need to get the actual selected row */
+			selectedRow = this.getSelectedRow(); 
+		}
+																	   
 		CardBean cardBean = CardBeanContainer.getCardBeanById((int) this.getValueAt(selectedRow, 0));
 		
 		this.setValueAt(cardBean.getName(), selectedRow, 1);
