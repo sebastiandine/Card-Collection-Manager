@@ -143,11 +143,21 @@ public class CardBean implements CardCollectionBean, Serializable, Comparable<Ca
 	}
 	
 	public void setImageFront(File imgFront){
-		this.imageFront = imgFront.getName();
-		
+		if(imgFront == null){
+			this.imageFront = null;
+		}
+		else{
+			this.imageFront = imgFront.getName();
+		}
 	}
+	
 	public void setImageBack(File imgBack){
-		this.imageBack = imgBack.getName();
+		if(imgBack == null){
+			this.imageBack = null;
+		}
+		else{
+			this.imageBack = imgBack.getName();
+		}
 	}
 	
 	
