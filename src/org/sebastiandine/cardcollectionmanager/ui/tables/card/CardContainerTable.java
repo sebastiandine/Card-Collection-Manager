@@ -128,7 +128,7 @@ public class CardContainerTable extends JTable {
 	 */
 	private void populateTable() throws IOException{
 		
-		for(CardBean i : CardBeanContainer.getCardBeanList()){
+		for(CardBean i : CardBeanContainer.getCardBeanListSortedByName()){
 			appendRowByCardBean(i);
 		}
 	}

@@ -3,6 +3,7 @@ package org.sebastiandine.cardcollectionmanager.container;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 import org.sebastiandine.cardcollectionmanager.bean.CardBean;
@@ -115,6 +116,24 @@ public class CardBeanContainer extends AbstractBeanContainer {
 		
 		Logger.debug("Array of CardBean objects provided.");
 		return specific_array;
+	}
+	
+	/**
+	 * This method returns the internal list of {@link CardBean} objects as an array,
+	 * sorted by card names.
+	 * 
+	 * @return Array with all internal {@link CardBean} objects, sorted by card names.
+	 */
+	public static CardBean[] getCardBeanListSortedByName(){
+		CardBean[] cardBeanList = getCardBeanList();
+		Arrays.sort(cardBeanList, new Comparator<CardBean>() {
+		    @Override
+		    public int compare(CardBean o1, CardBean o2) {
+		        return o1.getName().compareTo(o2.getName());
+		    }
+		});
+		
+		return cardBeanList;
 	}
 	
 	/**

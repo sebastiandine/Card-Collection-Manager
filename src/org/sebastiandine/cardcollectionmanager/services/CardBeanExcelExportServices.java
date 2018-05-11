@@ -84,7 +84,7 @@ public class CardBeanExcelExportServices {
 	public static void exportCardBeanContainerToXlsx(File url){
 		
 		Workbook workbook = new XSSFWorkbook();
-		parseCardBeanContainer(workbook, CardBeanContainer.getCardBeanList());
+		parseCardBeanContainer(workbook, CardBeanContainer.getCardBeanListSortedByName());
 		
 		FileOutputStream fos;
 		try {
