@@ -5,6 +5,7 @@ import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Date;
@@ -78,6 +79,7 @@ public class MtgApiClient {
 	public static MtgSet[] getAllSets(){
 		
 		List<MtgSet> setList = SetAPI.getAllSets();
+		appendEuropeanSets(setList); //append FBB, FWB and Renaissance, since they are not in the offical API
 
 		/* filter online only sets */
 		Iterator<MtgSet> iterator = setList.iterator();
@@ -122,4 +124,30 @@ public class MtgApiClient {
 		return setArray;
 	}
 
+	/**
+	 * This method adds europe specific sets to a list of {@link MtgSet} objects,
+	 * which are missing in the offical API.
+	 * @param sets List of {@link MtgSet} objects.
+	 */
+	private static void appendEuropeanSets(List<MtgSet> sets){
+		MtgSet fbb = new MtgSet();
+		fbb.setName("Foreign Limited");
+		fbb.setCode("fbb");
+		fbb.setReleaseDate("1994-04-01");
+		
+		MtgSet fwb = new MtgSet();
+		fwb.setName("Foreign Unlimited");
+		fwb.setCode("fwb");
+		fwb.setReleaseDate("1995-01-01");
+		
+		MtgSet ren = new MtgSet();
+		ren.setName("Renaissance");
+		ren.setCode("ren");
+		ren.setReleaseDate("1995-07-01");
+		
+		sets.add(fbb);
+		sets.add(fwb);
+		sets.add(ren);
+			
+	}
 }
