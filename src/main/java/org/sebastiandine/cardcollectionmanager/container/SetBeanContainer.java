@@ -9,9 +9,6 @@ import java.util.Arrays;
 import java.util.Calendar;
 import java.util.List;
 
-import javax.swing.JOptionPane;
-
-import org.sebastiandine.cardcollectionmanager.bean.CardBean;
 import org.sebastiandine.cardcollectionmanager.bean.CardCollectionBean;
 import org.sebastiandine.cardcollectionmanager.bean.SetBean;
 import org.sebastiandine.cardcollectionmanager.factories.PropertiesFactory;
@@ -98,32 +95,22 @@ public class SetBeanContainer extends AbstractBeanContainer {
 	 */
 	public static void updateSetBeanListFromApi(){
 		
-		SetBean bean = (SetBean)  setBeanList.get(setBeanList.size()-1);
-		String codeLastSetSerialzed = bean.getCode();
+		String codeLastSetSerialzed = getLatestSet().getCode();
 		MtgSet set = MtgApiClient.getAllSets()[MtgApiClient.getAllSets().length-1];
 		String codeLastSetFromApi = set.getCode();
 
-		Logger.debug("Try to update set data from API. Latest set in internal list is "+bean.getName()+"."
+		Logger.debug("Try to update set data from API. Latest set in internal list is "+getLatestSet().getName()+"."
 					+"Latest set within API response is "+set.getName()+".");
 		
 		if(codeLastSetSerialzed.equals(codeLastSetFromApi)){
-			JOptionPane.showMessageDialog(null, 
-					"No new set data found. Latest set is "+set.getName()+".",
-					"Update Set Data",
-					JOptionPane.NO_OPTION);
 			Logger.debug("Internal list is already up to date.");
 		}
 		else{
 			Logger.debug("Try to update set data.");
 			deleteSetBeanList();
 			createSetBeanListFromApi();
-			JOptionPane.showMessageDialog(null,
-					"New set data maintained. Latest set is "+set.getName()+".",
-					"Update Set Data",
-					JOptionPane.NO_OPTION);
 			Logger.info("Set data has been updated. Latest set is "+set.getName()+".");
-		}
-		
+		}	
 	}
 	
 	/**
@@ -150,7 +137,7 @@ public class SetBeanContainer extends AbstractBeanContainer {
 	
 	
 	/**
-	 * This method saves the current internal list of {@link CardBean} objects to the local system.
+	 * This method saves the current internal list of {@link SetBean} objects to the local system.
 	 * The save destination is defined by property 'url_carddata' in config file 'config/config.properties'.
 	 */
 	public static void saveSetBeanList(){
@@ -161,6 +148,20 @@ public class SetBeanContainer extends AbstractBeanContainer {
 			Logger.error(e.getMessage());
 		}
 		Logger.info("SetBean data stored to file "+PropertiesFactory.getSetDataUrl());
+	}
+	
+	/**
+	 * This method returns the latest set in the internal list of {@link SetBean} objects.
+	 * If the list is empty, it will return the {@link SetBean} dummy object.
+	 * @return Latest {@link SetBean} object.
+	 */
+	public static SetBean getLatestSet(){
+		if(setBeanList.size() > 0){
+			return (SetBean) setBeanList.get(setBeanList.size()-1);
+		}
+		else{
+			return SetBean.DUMMY;
+		}
 	}
 	
 }

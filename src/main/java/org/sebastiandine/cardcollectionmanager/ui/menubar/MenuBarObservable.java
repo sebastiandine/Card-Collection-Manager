@@ -7,7 +7,9 @@ import java.util.Observable;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
+import org.sebastiandine.cardcollectionmanager.bean.SetBean;
 import org.sebastiandine.cardcollectionmanager.container.SetBeanContainer;
 import org.sebastiandine.cardcollectionmanager.ui.dialogs.export.ExcelExportFileChooser;
 import org.sebastiandine.cardcollectionmanager.ui.dialogs.settings.DialogSettings;
@@ -98,7 +100,22 @@ public class MenuBarObservable extends Observable implements ActionListener {
 		}
 		
 		if(e.getSource() == men_updateSets){
+			SetBean oldLatestSet = SetBeanContainer.getLatestSet();
 			SetBeanContainer.updateSetBeanListFromApi();
+			SetBean newLatestSet = SetBeanContainer.getLatestSet();
+			
+			if(oldLatestSet.getCode().equals(newLatestSet.getCode())){
+				JOptionPane.showMessageDialog(null, 
+						"No new set data found. Latest set is "+oldLatestSet.getName()+".",
+						"Update Set Data",
+						JOptionPane.NO_OPTION);
+			}
+			else{
+				JOptionPane.showMessageDialog(null,
+						"New set data maintained. Latest set is "+newLatestSet.getName()+".",
+						"Update Set Data",
+						JOptionPane.NO_OPTION);
+			}
 		}
 		
 		if(e.getSource() == men_editSettings){
