@@ -3,11 +3,10 @@ package org.sebastiandine.cardcollectionmanager.container;
 import org.junit.Test;
 import org.sebastiandine.cardcollectionmanager.bean.SetBean;
 
-import static org.junit.Assert.*;
-
 import java.util.Arrays;
 
 import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.*;
 
 public class SetBeanContainerTest {
 	
