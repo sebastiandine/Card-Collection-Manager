@@ -16,14 +16,11 @@ import org.junit.experimental.theories.Theory;
 import org.junit.runner.RunWith;
 import org.sebastiandine.cardcollectionmanager.bean.CardBean;
 
-import io.magicthegathering.javasdk.api.CardAPI;
-import io.magicthegathering.javasdk.resource.Card;
-
 import static org.junit.Assert.*;
 import static org.hamcrest.Matchers.*;
 
 @RunWith(Theories.class)
-public class CardBeanContainerTest {
+public class CardBeanContainer_AddDelete_Test {
 	
 	@DataPoint
 	public static String[] powerNine = {"Black Lotus", "Ancestral Recall", "Time Walk", "Timetwister", "Mox Jet", "Mox Peal",
@@ -84,16 +81,20 @@ public class CardBeanContainerTest {
 	
 	@Test
 	public void testAddCardBean_singleEntry(){
-		String cardName = "Black Lotus";
-		CardBean card = new CardBean();
-		card.setName(cardName);
-		
-		CardBeanContainer.addCardBean(card);
+		utilAddCardToContainer("Black Lotus");
 		int id = CardBeanContainer.getNextId() - 1;
 		
 		assertThat(id, is(equalTo(1))); //id should start with 1
-		assertThat(CardBeanContainer.getCardBeanById(id).getName(), is(equalTo(cardName)));
+		assertThat(CardBeanContainer.getCardBeanById(id).getName(), is(equalTo("Black Lotus")));
 	}
+	
+	@Test
+	public void testDeleteCardBeanById_singleEntry(){
+		utilAddCardToContainer("Black Lotus");
+		CardBeanContainer.deleteCardBeanById(1);
+		assertThat(CardBeanContainer.getCardBeanList(), is(arrayWithSize(0)));
+	}
+	
 	
 	@Theory
 	public void testAddCardBean_multipleEntries(String[] cardNames){
@@ -101,9 +102,7 @@ public class CardBeanContainerTest {
 		for(String name : cardNames){
 			//CardBean card = mock(CardBean.class);  ! do not mock cardBean objects, when they get further data
 			//when(card.getName()).thenReturn(name); ! during processing (e.g. id assignment!)
-			CardBean card = new CardBean();
-			card.setName(name);
-			CardBeanContainer.addCardBean(card);
+			utilAddCardToContainer(name);
 		}
 
 		//get highest id
@@ -117,7 +116,36 @@ public class CardBeanContainerTest {
 		}
 	}
 	
+	@Theory
+	public void testDeleteCardBeanById_multipleEntries(String[] cardNames){
+		//pump data
+		for(String name : cardNames){
+			utilAddCardToContainer(name);
+		}
+
+		//get highest id
+		int highestId = CardBeanContainer.getNextId() - 1;
+		int counter = highestId;
+		String cardname;
+		
+		while(counter > 0){
+			cardname = CardBeanContainer.getCardBeanById(counter).getName();
+			CardBeanContainer.deleteCardBeanById(counter);
+			counter--;
+			for(int i = 1; i <= highestId; i++){
+				//! be sure that testdata only contains unique names
+				assertThat(CardBeanContainer.getCardBeanById(i).getName(), is(not(equalTo(cardname))));
+			}
+		}
+	}
 	
+	private static void utilAddCardToContainer(String cardname){
+		String cardName = cardname;
+		CardBean card = new CardBean();
+		card.setName(cardName);
+		
+		CardBeanContainer.addCardBean(card);
+	}
 	
 
 }

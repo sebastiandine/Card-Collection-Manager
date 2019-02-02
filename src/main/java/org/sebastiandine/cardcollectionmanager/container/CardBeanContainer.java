@@ -101,7 +101,13 @@ public class CardBeanContainer extends AbstractBeanContainer {
 	 */
 	public static CardBean getCardBeanById(int id){
 		Logger.debug("Try to get CardBean with ID="+id+".");
-		return (CardBean) getBeanById(cardBeanList, id);
+		CardBean bean = (CardBean) getBeanById(cardBeanList, id);
+		if(bean == null){
+			return CardBean.DUMMY;
+		}
+		else{
+			return bean;
+		}
 	}
 	
 	
