@@ -20,15 +20,17 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+      
+      - name: Project Metadata
+        run: |
+          echo "PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version | grep -e '^[^\[]'})" >> $GITHUB_ENV
           
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
       
       - name: Create Package
-        env:
-          VERSION: ${mvn help:evaluate -Dexpression=project.version | grep -e '^[^\[]'}
         run: |
-          echo $VERSION
+          echo ${{ env.PROJECT_VERSION }}
           mkdir staging && mkdir staging/data
           cp -R config staging/
           cp data/setdata staging/data/
@@ -38,6 +40,6 @@ jobs:
       - name: Upload Package
         uses: actions/upload-artifact@v3
         with:
-          name: Card-Collection-Manager-${VERSION}
+          name: Card-Collection-Manager-${{ env.PROJECT_VERSION }}
           path: staging
           
