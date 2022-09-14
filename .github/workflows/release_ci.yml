@@ -27,6 +27,9 @@ jobs:
           echo "PROJECT_ARTIFACTID=$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)" >> $GITHUB_ENV
           echo "PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
 
+      - name: Check Release Version Number
+        run: exit [[ ${{ env.PROJECT_VERSION }} =~ ^([1-9]\d*|0)(\.(([1-9]\d*)|0)){2}$ ]]
+
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
       
