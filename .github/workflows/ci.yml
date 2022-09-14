@@ -23,7 +23,11 @@ jobs:
       
       - name: Project Metadata
         run: |
-          echo "PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version | grep -e '^[^\[]')" >> $GITHUB_ENV
+          echo "PROJECT_GROUPID=$(mvn help:evaluate -Dexpression=project.groupId -q -DforceStdout)" >> $GITHUB_ENV
+          echo "PROJECT_ARTIFACTID=$(mvn help:evaluate -Dexpression=project.artifactId -q -DforceStdout)" >> $GITHUB_ENV
+          echo "PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version -q -DforceStdout)" >> $GITHUB_ENV
+
+
           mvn help:evaluate -Dexpression=project.version | grep -e '^[^\[]'
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
