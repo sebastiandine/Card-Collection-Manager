@@ -26,7 +26,7 @@ jobs:
       
       - name: Create Package
         env:
-          VERSION: mvn help:evaluate -Dexpression=project.version | grep -e '^[^\[]'
+          VERSION: ${mvn help:evaluate -Dexpression=project.version | grep -e '^[^\[]'}
         run: |
           echo $VERSION
           mkdir staging && mkdir staging/data
