@@ -47,9 +47,9 @@ public class CardBeanImageServices {
 									+"/"
 									+cardBean.getId()
 									+"+"
-									+cardBean.getSet().getName().replace("'", "").replace("`", "").replace(",","").replace(" ", "")
+									+replaceProblematicChars(cardBean.getSet().getName())
 									+"+"
-									+cardBean.getName().replace("'", "").replace("`", "").replace(",","").replace(" ", "")
+									+replaceProblematicChars(cardBean.getName())
 									+"+"
 									+imgType
 									+fileExtension);
@@ -112,8 +112,6 @@ public class CardBeanImageServices {
 		}
 	}
 	
-	
-	
 	/**
 	 * This method scales a given {@link Image} object by a given ratio.
 	 * 
@@ -158,6 +156,21 @@ public class CardBeanImageServices {
 		Logger.debug("Scale image with size '"+image.getWidth(null)+"x"+image.getHeight(null)+"' to preferred width "+width+" px.");
 		float ratio = (float) width / (float) image.getWidth(null);
 		return scaleImage(image, ratio);
+	}
+
+	/**
+	 * This method replaces all chars from a text that lead to problems when the text is used as a file name during serializtion.
+	 * @param text text with special characters
+	 * @return text with replaced characters for special characters
+	 */
+	private static String replaceProblematicChars(String text) {
+		return text
+				.replace("'", "")
+				.replace("`", "")
+				.replace(",","")
+				.replace(" ", "")
+				.replace(":", "-");
+									
 	}
 
 }
