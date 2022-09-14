@@ -1,0 +1,15 @@
+{
+    "name": "Java Development Environment",
+    "dockerFile": "Dockerfile",
+
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+    },
+    "extensions": [
+        "vscjava.vscode-maven",
+        "redhat.java",
+        "redhat.fabric8-analytics",
+        "DotJoshJohnson.xml"
+    ]
+
+}
