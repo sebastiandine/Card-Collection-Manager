@@ -23,7 +23,7 @@ jobs:
       
       - name: Project Metadata
         run: |
-          echo "PROJECT_VERSION=test" >> $GITHUB_ENV
+          echo "PROJECT_VERSION=$(mvn help:evaluate -Dexpression=project.version | grep -e '^[^\[]')" >> $GITHUB_ENV
           mvn help:evaluate -Dexpression=project.version | grep -e '^[^\[]'
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots package
