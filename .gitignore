@@ -4,3 +4,8 @@ build
 staging
 log
 .vscode
+*.jar
+*.xlsx
+data/images
+data/carddata
+**/.DS_Store
