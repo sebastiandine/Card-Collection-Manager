@@ -5,7 +5,7 @@
 	<artifactId>card-collection-manager</artifactId>
 	<version>1.1.1</version>
 	<name>Card Collection Manager</name>
-	<description>An application for managing Magic the Gathering card collections.</description>
+	<description>An application for managing Magic the Gathering card collections</description>
 
 	<properties>
 		<maven.test.skip>false</maven.test.skip>
