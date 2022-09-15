@@ -37,7 +37,7 @@ jobs:
           cp -R config staging/
           cp data/setdata staging/data/
           cp -R data/icons staging/data/
-          cp build/CardCollectionManager*.jar staging
+          cp ./CardCollectionManager*.jar staging
           
       - name: Upload Artifact
         uses: actions/upload-artifact@v3

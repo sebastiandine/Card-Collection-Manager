@@ -41,7 +41,7 @@ jobs:
           cp -R config staging/
           cp data/setdata staging/data/
           cp -R data/icons staging/data/
-          cp build/CardCollectionManager*.jar staging
+          cp ./CardCollectionManager*.jar staging
 
           cd staging
           zip -r Card-Collection-Manager-${{ env.PROJECT_VERSION }}.zip *
