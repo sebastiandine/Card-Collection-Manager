@@ -20,10 +20,27 @@ If you want to update your local version of the application. Just overwrite your
 you find in the archive file of the latest release. Do however not overwrite your data or config files.
 
 ## How to build/ contribute
-* Increase the build count of the current version in file `pom.xml`. Tag `<version>` is representing the current version and build number. So if the current version is 0.1-01, you should change it to 0.1-02 before you commit your changes. The number before the dash is the current main release which should not be changed, except by the main contributor. 
+### Contribute
+The project includes configuration of [VSCode development containers](https://code.visualstudio.com/docs/remote/containers) which should be the preffered environment to develop new features of the app. The container automatically installs the [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack) which should be all you need to develop in Java.
 
+Additionally, if you want to run the GUI out of the container, you need to use a X11 tool. I will briefly explain how to run them in order to display the GUI from the container.
+
+**Windows**<br>
+I recommend [VcXSrv](https://sourceforge.net/projects/vcxsrv/) if your host system is Windows. Once you have it installed, start VcXSsrv via `xlaunch.exe` and enable the option `Disable access control` before you start the server. Now, you can start a GUI app in your container that will be displayed via the X-server on the host system.
+
+**MacOS**<br>
+Install [XQuartz](https://www.xquartz.org/) and run it via the following command:
+```
+xhost +localhost
+```
+Now, you can start a GUI app in your container that will be displayed via the X-server on the host system.
+
+### Local Building
 * Execute `mvn clean` in order to cleanup the build directory.
 * Execute `mvn package` in order to compile the project and create various archive files in folder `build/`, ready for shipping.
+
+### Remote Building
+Actual versions are automatically built via GitHub Action pipelines defined at [`.github/workflows`](./.github/workflows/).
 
 ## Toolkit
 * [Apache Maven v.3.5.0](https://maven.apache.org/) - The famous build management tool, specialized for Java projects.

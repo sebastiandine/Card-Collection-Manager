@@ -41,7 +41,7 @@ public class MtgApiClient {
 	 * 			has been found, the standard MtG card back image will be provided.
 	 */
 	public static ImageIcon getCardImage(CardBean cardBean){
-		
+
 		/* fist check if the bean is the dummy bean */
 		if(cardBean.getId() == -1){
 			return PropertiesFactory.getMtgBackImageIcon();
@@ -53,9 +53,12 @@ public class MtgApiClient {
 		query.add("set="+cardBean.getSet().getCode());
 		
 		List<Card> cardList = CardAPI.getAllCards(query);
-		
+		System.out.println(cardList.get(0).getImageUrl());
+
 		if(!cardList.isEmpty()){
 			try {
+				//@bug img is always null, but cardList.get(0).getImageUrl() is a valid url.
+				// the problem is, that the link does not direct to a file but a service that displays the image
 				BufferedImage img = ImageIO.read(new URL(cardList.get(0).getImageUrl()));
 				return new ImageIcon(img);
 			} catch (Exception e) {
