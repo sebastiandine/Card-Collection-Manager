@@ -1,8 +1,12 @@
 package org.sebastiandine.cardcollectionmanager.services;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.nio.charset.StandardCharsets;
 import java.text.SimpleDateFormat;
 
 import org.sebastiandine.cardcollectionmanager.bean.CardBean;
@@ -26,7 +30,8 @@ public class CardBeanJsonExportService {
 		FileOutputStream fos;
 		try {
 			fos = new FileOutputStream(url);
-            fos.write("{".getBytes());
+            Writer w = new BufferedWriter(new OutputStreamWriter(fos, StandardCharsets.UTF_8));
+            w.write("{");
 
             for (CardBean card : cards) {
                 // prepare image string
@@ -58,9 +63,11 @@ public class CardBeanJsonExportService {
                     card.isAltered()
                 );
                 
-                fos.write(obj.getBytes());
+                w.write(obj);
             }
-            fos.write("}".getBytes());
+            w.write("}");
+            w.flush();
+            w.close();
 			fos.close();
 			Logger.info("Exported data sucessfully to "+url.getAbsolutePath()+".");
 		} catch (IOException e) {
