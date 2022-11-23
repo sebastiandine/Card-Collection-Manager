@@ -32,12 +32,16 @@ public class CardBeanJsonExportService {
 			fos = new FileOutputStream(url);
             Writer w = new BufferedWriter(new OutputStreamWriter(fos, StandardCharsets.UTF_8));
             w.write("{");
-
-            for (CardBean card : cards) {
+    
+            for (int i = 0; i < cards.length; i++) {
+                CardBean card = cards[i];
                 // prepare image string
                 String images = "[";
                 if (card.getImageFront() != null){
-                    images += String.format("\"%s\",", card.getImageFront().getName().replaceAll("\"", " "));
+                    images += String.format("\"%s\"", card.getImageFront().getName().replaceAll("\"", " "));
+                    if (card.getImageBack() != null) { // avoid trailing comma in set with only one image
+                        images += ",";
+                    }
                 }
                 if (card.getImageBack() != null){
                     images += String.format("\"%s\"", card.getImageBack().getName().replaceAll("\"", " "));
@@ -62,7 +66,10 @@ public class CardBeanJsonExportService {
                     card.isSigned(),
                     card.isAltered()
                 );
-                
+
+                if (i == (cards.length -1)){ // remove trailing comma for last entry
+                    obj = obj.substring(0, obj.length() -2); 
+                }
                 w.write(obj);
             }
             w.write("}");
