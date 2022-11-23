@@ -68,7 +68,7 @@ public class CardBeanJsonExportService {
                 );
 
                 if (i == (cards.length -1)){ // remove trailing comma for last entry
-                    obj = obj.substring(0, obj.length() -2); 
+                    obj = obj.substring(0, obj.length() -1); 
                 }
                 w.write(obj);
             }
