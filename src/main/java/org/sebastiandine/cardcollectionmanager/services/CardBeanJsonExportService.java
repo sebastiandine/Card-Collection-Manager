@@ -32,10 +32,10 @@ public class CardBeanJsonExportService {
                 // prepare image string
                 String images = "[";
                 if (card.getImageFront() != null){
-                    images += String.format("\"%s\",", card.getImageFront().getName());
+                    images += String.format("\"%s\",", card.getImageFront().getName().replaceAll("\"", " "));
                 }
                 if (card.getImageBack() != null){
-                    images += String.format("\"%s\"", card.getImageBack().getName());
+                    images += String.format("\"%s\"", card.getImageBack().getName().replaceAll("\"", " "));
                 }
                 images += "]";
 
@@ -47,7 +47,7 @@ public class CardBeanJsonExportService {
                     card.getAmount(),
                     card.getName(),
                     card.getSet().getCode(),
-                    card.getSet().getName(),
+                    card.getSet().getName().replaceAll("\"", ""),
                     releaseDateFormat.format(card.getSet().getRelease().getTime()),
                     card.getNote(),
                     images,
