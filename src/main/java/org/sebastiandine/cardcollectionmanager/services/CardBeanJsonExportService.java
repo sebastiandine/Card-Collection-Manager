@@ -41,7 +41,7 @@ public class CardBeanJsonExportService {
 
                 String obj = String.format(
                     "\"%d\":{\"id\":%d,\"amount\":%d,\"name\":\"%s\",\"set\":{\"id\":\"%s\",\"name\":\"%s\",\"releaseDate\":\"%s\"}," +
-                    "\"setNo\":\"\",\"note\":\"%s\",\"images\":[%s],\"language\":\"%s\",\"condition\":\"%s\",\"foil\":%b,\"signed\":%b,\"altered\":%b},",
+                    "\"setNo\":\"\",\"note\":\"%s\",\"images\":%s,\"language\":\"%s\",\"condition\":\"%s\",\"foil\":%b,\"signed\":%b,\"altered\":%b},",
                     card.getId(),
                     card.getId(),
                     card.getAmount(),
