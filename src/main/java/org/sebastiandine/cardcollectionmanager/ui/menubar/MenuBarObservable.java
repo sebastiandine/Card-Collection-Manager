@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
 import org.sebastiandine.cardcollectionmanager.bean.SetBean;
 import org.sebastiandine.cardcollectionmanager.container.SetBeanContainer;
 import org.sebastiandine.cardcollectionmanager.ui.dialogs.export.ExcelExportFileChooser;
+import org.sebastiandine.cardcollectionmanager.ui.dialogs.export.JsonExportFileChooser;
 import org.sebastiandine.cardcollectionmanager.ui.dialogs.settings.DialogSettings;
 
 
@@ -37,7 +38,7 @@ public class MenuBarObservable extends Observable implements ActionListener {
 	private JMenuItem men_updateSets;
 	private JMenuItem men_editSettings;
 	private JMenuItem men_exportExcel;
-	
+	private JMenuItem men_exportJson;
 	
 	public MenuBarObservable(){
 		
@@ -68,11 +69,15 @@ public class MenuBarObservable extends Observable implements ActionListener {
 		
 		men_exportExcel = new JMenuItem("to Excel (.xlsx)");
 		men_exportExcel.addActionListener(this);
+
+		men_exportJson = new JMenuItem("to JSON (.json)");
+		men_exportJson.addActionListener(this);
 		
 		men_file.add(men_close);
 		men_advanced.add(men_updateSets);
 		men_settings.add(men_editSettings);
 		men_export.add(men_exportExcel);
+		men_export.add(men_exportJson);
 		
 		menuBar.add(men_file);
 		menuBar.add(men_advanced);
@@ -125,6 +130,11 @@ public class MenuBarObservable extends Observable implements ActionListener {
 		if(e.getSource() == men_exportExcel){
 			new ExcelExportFileChooser();
 		}
+
+		if(e.getSource() == men_exportJson){
+			new JsonExportFileChooser();
+		}
+
 	}
 	
 }
