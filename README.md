@@ -1,4 +1,7 @@
 # Card Collection Manager
+
+**DEPRECATED**: This project was deprecated in favor of its successor [Card Collection Manager 2](https://github.com/sebastiandine/Card-Collection-Manager-2). Please refer to the documentation of CCM2 to learn how to migrate your CCM1 collection to CCM2.
+
 ![img1](img1.png)
 ## Project Description
 This projects provides a management application for Magic the Gathering card collections. Its aim is to be a simple solution to keep track of collections. The main reason why I wrote this application is because I required a tool, which can manage single card images of a large collection, besides common card collection management features.
