@@ -1,5 +1,11 @@
 # Card Collection Manager
 
+[![Deprecated: Continued as CCM3](https://img.shields.io/badge/%E2%84%B9%EF%B8%8F%20Project%20Deprecated-Continued%20as%20CCM3-yellow?style=for-the-badge)](https://github.com/sebastiandine/Card-Collection-Manager-3)
+
+> [!WARNING]
+> This project (**CCM1**) is deprecated and no longer actively developed.  
+> Development continues in **CCM3**: https://github.com/sebastiandine/Card-Collection-Manager-3
+
 **DEPRECATED**: This project was deprecated in favor of its successor [Card Collection Manager 2](https://github.com/sebastiandine/Card-Collection-Manager-2). Please refer to the documentation of CCM2 to learn how to migrate your CCM1 collection to CCM2.
 
 ![img1](img1.png)
